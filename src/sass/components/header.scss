@@ -1,0 +1,262 @@
+.header {
+    background-color: $main-bg;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    height: $header-height;
+    transition: height 0.3s ease;
+
+    @include tablet {
+        height: $header-tablet-height;
+        box-shadow: $box-shadow;
+    }
+
+    @include mobile {
+        height: $header-mobile-height;
+    }
+
+    .container {
+        height: 100%;
+    }
+
+    &.shrink {
+        height: $header-shrink-height;
+        box-shadow: $box-shadow;
+        z-index: 100;
+
+        @include mobile {
+            height: $header-mobile-height;
+        }
+    }
+
+    &__menu {
+        @include flex(center, space-between);
+        height: 100%;
+        font-size: 1.5rem;
+
+        &__item {
+            text-align: center;
+        }
+
+        &__item ~ &__item {
+            margin-left: 30px;
+
+            @include tablet {
+                margin-left: 20px;
+            }
+
+            @include mobile {
+                margin-left: 10px;
+            }
+        }
+
+        &__item.active {
+            font-weight: 600;
+            color: $main-color;
+        }
+
+        &__item:hover {
+            color: $main-color;
+        }
+
+        &__left,
+        &__right {
+            @include flex(center, center);
+            height: 100%;
+        }
+
+        &__right {
+            font-size: 2.25rem;
+
+            &__item {
+                @include flex(center, center);
+                position: relative;
+
+                @include tablet {
+                    margin-left: 10px;
+                }
+
+                &:first-child {
+                    display: none;
+
+                    @include tablet {
+                        display: block;
+                    }
+                }
+
+                i {
+                    @include flex(center, center);
+                }
+
+                &__quantity {
+                    @include flex(center, center);
+                    position: absolute;
+                    top: -20%;
+                    right: -40%;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    background-color: $main-color;
+                    color: $txt-white;
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    visibility: hidden;
+
+                    @include mobile {
+                        top: -10%;
+                        right: -30%;
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+
+                &__quantity.active {
+                    visibility: visible;
+                }
+            }
+        }
+
+        &__left {
+            &__close {
+                display: none;
+            }
+
+            &__item {
+                min-width: 100px;
+            }
+
+            @include tablet {
+                flex-direction: column;
+                background-color: $main-bg;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100vh;
+                justify-content: flex-start;
+                padding-top: 30px;
+                transform: translateX(-100%);
+                transition: transform 0.5s ease;
+                z-index: 100;
+
+                &.active {
+                    transform: translateX(0);
+                }
+
+                &__item ~ &__item {
+                    margin-left: unset;
+                    margin-top: 20px;
+                }
+
+                &__close {
+                    display: block;
+                    position: absolute;
+                    left: 20px;
+                    font-size: 2.5rem;
+                }
+            }
+        }
+
+        &__mobile-toggle {
+            display: none;
+
+            @include tablet {
+                display: block;
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    &__logo {
+        @include tablet {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        img {
+            height: 28px;
+
+            @include mobile {
+                height: 18px;
+            }
+        }
+    }
+
+    &__search {
+        @include flex(center, center);
+        width: 300px;
+
+        @include tablet {
+            display: none;
+
+            &.active {
+                @include flex(center, center);
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                padding: 0 20px;
+                animation: slideDown 0.5s ease;
+
+                @keyframes slideDown {
+                    from {
+                        opacity: 0;
+                        transform: translateY(-50%);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+            }
+        }
+
+        @include mobile {
+            &.active {
+                padding: 0 10px;
+            }
+        }
+
+        &__input {
+            padding: 5px;
+            width: 80%;
+            height: 35px;
+            font-size: 1.25rem;
+            line-height: 1.25rem;
+            color: $txt-second-color;
+            outline: none;
+            border: 1px solid;
+            border-right: none;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+
+            &:hover {
+                border-color: $main-color; 
+            }
+        }
+
+        &__btn {
+            @include flex(center, center);
+            flex: 1;
+            height: 35px;
+            color: $txt-white;
+            background-color: $main-color;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+
+            a {
+                @include flex(center, center);
+                width: 100%;
+                height: 100%;
+
+                &:hover {
+                    color: $txt-white;
+                }
+            }
+        }
+    }
+}

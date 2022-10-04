@@ -1,0 +1,20 @@
+.search {
+    @include flex(center, center);
+    flex-direction: column;
+
+    &__title {
+        text-align: center;
+        font-size: 1.75rem;
+        margin: 40px 0;
+        width: 100%;
+
+        span {
+            color: $main-color;
+            font-weight: 600;
+        }
+    }
+
+    &__result {
+        width: 100%;
+    }
+}

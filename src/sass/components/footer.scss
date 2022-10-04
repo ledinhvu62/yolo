@@ -1,0 +1,50 @@
+.footer {
+    padding: 70px 0;
+    box-shadow: $box-shadow;
+    font-size: 1.1rem;
+
+    & > * > * > * {
+        @include mobile {
+            @include flex(center, center);
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    &__logo {
+        height: 38px;
+        margin-bottom: 25px;
+
+        @include mobile {
+            height: 28px;
+        }
+    }
+
+    &__about {
+        p {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__title {
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+    }
+
+    &__content {
+        p {
+            margin-bottom: 1.25rem;
+        }
+    }
+
+    &__social-link {
+        margin-right: 15px;
+
+        i {
+            font-size: 2.25rem;
+            color: $main-color;
+            border: $main-color;
+        }
+    }
+}
