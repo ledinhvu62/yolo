@@ -1,3 +1,10 @@
+# Descriptions
+
+Fashion website with functions to view product details, add to cart, update cart, search and filter product.\
+Responsive for tablet and mobile.
+
+Link: [https://yolo-ledinhvu.vercel.app/](https://yolo-ledinhvu.vercel.app/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
