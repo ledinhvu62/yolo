@@ -71,7 +71,7 @@ HeroSlider.propTypes = {
 const HeroSliderItem = props => (
     <div className={`hero-slider__item ${props.active ? 'active' : ''}`}>
         <div className="hero-slider__item__info">
-            <div className={`hero-slider__item__info__title color-${props.item.color}`}>
+            <div className={`hero-slider__item__info__title color-main`}>
                 <span>{props.item.title}</span>
             </div>
             <div className="hero-slider__item__info__description">
@@ -80,7 +80,6 @@ const HeroSliderItem = props => (
             <div className="hero-slider__item__info__btn">
                 <Link to={props.item.path}>
                     <Button
-                        backgroundColor={props.item.color}
                         icon="bx bx-cart"
                         animate={true}
                     >
@@ -90,9 +89,9 @@ const HeroSliderItem = props => (
             </div>
         </div>
         <div className="hero-slider__item__image">
-            <div className={`shape bg-${props.item.color}`}></div>
-            <img src={props.item.img} alt="" />
-        </div>         
+            <img src={props.item.img1} alt="" />
+            <img src={props.item.img2} alt="" />
+        </div>
     </div>
 )
 

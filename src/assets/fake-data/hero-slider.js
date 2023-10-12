@@ -1,29 +1,34 @@
-const img1 = require("../images/slider/slide_1.png")
-const img2 = require("../images/slider/slide_2.png")
-const img3 = require("../images/slider/slide_3.png")
+const slide_01_image_01 = require("../images/slider/slide-01 (1).png")
+const slide_01_image_02 = require("../images/slider/slide-01 (2).png")
+
+const slide_02_image_01 = require("../images/slider/slide-02 (1).png")
+const slide_02_image_02 = require("../images/slider/slide-02 (2).png")
+
+const slide_03_image_01 = require("../images/slider/slide-03 (1).png")
+const slide_03_image_02 = require("../images/slider/slide-03 (2).png")
 
 const heroSliderData = [
     {
-        title: "Polo nữ Pima cao cấp",
-        description: "Nhắc đến sự đẳng cấp là không thể không nhắc đến dòng vải pima. Nó tạo nên chất lượng tốt nhất cho bất kỳ sản phẩm thời trang nào. Sợi vải pima dài và dày hơn sợi cotton thông thường gấp đôi nhờ công nghệ dệt tân tiến. Điều đó làm cho kết cấu áo polo chắc chắn, bền chặt, hạn chế tối đa xù lông, mềm mượt, bền màu, vô cùng đảm bảo sức khoẻ người dùng",
-        img: img1,
-        color: "blue",
-        path: "/catalog/ao-thun-dinosaur-01"
+        title: "Áo Thun Croptop",
+        description: "Áo croptop nữ cá tính với chữ in nổi bật trước ngực, in puff tạo hiệu ứng nổi đặc biệt. Thiết kế phần nách được cắt cách điệu, thoải mái. Có thể phối theo phong cách cá tính với quần suông, jogger, chân váy, quần jeans hay phong cách cơ bản cùng jeans, chân váy, quần short.",
+        img1: slide_01_image_01,
+        img2: slide_01_image_02,
+        path: "/catalog/ao-thun-croptop-3",
     },
     {
-        title: "Polo Nữ Dáng Suông Modal",
-        description: "Polo nữ dáng suông Modal sử dụng công nghệ vải cao cấp thân thiện với môi trường sản xuất độc quyền chống co rút vải, áo polo nữ vải modal là sản phẩm thích hợp cho các bạn có môi trường làm việc năng động như hiện nay",
-        img: img2,
-        path: "/catalog/ao-thun-dinosaur-02",
-        color: "pink"
+        title: "Áo Nỉ Dài Tay",
+        description: "Áo thu đông nữ chất liệu nỉ dày dặn. Mặt trong có lớp lông nhung mềm mại, giữ form và rất ấm. Kiểu rộng cơ bản thích hợp với mọi dáng người. Chiếc áo có thể mặc với nhiều phong cách và hoàn cảnh như đi chơi, đi làm hoặc ở nhà đều phù hợp.",
+        img1: slide_02_image_01,
+        img2: slide_02_image_02,
+        path: "/catalog/ao-ni-dai-tay-2",
     },
     {
-        title: "Polo Nữ Coolmax Lacoste",
-        description: "Mẫu áo polo nữ được làm bằng chất liệu coolmax đem lại cảm giác mát lạnh khi mặc. Thiết kế mẫu áo polo coolmax này có kiểu dáng cực kỳ thoải mái. Tạo sự gọn gàng hứa hẹn sẽ là mẫu áo polo vô cùng hot trong thời điểm sắp tới",
-        img: img3,
-        path: "/catalog/ao-thun-dinosaur-03",
-        color: "orange"
-    }
+        title: "Áo Polo Siro Rayon",
+        description: "Áo polo nữ bo kẻ hiện đại, mềm thoáng. Công nghệ Siro compact với mật độ xơ cao, được xoắn gọn gàng và xe đôi nên bề mặt vải mịn màng. Hạn chế xù lông hơn 17% và bền hơn 20% so với các loại vải khác cùng dòng. Sản phẩm dễ chăm sóc, có thể giặt máy.",
+        img1: slide_03_image_01,
+        img2: slide_03_image_02,
+        path: "/catalog/ao-polo-siro-rayon-1",
+    },
 ]
 
 export default heroSliderData
