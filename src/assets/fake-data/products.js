@@ -59,15 +59,14 @@ const products = [
         slug: "ao-thun-clean-viet-nam-1",
         size: ["s", "m", "l"],
         description: `
-        <div>
-            <p>- Áo thun nữ form suông rộng thoải mái, thành phần: 60% Cotton + 20% Polyester + 20% Recycle Polyester.</p>
-            <p>- Chất liệu cotton tái chế bảo vệ môi trường, rất mềm mại, thấm hút tốt.</p>
-            <p>- Áo có hình in đặc trưng cho bộ sưu tập chất liệu tái chế, tuyên truyền và nâng cáo nhận thức môi trường.</p>
-            <p>- Phong cách trẻ trung năng động, thích hợp mọi dáng người.</p>
-            <p>- Có thể mặc cùng trang phục hàng ngày như: quần jeans, short,... thoải mái đi chơi, đi làm, ở nhà.</p>
-            <p>- Sản xuất tại Việt Nam.</p>
-        </div>        
-        `
+            <div>
+                <p>- Áo thun nữ form suông rộng thoải mái, thành phần: 60% Cotton + 20% Polyester + 20% Recycle Polyester.</p>
+                <p>- Chất liệu cotton tái chế bảo vệ môi trường, rất mềm mại, thấm hút tốt.</p>
+                <p>- Áo có hình in đặc trưng cho bộ sưu tập chất liệu tái chế, tuyên truyền và nâng cáo nhận thức môi trường.</p>
+                <p>- Phong cách trẻ trung năng động, thích hợp mọi dáng người.</p>
+                <p>- Có thể mặc cùng trang phục hàng ngày như: quần jeans, short,... thoải mái đi chơi, đi làm, ở nhà.</p>
+            </div>    
+        `,
     },
     {
         title: "Áo Thun Croptop 1",
@@ -79,15 +78,14 @@ const products = [
         slug: "ao-thun-croptop-1",
         size: ["s"],
         description: `
-        <div>
-            <p>- Áo thun nữ form suông rộng thoải mái, thành phần: 60% Cotton + 20% Polyester + 20% Recycle Polyester.</p>
-            <p>- Chất liệu cotton tái chế bảo vệ môi trường, rất mềm mại, thấm hút tốt.</p>
-            <p>- Áo có hình in đặc trưng cho bộ sưu tập chất liệu tái chế, tuyên truyền và nâng cáo nhận thức môi trường.</p>
-            <p>- Phong cách trẻ trung năng động, thích hợp mọi dáng người.</p>
-            <p>- Có thể mặc cùng trang phục hàng ngày như: quần jeans, short,... thoải mái đi chơi, đi làm, ở nhà.</p>
-            <p>- Sản xuất tại Việt Nam.</p>
-        </div>        
-        `
+            <div>
+                <p>- Áo croptop nữ cá tính với chữ in nổi bật trước ngực, in puff tạo hiệu ứng nổi đặc biệt.</p>
+                <p>- Thiết kế phần nách được cắt cách điệu, thoải mái.</p>
+                <p>- Chất liệu thun rib co giãn tốt, giữ form khi mặc.</p>
+                <p>- Có thể phối theo phong cách cá tính với quần suông, jogger, chân váy, quần jeans hay phong cách cơ bản cùng jeans, chân váy, quần short.</p>
+                <p>- Thích hợp mặc đi chơi, đi làm hoặc đi học.</p>
+            </div>
+        `,
     },
     {
         title: "Áo Thun Dập Chữ Nổi",
@@ -99,15 +97,14 @@ const products = [
         slug: "ao-thun-dap-chu-noi",
         size: ["s", "m"],
         description: `
-        <div>
-            <p>- Áo thun nữ form suông rộng thoải mái, thành phần: 60% Cotton + 20% Polyester + 20% Recycle Polyester.</p>
-            <p>- Chất liệu cotton tái chế bảo vệ môi trường, rất mềm mại, thấm hút tốt.</p>
-            <p>- Áo có hình in đặc trưng cho bộ sưu tập chất liệu tái chế, tuyên truyền và nâng cáo nhận thức môi trường.</p>
-            <p>- Phong cách trẻ trung năng động, thích hợp mọi dáng người.</p>
-            <p>- Có thể mặc cùng trang phục hàng ngày như: quần jeans, short,... thoải mái đi chơi, đi làm, ở nhà.</p>
-            <p>- Sản xuất tại Việt Nam.</p>
-        </div>        
-        `
+            <div>
+                <p>- Chất liệu 100% Cotton.</p>
+                <p>- Thấm hút mồ hôi tốt, thoáng mát, rất thích hợp với thời tiết nóng ẩm Việt Nam.</p>
+                <p>- Co giãn nhẹ, phù hợp với chuyển động của cơ thể.</p>
+                <p>- Form dáng suông giúp tạo sự thoải mái cử động cho người mặc.</p>
+                <p>- Đa dạng màu sắc dễ dàng kết hợp cùng quần shorts hoặc quần jeans.</p>
+            </div>
+        `,
     },
     {
         title: "Áo Thun Yoguu 1",
@@ -119,15 +116,14 @@ const products = [
         slug: "ao-thun-yoguu-1",
         size: ["l", "xl"],
         description: `
-        <div>
-            <p>- Áo thun nữ form suông rộng thoải mái, thành phần: 60% Cotton + 20% Polyester + 20% Recycle Polyester.</p>
-            <p>- Chất liệu cotton tái chế bảo vệ môi trường, rất mềm mại, thấm hút tốt.</p>
-            <p>- Áo có hình in đặc trưng cho bộ sưu tập chất liệu tái chế, tuyên truyền và nâng cáo nhận thức môi trường.</p>
-            <p>- Phong cách trẻ trung năng động, thích hợp mọi dáng người.</p>
-            <p>- Có thể mặc cùng trang phục hàng ngày như: quần jeans, short,... thoải mái đi chơi, đi làm, ở nhà.</p>
-            <p>- Sản xuất tại Việt Nam.</p>
-        </div>        
-        `
+            <div>
+                <p>- Áo thun YOGUU dấu ấn khằng định chất riêng thế hệ trẻ.</p>
+                <p>- Chiếc áo sở hữu tinh thần tươi mới: YOung - Gout - Unisex - Unique.</p>
+                <p>- Vải cotton 100% được kéo sợi theo công nghệ Compact, sợi được trồng bằng phương pháp khoa học - kỹ thuật cao nên tạo ra xơ bông dai và dài hơn.</p>
+                <p>- Sợi xoắn từ những xơ bông dài và chắc giúp giảm tối đa độ xù lông trên bề mặt vải.</p>
+                <p>- Áo có khả năng thấm hút mồ hôi tốt, thoáng mát thích hợp với thời tiết nóng ẩm của Việt Nam.</p>
+            </div>
+        `,
     },
     {
         title: "Áo Thun In Gấu",
@@ -139,15 +135,15 @@ const products = [
         slug: "ao-thun-in-gau",
         size: ["s"],
         description: `
-        <div>
-            <p>- Áo thun nữ form suông rộng thoải mái, thành phần: 60% Cotton + 20% Polyester + 20% Recycle Polyester.</p>
-            <p>- Chất liệu cotton tái chế bảo vệ môi trường, rất mềm mại, thấm hút tốt.</p>
-            <p>- Áo có hình in đặc trưng cho bộ sưu tập chất liệu tái chế, tuyên truyền và nâng cáo nhận thức môi trường.</p>
-            <p>- Phong cách trẻ trung năng động, thích hợp mọi dáng người.</p>
-            <p>- Có thể mặc cùng trang phục hàng ngày như: quần jeans, short,... thoải mái đi chơi, đi làm, ở nhà.</p>
-            <p>- Sản xuất tại Việt Nam.</p>
-        </div>        
-        `
+            <div>
+                <p>- Áo thun nữ Cotton BCI (tổ chức phi lợi nhuận toàn cầu về chương trình bông bền vững).</p>
+                <p>- Giảm thiểu 50-80% hóa chất so với bông thông thường.</p>
+                <p>- Chất lượng được kiểm soát và đảm bảo theo tiêu chuẩn quốc tế.</p>
+                <p>- An toàn thân thiện với da.</p>
+                <p>- Mềm mại, bề mặt vải bông xốp.</p>
+                <p>- Thông thoáng, thấm hút, độ bền cao.</p>
+            </div>
+        `,
     },
     {
         title: "Áo Thun In Tràn",
@@ -159,15 +155,13 @@ const products = [
         slug: "ao-thun-in-tran",
         size: ["s", "m"],
         description: `
-        <div>
-            <p>- Áo thun nữ form suông rộng thoải mái, thành phần: 60% Cotton + 20% Polyester + 20% Recycle Polyester.</p>
-            <p>- Chất liệu cotton tái chế bảo vệ môi trường, rất mềm mại, thấm hút tốt.</p>
-            <p>- Áo có hình in đặc trưng cho bộ sưu tập chất liệu tái chế, tuyên truyền và nâng cáo nhận thức môi trường.</p>
-            <p>- Phong cách trẻ trung năng động, thích hợp mọi dáng người.</p>
-            <p>- Có thể mặc cùng trang phục hàng ngày như: quần jeans, short,... thoải mái đi chơi, đi làm, ở nhà.</p>
-            <p>- Sản xuất tại Việt Nam.</p>
-        </div>        
-        `
+            <div>
+                <p>- Một thiết kế áo phông nữ kiểu dáng freesize - rộng rãi, thoải mái.</p>
+                <p>- Chất liệu 100% Cotton mềm mại được cả thế giới tin dùng.</p>
+                <p>- Áo có khả năng thấm hút tốt, mềm và mát.</p>
+                <p>- Do được trồng bằng phương pháp khoa học, kỹ thuật cao nên vảo Cotton Mỹ có các xơ bông dai và dài hơn tạo nên kết cấu nhẹ và thông thoáng khi mặc.</p>
+            </div>
+        `,
     },
     {
         title: "Áo Nỉ Dài Tay 1",
@@ -179,15 +173,15 @@ const products = [
         slug: "ao-ni-dai-tay-1",
         size: ["m", "l"],
         description: `
-        <div>
-            <p>- Áo thun nữ form suông rộng thoải mái, thành phần: 60% Cotton + 20% Polyester + 20% Recycle Polyester.</p>
-            <p>- Chất liệu cotton tái chế bảo vệ môi trường, rất mềm mại, thấm hút tốt.</p>
-            <p>- Áo có hình in đặc trưng cho bộ sưu tập chất liệu tái chế, tuyên truyền và nâng cáo nhận thức môi trường.</p>
-            <p>- Phong cách trẻ trung năng động, thích hợp mọi dáng người.</p>
-            <p>- Có thể mặc cùng trang phục hàng ngày như: quần jeans, short,... thoải mái đi chơi, đi làm, ở nhà.</p>
-            <p>- Sản xuất tại Việt Nam.</p>
-        </div>        
-        `
+            <div>
+                <p>- Áo thu đông nữ chất liệu nỉ dày dặn.</p>
+                <p>- Thành phần: 60% Polyester + 35% Cotton + 5% Spandex.</p>
+                <p>- Mặt trong có lớp lông nhung mềm mại, giữ form và rất ấm.</p>
+                <p>- Kiểu rộng cơ bản thích hợp với mọi dáng người.</p>
+                <p>- Điểm nhấn là hình in trẻ trung, cá tính trước ngực.</p>
+                <p>- Chiếc áo có thể mặc với nhiều phong cách và hoàn cảnh như: đi chơi, đi làm hoặc ở nhà đều phù hợp.</p>
+            </div>
+        `,
     },
     {
         title: "Áo Polo Siro Rayon 1",
@@ -199,15 +193,13 @@ const products = [
         slug: "ao-polo-siro-rayon-1",
         size: ["s", "m", "l"],
         description: `
-        <div>
-            <p>- Áo thun nữ form suông rộng thoải mái, thành phần: 60% Cotton + 20% Polyester + 20% Recycle Polyester.</p>
-            <p>- Chất liệu cotton tái chế bảo vệ môi trường, rất mềm mại, thấm hút tốt.</p>
-            <p>- Áo có hình in đặc trưng cho bộ sưu tập chất liệu tái chế, tuyên truyền và nâng cáo nhận thức môi trường.</p>
-            <p>- Phong cách trẻ trung năng động, thích hợp mọi dáng người.</p>
-            <p>- Có thể mặc cùng trang phục hàng ngày như: quần jeans, short,... thoải mái đi chơi, đi làm, ở nhà.</p>
-            <p>- Sản xuất tại Việt Nam.</p>
-        </div>        
-        `
+            <div>
+                <p>- Áo polo nữ bo kẻ hiện đại, mềm thoáng.</p>
+                <p>- Công nghệ Siro compact với mật độ xơ cao, được xoắn gọn gàng và xe đôi nên bề mặt vải mịn màng.</p>
+                <p>- Hạn chế xù lông hơn 17% và bền hơn 20% so với các loại vải khác cùng dòng.</p>
+                <p>- Sản phẩm dễ chăm sóc, có thể giặt máy.</p>
+            </div>
+        `,
     },
     {
         title: "Áo Thun Croptop 2",
@@ -219,15 +211,14 @@ const products = [
         slug: "ao-thun-croptop-2",
         size: ["s"],
         description: `
-        <div>
-            <p>- Áo thun nữ form suông rộng thoải mái, thành phần: 60% Cotton + 20% Polyester + 20% Recycle Polyester.</p>
-            <p>- Chất liệu cotton tái chế bảo vệ môi trường, rất mềm mại, thấm hút tốt.</p>
-            <p>- Áo có hình in đặc trưng cho bộ sưu tập chất liệu tái chế, tuyên truyền và nâng cáo nhận thức môi trường.</p>
-            <p>- Phong cách trẻ trung năng động, thích hợp mọi dáng người.</p>
-            <p>- Có thể mặc cùng trang phục hàng ngày như: quần jeans, short,... thoải mái đi chơi, đi làm, ở nhà.</p>
-            <p>- Sản xuất tại Việt Nam.</p>
-        </div>        
-        `
+            <div>
+                <p>- Áo croptop nữ cá tính với chữ in nổi bật trước ngực, in puff tạo hiệu ứng nổi đặc biệt.</p>
+                <p>- Thiết kế phần nách được cắt cách điệu, thoải mái.</p>
+                <p>- Chất liệu thun rib co giãn tốt, giữ form khi mặc.</p>
+                <p>- Có thể phối theo phong cách cá tính với quần suông, jogger, chân váy, quần jeans hay phong cách cơ bản cùng jeans, chân váy, quần short.</p>
+                <p>- Thích hợp mặc đi chơi, đi làm hoặc đi học.</p>
+            </div>
+        `,
     },
     {
         title: "Áo Thun Yoguu 2",
@@ -239,15 +230,14 @@ const products = [
         slug: "ao-thun-yoguu-2",
         size: ["l", "xl"],
         description: `
-        <div>
-            <p>- Áo thun nữ form suông rộng thoải mái, thành phần: 60% Cotton + 20% Polyester + 20% Recycle Polyester.</p>
-            <p>- Chất liệu cotton tái chế bảo vệ môi trường, rất mềm mại, thấm hút tốt.</p>
-            <p>- Áo có hình in đặc trưng cho bộ sưu tập chất liệu tái chế, tuyên truyền và nâng cáo nhận thức môi trường.</p>
-            <p>- Phong cách trẻ trung năng động, thích hợp mọi dáng người.</p>
-            <p>- Có thể mặc cùng trang phục hàng ngày như: quần jeans, short,... thoải mái đi chơi, đi làm, ở nhà.</p>
-            <p>- Sản xuất tại Việt Nam.</p>
-        </div>        
-        `
+            <div>
+                <p>- Áo thun YOGUU dấu ấn khằng định chất riêng thế hệ trẻ.</p>
+                <p>- Chiếc áo sở hữu tinh thần tươi mới: YOung - Gout - Unisex - Unique.</p>
+                <p>- Vải cotton 100% được kéo sợi theo công nghệ Compact, sợi được trồng bằng phương pháp khoa học - kỹ thuật cao nên tạo ra xơ bông dai và dài hơn.</p>
+                <p>- Sợi xoắn từ những xơ bông dài và chắc giúp giảm tối đa độ xù lông trên bề mặt vải.</p>
+                <p>- Áo có khả năng thấm hút mồ hôi tốt, thoáng mát thích hợp với thời tiết nóng ẩm của Việt Nam.</p>
+            </div>
+        `,
     },
     {
         title: "Áo Thun Clean Việt Nam 2",
@@ -259,15 +249,14 @@ const products = [
         slug: "ao-thun-clean-viet-nam-2",
         size: ["s", "m", "l"],
         description: `
-        <div>
-            <p>- Áo thun nữ form suông rộng thoải mái, thành phần: 60% Cotton + 20% Polyester + 20% Recycle Polyester.</p>
-            <p>- Chất liệu cotton tái chế bảo vệ môi trường, rất mềm mại, thấm hút tốt.</p>
-            <p>- Áo có hình in đặc trưng cho bộ sưu tập chất liệu tái chế, tuyên truyền và nâng cáo nhận thức môi trường.</p>
-            <p>- Phong cách trẻ trung năng động, thích hợp mọi dáng người.</p>
-            <p>- Có thể mặc cùng trang phục hàng ngày như: quần jeans, short,... thoải mái đi chơi, đi làm, ở nhà.</p>
-            <p>- Sản xuất tại Việt Nam.</p>
-        </div>        
-        `
+            <div>
+                <p>- Áo thun nữ form suông rộng thoải mái, thành phần: 60% Cotton + 20% Polyester + 20% Recycle Polyester.</p>
+                <p>- Chất liệu cotton tái chế bảo vệ môi trường, rất mềm mại, thấm hút tốt.</p>
+                <p>- Áo có hình in đặc trưng cho bộ sưu tập chất liệu tái chế, tuyên truyền và nâng cáo nhận thức môi trường.</p>
+                <p>- Phong cách trẻ trung năng động, thích hợp mọi dáng người.</p>
+                <p>- Có thể mặc cùng trang phục hàng ngày như: quần jeans, short,... thoải mái đi chơi, đi làm, ở nhà.</p>
+            </div>
+        `,
     },
     {
         title: "Áo Nỉ Dài Tay 2",
@@ -279,15 +268,15 @@ const products = [
         slug: "ao-ni-dai-tay-2",
         size: ["m", "l"],
         description: `
-        <div>
-            <p>- Áo thun nữ form suông rộng thoải mái, thành phần: 60% Cotton + 20% Polyester + 20% Recycle Polyester.</p>
-            <p>- Chất liệu cotton tái chế bảo vệ môi trường, rất mềm mại, thấm hút tốt.</p>
-            <p>- Áo có hình in đặc trưng cho bộ sưu tập chất liệu tái chế, tuyên truyền và nâng cáo nhận thức môi trường.</p>
-            <p>- Phong cách trẻ trung năng động, thích hợp mọi dáng người.</p>
-            <p>- Có thể mặc cùng trang phục hàng ngày như: quần jeans, short,... thoải mái đi chơi, đi làm, ở nhà.</p>
-            <p>- Sản xuất tại Việt Nam.</p>
-        </div>        
-        `
+            <div>
+                <p>- Áo thu đông nữ chất liệu nỉ dày dặn.</p>
+                <p>- Thành phần: 60% Polyester + 35% Cotton + 5% Spandex.</p>
+                <p>- Mặt trong có lớp lông nhung mềm mại, giữ form và rất ấm.</p>
+                <p>- Kiểu rộng cơ bản thích hợp với mọi dáng người.</p>
+                <p>- Điểm nhấn là hình in trẻ trung, cá tính trước ngực.</p>
+                <p>- Chiếc áo có thể mặc với nhiều phong cách và hoàn cảnh như: đi chơi, đi làm hoặc ở nhà đều phù hợp.</p>
+            </div>
+        `,
     },
     {
         title: "Áo Thun Ignite",
@@ -299,15 +288,14 @@ const products = [
         slug: "ao-thun-ignite",
         size: ["m"],
         description: `
-        <div>
-            <p>- Áo thun nữ form suông rộng thoải mái, thành phần: 60% Cotton + 20% Polyester + 20% Recycle Polyester.</p>
-            <p>- Chất liệu cotton tái chế bảo vệ môi trường, rất mềm mại, thấm hút tốt.</p>
-            <p>- Áo có hình in đặc trưng cho bộ sưu tập chất liệu tái chế, tuyên truyền và nâng cáo nhận thức môi trường.</p>
-            <p>- Phong cách trẻ trung năng động, thích hợp mọi dáng người.</p>
-            <p>- Có thể mặc cùng trang phục hàng ngày như: quần jeans, short,... thoải mái đi chơi, đi làm, ở nhà.</p>
-            <p>- Sản xuất tại Việt Nam.</p>
-        </div>        
-        `
+            <div>
+                <p>- Chất liệu Bột Ngô: 80% Cotton + 20% Polyester I-scra Softcool.</p>
+                <p>- Thoải mái hoạt động với chất liệu co giãn đàn hồi cực tốt mà không cần sử dụng đến sợi spandex, bề mặt vải hồi phục tốt ngay sau khi co giãn.</p>
+                <p>- Sợi cotton bột ngô chiếm tới 80% nên hiệu quả thấm hút cao.</p>
+                <p>- Công nghệ kéo sợi Compact giúp xơ bông được sắp xếp chặt chẽ, giảm độ xù lông và mềm mại hơn.</p>
+                <p>- Kiểu dáng rộng, nổi bật cá tính cùng hình in nổi bật núi lửa phía sau áo.</p>
+            </div>
+        `,
     },
     {
         title: "Áo Polo Siro Rayon 2",
@@ -319,15 +307,13 @@ const products = [
         slug: "ao-polo-siro-rayon-2",
         size: ["s", "m", "l"],
         description: `
-        <div>
-            <p>- Áo thun nữ form suông rộng thoải mái, thành phần: 60% Cotton + 20% Polyester + 20% Recycle Polyester.</p>
-            <p>- Chất liệu cotton tái chế bảo vệ môi trường, rất mềm mại, thấm hút tốt.</p>
-            <p>- Áo có hình in đặc trưng cho bộ sưu tập chất liệu tái chế, tuyên truyền và nâng cáo nhận thức môi trường.</p>
-            <p>- Phong cách trẻ trung năng động, thích hợp mọi dáng người.</p>
-            <p>- Có thể mặc cùng trang phục hàng ngày như: quần jeans, short,... thoải mái đi chơi, đi làm, ở nhà.</p>
-            <p>- Sản xuất tại Việt Nam.</p>
-        </div>        
-        `
+            <div>
+                <p>- Áo polo nữ bo kẻ hiện đại, mềm thoáng.</p>
+                <p>- Công nghệ Siro compact với mật độ xơ cao, được xoắn gọn gàng và xe đôi nên bề mặt vải mịn màng.</p>
+                <p>- Hạn chế xù lông hơn 17% và bền hơn 20% so với các loại vải khác cùng dòng.</p>
+                <p>- Sản phẩm dễ chăm sóc, có thể giặt máy.</p>
+            </div>
+        `,
     },
     {
         title: "Áo Thun Croptop 3",
@@ -339,15 +325,14 @@ const products = [
         slug: "ao-thun-croptop-3",
         size: ["s"],
         description: `
-        <div>
-            <p>- Áo thun nữ form suông rộng thoải mái, thành phần: 60% Cotton + 20% Polyester + 20% Recycle Polyester.</p>
-            <p>- Chất liệu cotton tái chế bảo vệ môi trường, rất mềm mại, thấm hút tốt.</p>
-            <p>- Áo có hình in đặc trưng cho bộ sưu tập chất liệu tái chế, tuyên truyền và nâng cáo nhận thức môi trường.</p>
-            <p>- Phong cách trẻ trung năng động, thích hợp mọi dáng người.</p>
-            <p>- Có thể mặc cùng trang phục hàng ngày như: quần jeans, short,... thoải mái đi chơi, đi làm, ở nhà.</p>
-            <p>- Sản xuất tại Việt Nam.</p>
-        </div>        
-        `
+            <div>
+                <p>- Áo croptop nữ cá tính với chữ in nổi bật trước ngực, in puff tạo hiệu ứng nổi đặc biệt.</p>
+                <p>- Thiết kế phần nách được cắt cách điệu, thoải mái.</p>
+                <p>- Chất liệu thun rib co giãn tốt, giữ form khi mặc.</p>
+                <p>- Có thể phối theo phong cách cá tính với quần suông, jogger, chân váy, quần jeans hay phong cách cơ bản cùng jeans, chân váy, quần short.</p>
+                <p>- Thích hợp mặc đi chơi, đi làm hoặc đi học.</p>
+            </div>
+        `,
     },
     {
         title: "Áo Polo Siro Rayon 3",
@@ -359,17 +344,14 @@ const products = [
         slug: "ao-polo-siro-rayon-3",
         size: ["s", "m", "l"],
         description: `
-        <div>
-            <p>- Áo thun nữ form suông rộng thoải mái, thành phần: 60% Cotton + 20% Polyester + 20% Recycle Polyester.</p>
-            <p>- Chất liệu cotton tái chế bảo vệ môi trường, rất mềm mại, thấm hút tốt.</p>
-            <p>- Áo có hình in đặc trưng cho bộ sưu tập chất liệu tái chế, tuyên truyền và nâng cáo nhận thức môi trường.</p>
-            <p>- Phong cách trẻ trung năng động, thích hợp mọi dáng người.</p>
-            <p>- Có thể mặc cùng trang phục hàng ngày như: quần jeans, short,... thoải mái đi chơi, đi làm, ở nhà.</p>
-            <p>- Sản xuất tại Việt Nam.</p>
-        </div>        
-        `
+            <div>
+                <p>- Áo polo nữ bo kẻ hiện đại, mềm thoáng.</p>
+                <p>- Công nghệ Siro compact với mật độ xơ cao, được xoắn gọn gàng và xe đôi nên bề mặt vải mịn màng.</p>
+                <p>- Hạn chế xù lông hơn 17% và bền hơn 20% so với các loại vải khác cùng dòng.</p>
+                <p>- Sản phẩm dễ chăm sóc, có thể giặt máy.</p>
+            </div>
+        `,
     },
-    // 16 products
 ]
 
 const getAllProducts = () => products

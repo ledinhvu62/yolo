@@ -24,7 +24,6 @@ const ProductView = props => {
     }
 
     const [previewImg, setPreviewImg] = useState(product.image01)
-    const [descriptionExpand, setDescriptionExpand] = useState(false)
     const [color, setColor] = useState(product.colors[0])
     const [size, setSize] = useState(product.size[0])
     const [quantity, setQuantity] = useState(1)
@@ -88,18 +87,11 @@ const ProductView = props => {
                 <div className="product__images__main">
                     <img src={previewImg} alt="" />
                 </div>
-                <div className={`product-description ${descriptionExpand ? 'expand' : ''}`}>
+                <div className="product-description">
                     <div className="product-description__title">
                         Chi tiết sản phẩm
                     </div>
                     <div className="product-description__content" dangerouslySetInnerHTML={{ __html: product.description }}></div>
-                    <div className="product-description__toggle">
-                        <Button size="sm" onClick={() => setDescriptionExpand(!descriptionExpand)}>
-                            {
-                                descriptionExpand ? 'Thu gọn' : 'Xem thêm'
-                            }
-                        </Button>
-                    </div>
                 </div>
             </div>
             <div className="product__info">
@@ -180,18 +172,11 @@ const ProductView = props => {
                     <Button onClick={() => goToCart()}>Mua ngay</Button>
                 </div>
             </div>
-            <div className={`product-description mobile ${descriptionExpand ? 'expand' : ''}`}>
+            <div className="product-description mobile">
                 <div className="product-description__title">
                     Chi tiết sản phẩm
                 </div>
                 <div className="product-description__content" dangerouslySetInnerHTML={{ __html: product.description }}></div>
-                <div className="product-description__toggle">
-                    <Button size="sm" onClick={() => setDescriptionExpand(!descriptionExpand)}>
-                        {
-                            descriptionExpand ? 'Thu gọn' : 'Xem thêm'
-                        }
-                    </Button>
-                </div>
             </div>
         </div>
     )
