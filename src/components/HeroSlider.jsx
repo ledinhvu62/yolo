@@ -89,8 +89,8 @@ const HeroSliderItem = props => (
             </div>
         </div>
         <div className="hero-slider__item__image">
-            <img src={props.item.img1} alt="" />
-            <img src={props.item.img2} alt="" />
+            <img src={props.item.img1} alt="Ảnh 1" />
+            <img src={props.item.img2} alt="Ảnh 2" />
         </div>
     </div>
 )

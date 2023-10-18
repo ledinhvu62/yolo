@@ -2,11 +2,11 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useSearchParams } from 'react-router-dom'
 
-import productData from '../assets/fake-data/products'
-
 import Helmet from '../components/Helmet'
 import Grid from '../components/Grid'
 import ProductCard from '../components/ProductCard'
+
+import productData from '../assets/fake-data/products'
 
 const Search = () => {
     const keyword = useSelector((state) => state.keywordSearch.value)

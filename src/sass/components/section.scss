@@ -2,12 +2,12 @@
     margin-bottom: 80px;
 
     & > * ~ * {
-        margin-top: 70px;
+        margin-top: 40px;
     }
 
     &__title {
-        font-size: 2rem;
-        text-transform: capitalize;
-        text-align: center;
+        font-size: 1.75rem;
+        font-weight: bold;
+        text-transform: uppercase;
     }
 }

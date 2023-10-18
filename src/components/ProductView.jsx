@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 
-import { addItem } from '../redux/shopping-cart/cartItemsSlice'
-
 import Button from './Button'
+
+import { addItem } from '../redux/shopping-cart/cartItemsSlice'
 
 import numberWithCommas from '../utils/numberWithCommas'
 
@@ -75,17 +75,17 @@ const ProductView = props => {
                         className="product__images__list__item"
                         onMouseOver={() => setPreviewImg(product.image01)}
                     >
-                        <img src={product.image01} alt="" />
+                        <img src={product.image01} alt="Ảnh sản phẩm 1" />
                     </div>
                     <div
                         className="product__images__list__item"
                         onMouseOver={() => setPreviewImg(product.image02)}
                     >
-                        <img src={product.image02} alt="" />
+                        <img src={product.image02} alt="Ảnh sản phẩm 2" />
                     </div>
                 </div>
                 <div className="product__images__main">
-                    <img src={previewImg} alt="" />
+                    <img src={previewImg} alt="Ảnh sản phẩm" />
                 </div>
                 <div className="product-description">
                     <div className="product-description__title">

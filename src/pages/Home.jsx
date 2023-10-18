@@ -12,8 +12,6 @@ import heroSliderData from '../assets/fake-data/hero-slider'
 import policy from '../assets/fake-data/policy'
 import productData from '../assets/fake-data/products'
 
-import banner from '../assets/images/banner.png'
-
 const Home = () => {
     return (
         <Helmet title="Trang chủ">
@@ -52,7 +50,7 @@ const Home = () => {
             {/* best selling section */}
             <Section>
                 <SectionTitle>
-                    Sản phẩm bán chạy trong tuần
+                    Sản phẩm bán chạy
                 </SectionTitle>
                 <SectionBody>
                     <Grid
@@ -107,20 +105,10 @@ const Home = () => {
             </Section>
             {/* end new arrival section */}
 
-            {/* banner */}
-            <Section>
-                <SectionBody>
-                    <Link to="/catalog">
-                        <img src={banner} alt="" />
-                    </Link>
-                </SectionBody>
-            </Section>
-            {/* end banner */}
-
             {/* popular product section */}
             <Section>
                 <SectionTitle>
-                    Phổ biến
+                    Gợi ý cho bạn
                 </SectionTitle>
                 <SectionBody>
                     <Grid

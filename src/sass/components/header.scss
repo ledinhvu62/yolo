@@ -178,10 +178,10 @@
         }
 
         img {
-            height: 28px;
+            height: 36px;
 
             @include mobile {
-                height: 18px;
+                height: 24px;
             }
         }
     }

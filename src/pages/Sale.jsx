@@ -1,34 +1,18 @@
-import React, { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import React from 'react'
 
 import Helmet from '../components/Helmet'
-import Section, { SectionBody, SectionTitle } from '../components/Section'
+import Section, { SectionBody } from '../components/Section'
 import Grid from '../components/Grid'
 import ProductCard from '../components/ProductCard'
-import ProductView from '../components/ProductView'
 
 import productData from '../assets/fake-data/products'
 
-const Product = () => {
-    const { slug } = useParams()
-    const product = productData.getProductBySlug(slug)
-    const relatedProducts = productData.getProducts(10)
-
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [product])
+const Sale = () => {
+    const saleProducts = productData.getProducts(10)
 
     return (
-        <Helmet title={product.title}>
+        <Helmet title="Sale">
             <Section>
-                <SectionBody>
-                    <ProductView product={product} />
-                </SectionBody>
-            </Section>
-            <Section>
-                <SectionTitle>
-                    Sản phẩm liên quan
-                </SectionTitle>
                 <SectionBody>
                     <Grid
                         col={5}
@@ -37,7 +21,7 @@ const Product = () => {
                         gap={20}
                     >
                         {
-                            relatedProducts.map((item, index) => (
+                            saleProducts.map((item, index) => (
                                 <ProductCard
                                     key={index}
                                     img01={item.image01}
@@ -55,4 +39,4 @@ const Product = () => {
     )
 }
 
-export default Product
+export default Sale

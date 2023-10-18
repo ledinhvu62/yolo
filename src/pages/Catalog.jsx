@@ -117,7 +117,7 @@ const Catalog = () => {
                     </div>
                     <div className="catalog__filter__widget">
                         <div className="catalog__filter__widget__title">
-                            Danh mục sản phẩm
+                            Loại sản phẩm
                         </div>
                         <div className="catalog__filter__widget__content">
                             {

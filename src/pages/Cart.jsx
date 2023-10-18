@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
-import productData from '../assets/fake-data/products'
-
 import Helmet from '../components/Helmet'
 import Button from '../components/Button'
 import CartItem from '../components/CartItem'
+
+import productData from '../assets/fake-data/products'
 
 import numberWithCommas from '../utils/numberWithCommas'
 

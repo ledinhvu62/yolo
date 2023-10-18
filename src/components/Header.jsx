@@ -16,8 +16,8 @@ const mainNav = [
         path: "/catalog"
     },
     {
-        display: "Phụ kiện",
-        path: "/accessories"
+        display: "Sale",
+        path: "/sale"
     },
     {
         display: "Liên hệ",
@@ -106,7 +106,7 @@ const Header = () => {
                             className="header__search__input"
                             value={keyword}
                             type="text"
-                            placeholder="Bạn muốn tìm kiếm?"
+                            placeholder="Tìm kiếm"
                             onChange={e => dispatch(set(e.target.value))}
                             onKeyDown={e => e.key === 'Enter' && navigate('/search')}
                         />
