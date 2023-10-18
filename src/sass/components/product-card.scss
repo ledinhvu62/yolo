@@ -65,14 +65,8 @@
 
     &__price {
         color: $txt-main-color;
-        font-size: 1.5rem;
-        font-weight: 500;
+        font-size: 1.25rem;
+        font-weight: bold;
         margin-bottom: 10px;
-
-        &__old {
-            color: $txt-second-color;
-            margin-left: 20px;
-            font-size: 1.25rem;
-        }
     }
 }

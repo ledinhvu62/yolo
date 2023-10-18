@@ -31,7 +31,7 @@
         }
 
         @include mobile {
-            padding-top: unset;
+            padding-top: $header-mobile-height;
         }
 
         &.active {
@@ -111,12 +111,6 @@
 
             @include tablet {
                 width: 100%;
-                height: 60%;
-            }
-
-            @include mobile {
-                margin-top: 40px;
-                width: 80%;
                 height: 60%;
             }
 
