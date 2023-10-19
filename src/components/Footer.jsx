@@ -8,39 +8,47 @@ import logo from '../assets/images/logo.png'
 const footerAboutLinks = [
     {
         display: "Giới thiệu",
-        path: "/about"
+        path: "/about",
     },
     {
         display: "Liên hệ",
-        path: "/about"
+        path: "/contact",
     },
     {
         display: "Tuyển dụng",
-        path: "/about"
+        path: "/about",
     },
     {
         display: "Tin tức",
-        path: "/about"
+        path: "/about",
     },
     {
         display: "Hệ thống cửa hàng",
-        path: "/about"
-    }
+        path: "/about",
+    },
 ]
 
 const footerCustomerLinks = [
     {
+        display: "Chính sách khách hàng thân thiết",
+        path: "/about",
+    },
+    {
         display: "Chính sách đổi trả",
-        path: "/about"
+        path: "/about",
     },
     {
         display: "Chính sách bảo hành",
-        path: "/about"
+        path: "/about",
     },
     {
-        display: "Chính sách hoàn tiền",
-        path: "/about"
-    }
+        display: "Chính sách thanh toán",
+        path: "/about",
+    },
+    {
+        display: "Chính sách bảo mật",
+        path: "/about",
+    },
 ]
 
 const Footer = () => {
@@ -55,18 +63,19 @@ const Footer = () => {
                 >
                     <div>
                         <div className="footer__title">
-                            Tổng đài hỗ trợ
+                            Đăng ký nhận thông tin
                         </div>
                         <div className="footer__content">
-                            <p>
-                                Liên hệ đặt hàng <strong>0123456789</strong>
-                            </p>
-                            <p>
-                                Thắc mắc đơn hàng <strong>0123456789</strong>
-                            </p>
-                            <p>
-                                Góp ý khiếu nại <strong>0123456789</strong>
-                            </p>
+                            <div className="footer__register">
+                                <input
+                                    className="footer__register__input"
+                                    type="text"
+                                    placeholder="Nhập email"
+                                />
+                                <div className="footer__register__btn">
+                                    Đăng ký
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div>
