@@ -63,23 +63,6 @@ const Footer = () => {
                 >
                     <div>
                         <div className="footer__title">
-                            Đăng ký nhận thông tin
-                        </div>
-                        <div className="footer__content">
-                            <div className="footer__register">
-                                <input
-                                    className="footer__register__input"
-                                    type="text"
-                                    placeholder="Nhập email"
-                                />
-                                <div className="footer__register__btn">
-                                    Đăng ký
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div className="footer__title">
                             Về Yolo
                         </div>
                         <div className="footer__content">

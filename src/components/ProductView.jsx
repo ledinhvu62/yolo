@@ -165,13 +165,19 @@ const ProductView = props => {
                     <Button
                         color="main"
                         backgroundColor="white"
+                        size="block"
                         onClick={() => addToCart()}
                     >
                         Thêm vào giỏ hàng
                     </Button>
                 </div>
                 <div className="product__info__item">
-                    <Button onClick={() => goToCart()}>Mua ngay</Button>
+                    <Button
+                        size="block"
+                        onClick={() => goToCart()}
+                    >
+                        Mua ngay
+                    </Button>
                 </div>
             </div>
             <div className="product-description tablet-mobile">

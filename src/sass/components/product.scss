@@ -156,17 +156,13 @@
                     border-bottom: 1px solid $txt-second-color;
                 }
             }
-
-            button {
-                width: 100%;
-            }
         }
     }
 }
 
 .product-description {
     width: 100%;
-    padding: 2rem 2rem 3rem;
+    padding-right: 2rem;
     height: fit-content;
     overflow: hidden;
     position: relative;
@@ -177,6 +173,7 @@
 
     &.tablet-mobile {
         display: none;
+        padding-right: 0;
 
         @include tablet {
             display: block;
