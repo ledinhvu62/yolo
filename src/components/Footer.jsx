@@ -28,11 +28,7 @@ const footerAboutLinks = [
     },
 ]
 
-const footerCustomerLinks = [
-    {
-        display: "Chính sách khách hàng thân thiết",
-        path: "/about",
-    },
+const footerCustomerSupportLinks = [
     {
         display: "Chính sách đổi trả",
         path: "/about",
@@ -51,6 +47,13 @@ const footerCustomerLinks = [
     },
 ]
 
+const footerInfo = [
+    "Mã số thuế: 1234567890",
+    "Địa chỉ: Số 04 Phan Chu Trinh, P.12, Q.Bình Thạnh, TP.Hồ Chí Minh",
+    "Số điện thoại: 0123456789",
+    "Email: cskh@yolo.vn",
+]
+
 const Footer = () => {
     return (
         <footer className="footer">
@@ -61,6 +64,20 @@ const Footer = () => {
                     smCol={1}
                     gap={10}
                 >
+                    <div>
+                        <div className="footer__title">
+                            Công ty Cổ phần Yolo
+                        </div>
+                        <div className="footer__content">
+                            {
+                                footerInfo.map((item, index) => (
+                                    <p key={index}>
+                                        {item}
+                                    </p>
+                                ))
+                            }
+                        </div>
+                    </div>
                     <div>
                         <div className="footer__title">
                             Về Yolo
@@ -83,7 +100,7 @@ const Footer = () => {
                         </div>
                         <div className="footer__content">
                             {
-                                footerCustomerLinks.map((item, index) => (
+                                footerCustomerSupportLinks.map((item, index) => (
                                     <p key={index}>
                                         <Link to={item.path}>
                                             {item.display}
@@ -95,14 +112,14 @@ const Footer = () => {
                     </div>
                     <div className="footer__about">
                         <Link to="/">
-                            <img src={logo} className="footer__logo" alt="" />
+                            <img src={logo} className="footer__logo" alt="Logo Yolo" />
                         </Link>
                         <div className="footer__title">
                             Theo dõi chúng tôi tại
                         </div>
                         <div className="footer__content">
                             <a className="footer__social-link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                                <i className="bx bxl-facebook-circle"></i>
+                                <i className="bx bxl-facebook"></i>
                             </a>
                             <a className="footer__social-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
                                 <i className="bx bxl-instagram"></i>
@@ -113,6 +130,10 @@ const Footer = () => {
                         </div>
                     </div>
                 </Grid>
+                <div className="footer__copyright">
+                    <hr/>
+                    <p>© YOLO - Bản quyền thuộc về Công ty Cổ phần Yolo</p>
+                </div>
             </div>
         </footer>
     )

@@ -79,7 +79,7 @@ const Header = () => {
                     </div>
                     <div className="header__logo">
                         <Link to="/">
-                            <img src={logo} alt="" />
+                            <img src={logo} alt="Logo Yolo" />
                         </Link>
                     </div>
                     <div className="header__menu__left" ref={menuLeft}>
