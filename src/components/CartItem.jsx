@@ -41,7 +41,7 @@ const CartItem = props => {
     return (
         <div className="cart__item">
             <div className="cart__item__image">
-                <img src={item.product.image01} alt="" />
+                <img src={item.product.image01} alt="Ảnh sản phẩm" />
             </div>
             <div className="cart__item__info">
                 <div className="cart__item__info__name">
@@ -55,7 +55,7 @@ const CartItem = props => {
                 <div className="cart__item__info__quantity">
                     <div className="product__info__item__quantity">
                         <div
-                            className="product__info__item__quantity__btn-minus"
+                            className={`product__info__item__quantity__btn-minus ${quantity === 1 ? '' : 'active'}`}
                             onClick={() => updateQuantity('-')}
                         >
                             <i className="bx bx-minus"></i>

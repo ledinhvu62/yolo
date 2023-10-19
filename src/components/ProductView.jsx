@@ -145,7 +145,7 @@ const ProductView = props => {
                     </div>
                     <div className="product__info__item__quantity">
                         <div
-                            className="product__info__item__quantity__btn-minus"
+                            className={`product__info__item__quantity__btn-minus ${quantity === 1 ? '' : 'active'}`}
                             onClick={() => updateQuantity('minus')}
                         >
                             <i className="bx bx-minus"></i>
@@ -169,6 +169,8 @@ const ProductView = props => {
                     >
                         Thêm vào giỏ hàng
                     </Button>
+                </div>
+                <div className="product__info__item">
                     <Button onClick={() => goToCart()}>Mua ngay</Button>
                 </div>
             </div>

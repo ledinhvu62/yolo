@@ -62,10 +62,13 @@
         margin-bottom: 20px;
 
         &__image {
+            height: 150px;
             margin-right: 20px;
+            border-radius: 4px;
+            overflow: hidden;
 
             img {
-                height: 150px;
+                height: 100%;
             }
         }
 
