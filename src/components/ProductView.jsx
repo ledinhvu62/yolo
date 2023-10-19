@@ -103,7 +103,7 @@ const ProductView = props => {
                 </div>
                 <div className="product__info__item">
                     <div className="product__info__item__title">
-                        Màu sắc
+                        Màu sắc:
                     </div>
                     <div className="product__info__item__list">
                         {
@@ -121,7 +121,7 @@ const ProductView = props => {
                 </div>
                 <div className="product__info__item">
                     <div className="product__info__item__title">
-                        Kích cỡ
+                        Kích cỡ:
                     </div>
                     <div className="product__info__item__list">
                         {
@@ -141,7 +141,7 @@ const ProductView = props => {
                 </div>
                 <div className="product__info__item">
                     <div className="product__info__item__title">
-                        Số lượng
+                        Số lượng:
                     </div>
                     <div className="product__info__item__quantity">
                         <div
@@ -172,7 +172,7 @@ const ProductView = props => {
                     <Button onClick={() => goToCart()}>Mua ngay</Button>
                 </div>
             </div>
-            <div className="product-description mobile">
+            <div className="product-description tablet-mobile">
                 <div className="product-description__title">
                     Chi tiết sản phẩm
                 </div>
