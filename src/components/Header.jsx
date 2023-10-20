@@ -71,7 +71,7 @@ const Header = () => {
             <div className="container">
                 <div className="header__menu">
                     <div className="header__menu__mobile-toggle" onClick={menuToggle}>
-                        <i className="bx bx-menu-alt-left"></i>
+                        <i className="bx bx-menu"></i>
                     </div>
                     <div className="header__logo">
                         <Link to="/">

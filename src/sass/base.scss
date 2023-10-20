@@ -77,11 +77,11 @@ img {
     margin: auto;
 
     @include tablet {
-        padding: 0 80px;
+        padding: 0 60px;
     }
 
     @include mobile {
-        padding: 0 40px;
+        padding: 0 20px;
     }
 }
 

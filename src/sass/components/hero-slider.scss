@@ -1,166 +1,83 @@
-.hero-slider {
-    $mb: 50px;
-    height: 100vh;
-    max-height: 1080px;
+.slider {
+    width: 100%;
+    height: 300px;
     position: relative;
-    margin-bottom: $mb;
-    margin-top: calc(#{$header-height} * -1);
-    background-color: blue;
+    margin-bottom: 60px;
 
     @include tablet {
-        margin-top: calc(#{$header-tablet-height} * -1);
-        margin-bottom: calc(#{$header-tablet-height} + $mb);
+        margin-bottom: 40px;
+        height: 250px;
     }
 
     @include mobile {
-        margin-top: calc(#{$header-mobile-height} * -1);
-        margin-bottom: calc(#{$header-mobile-height} + $mb);
+        height: 150px;
+        margin-bottom: 20px;
     }
 
     &__item {
-        @include flex(center, space-between);
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
         position: absolute;
+        display: none;
         inset: 0;
-        //background-color: red;
-
-        @include tablet {
-            @include flex(center, flex-end);
-            flex-direction: column-reverse;
-            padding-top: $header-tablet-height;
-            padding-bottom: 40px;
-        }
-
-        @include mobile {
-            padding-top: $header-mobile-height;
-        }
 
         &.active {
-            opacity: 1;
-            visibility: visible;
+            display: block;
             pointer-events: visible;
         }
 
-        &__info {
-            width: 58.33%;
-
-            @include tablet {
-                @include flex(center, center);
-                flex-direction: column;
-                width: 100%;
-            }
-
-            &__title,
-            &__description {
-                margin-bottom: 30px;
-
-                @include tablet {
-                    margin-bottom: 15px;
-                }
-            }
-
-            &__title {
-                font-family: "M PLUS Rounded 1c", sans-serif;
-                font-weight: 600;
-                font-size: 3rem;
-                line-height: 4.5rem;
-                overflow: hidden;
-
-                @include tablet {
-                    font-size: 2.5rem;
-                    line-height: 3.75rem;
-                }
-            }
-
-            &__description {
-                color: $txt-second-color;
-                font-size: 1.5rem;
-                line-height: 2.25rem;
-                text-align: justify;
-                overflow: hidden;
-
-                @include mobile {
-                    font-size: 1.25rem;
-                    line-height: 2rem;
-                }
-            }
-
-            &__btn {
-                overflow: hidden;
-            }
-
-            &__title > span,
-            &__description > span,
-            &__btn > button {
-                display: block;
-                transform: translateY(-100%);
-                transition: transform 0.5s ease;
-            }
-        }
-
-        &.active &__info {
-            &__title > span,
-            &__description > span,
-            &__btn > button {
-                transform: translateY(0);
-            }
-        }
-
-        &__image {
-            @include flex(center, center);
-            pointer-events: none;
-
-            @include tablet {
-                height: 60%;
-            }
-
-            @include mobile {
-                height: 40%;
-            }
-
-            img {
-                height: 70vh;
-                transform: scale(0) rotate(65deg);
-                transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-                @include tablet {
-                    height: 100%;
-                }
-            }
-        }
-
-        &.active &__image > img {
-            transform: scale(1) rotate(0);
+        img {
+            width: 100%;
+            height: 100%;
         }
     }
 
     &__control {
-        @include flex(center, center);
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-
-        &__item ~ &__item {
-            margin-left: 10px;
+        &__item__left {
+            @include flex(center, center);
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            font-size: 3rem;
+            background-color: rgb(204, 201, 201);
+            border-radius: 50%;
         }
 
-        &__item {
+        &__item__right {
             @include flex(center, center);
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            font-size: 3rem;
+            background-color: rgb(204, 201, 201);
+            border-radius: 50%;
+        }
+
+        &__item__central {
+            @include flex(center, center);
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &__item__dot {
             font-size: 2rem;
-            
-            &:first-child,
-            &:last-child {
-                &:hover {
-                    color: $main-color;
-                    cursor: pointer;
-                }
+            height: 8px;
+            width: 8px;
+            background-color: white;
+            border-radius: 50%;
+            margin-left: 10px;
+
+            &:nth-child(1) {
+                margin-left: 0;
             }
 
-            .index {
-                font-size: 1.75rem;
+            &.active {
+                background-color: $main-color;
+                border: 1px solid white;
+                height: 10px;
+                width: 10px;
             }
         }
     }

@@ -2,27 +2,26 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import Helmet from '../components/Helmet'
-import HeroSlider from '../components/HeroSlider'
+import Slider from '../components/Slider'
 import Section, { SectionTitle, SectionBody } from '../components/Section'
 import PolicyCard from '../components/PolicyCard'
 import Grid from '../components/Grid'
 import ProductCard from '../components/ProductCard'
 
-import heroSliderData from '../assets/fake-data/hero-slider'
+import slider from '../assets/fake-data/slider'
 import policy from '../assets/fake-data/policy'
 import productData from '../assets/fake-data/products'
 
 const Home = () => {
     return (
         <Helmet title="Trang chủ">
-            {/* hero slider */}
-            <HeroSlider
-                data={heroSliderData}
-                control={true}
+            {/* slider */}
+            <Slider
+                data={slider}
                 auto={true}
                 timeOut={5000}
             />
-            {/* end hero slider */}
+            {/* end slider */}
 
             {/* policy section */}
             <Section>
