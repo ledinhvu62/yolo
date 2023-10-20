@@ -30,39 +30,6 @@ const Contact = () => {
     return (
         <Helmet title="Liên hệ">
             <div className="contact">
-                <div className="contact__info">
-                    <Grid
-                        col={3}
-                        mdCol={1}
-                        smCol={1}
-                        gap={20}
-                    >
-                        <div className="contact__info__item">
-                            <h4 className="contact__info__item__title">
-                                Địa chỉ:
-                            </h4>
-                            <p className="contact__info__item__text">
-                                04 Phan Chu Trinh, Q.Bình Thạnh, TPHCM
-                            </p>
-                        </div>
-                        <div className="contact__info__item">
-                            <h4 className="contact__info__item__title">
-                                Email:
-                            </h4>
-                            <p className="contact__info__item__text">
-                                contact@yolo.vn
-                            </p>
-                        </div>
-                        <div className="contact__info__item">
-                            <h4 className="contact__info__item__title">
-                                Số điện thoại:
-                            </h4>
-                            <p className="contact__info__item__text">
-                                0123456789
-                            </p>
-                        </div>
-                    </Grid>
-                </div>
                 <div className="contact__map-and-form">
                     <Grid
                         col={2}

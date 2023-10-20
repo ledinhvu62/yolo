@@ -1,19 +1,4 @@
 .contact {
-    &__info {
-        margin-bottom: 50px;
-
-        &__item {
-            padding: 10px;
-            background-color: rgba(0, 0, 0, 0.05);
-            border-radius: 4px;
-            font-size: 1.25rem;
-
-            &__title {
-                margin-bottom: 5px;
-            }
-        }
-    }
-
     &__map-and-form {
         &__map {
             width: 100%;
