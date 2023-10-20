@@ -1,0 +1,105 @@
+.slider {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    margin-bottom: 60px;
+
+    @include tablet {
+        margin-bottom: 40px;
+        height: 250px;
+    }
+
+    @include mobile {
+        height: 150px;
+        margin-bottom: 20px;
+    }
+
+    &__item {
+        position: absolute;
+        display: none;
+        inset: 0;
+
+        &.active {
+            display: block;
+            pointer-events: visible;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__btn-prev,
+    &__btn-next {
+        @include flex(center, center);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2.5rem;
+        background-color: #a6aaae;
+        border-radius: 50%;
+        color: $txt-white;
+
+        @include mobile {
+            font-size: 1.75rem;
+        }
+    }
+
+    &__btn-prev {
+        left: 15px;
+
+        @include mobile {
+            left: 10px;
+        }
+    }
+
+    &__btn-next {
+        right: 15px;
+
+        @include mobile {
+            right: 10px;
+        }
+    }
+
+    &__dot {
+        @include flex(center, center);
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include mobile {
+            bottom: 10px;
+        }
+    }
+
+    &__dot__item {
+        height: 8px;
+        width: 8px;
+        background-color: $main-bg;
+        border-radius: 50%;
+        margin-left: 10px;
+
+        @include mobile {
+            height: 6px;
+            width: 6px;
+        }
+
+        &:nth-child(1) {
+            margin-left: 0;
+        }
+
+        &.active {
+            background-color: $main-color;
+            border: 1px solid white;
+            height: 10px;
+            width: 10px;
+
+            @include mobile {
+                height: 8px;
+                width: 8px;
+            }
+        }
+    }
+}

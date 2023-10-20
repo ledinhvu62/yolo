@@ -19,6 +19,10 @@ const Slider = props => {
         setActiveSlide(index)
     }
 
+    const selectSlide = (index) => {
+        setActiveSlide(index)
+    }
+
     useEffect(() => {
         if (props.auto) {
             const slideAuto = setInterval(() => {
@@ -36,25 +40,29 @@ const Slider = props => {
             {
                 data.map((item, index) => (
                     <div key={index} className={`slider__item ${index === activeSlide ? 'active' : ''}`}>
-                        <img src={item.img} alt=""></img>
+                        <Link to={`${item.path}`}>
+                            <img src={item.img} alt=""></img>
+                        </Link>
                     </div>
                 ))
             }
-            <div className="slider__control">
-                <div className="slider__control__item__left" onClick={prevSlide}>
-                    <i className="bx bx-chevron-left"></i>
-                </div>
-                <div className="slider__control__item__central">
+            <div className="slider__btn-prev" onClick={prevSlide}>
+                <i className="bx bx-chevron-left"></i>
+            </div>
+            <div className="slider__dot">
                 {
                     data.map((item, index) => (
-                        <div key={index} className={`slider__control__item__dot ${index === activeSlide ? 'active' : ''}`}>
+                        <div
+                            key={index}
+                            className={`slider__dot__item ${index === activeSlide ? 'active' : ''}`}
+                            onClick={() => selectSlide(index)}
+                        >
                         </div>
                     ))
                 }
-                </div>
-                <div className="slider__control__item__right" onClick={nextSlide}>
-                    <i className="bx bx-chevron-right"></i>
-                </div>
+            </div>
+            <div className="slider__btn-next" onClick={nextSlide}>
+                <i className="bx bx-chevron-right"></i>
             </div>
         </div>
     )
