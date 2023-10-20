@@ -13,7 +13,7 @@ const slider = [
     },
     {
         img: slider_03,
-        path: "/catalog/ao-ni-dai-tay-2",
+        path: "/catalog/ao-2-day-dang-om-1",
     },
 ]
 

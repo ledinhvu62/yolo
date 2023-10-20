@@ -1,7 +1,7 @@
 const category = [
     {
-        display: "Áo nỉ",
-        categorySlug: "ao-ni",
+        display: "Áo 2 dây",
+        categorySlug: "ao-2-day",
     },
     {
         display: "Áo polo",

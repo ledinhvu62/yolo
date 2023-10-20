@@ -16,6 +16,10 @@ const colors = [
         color: "white",
     },
     {
+        display: "Vàng",
+        color: "yellow",
+    },
+    {
         display: "Xanh dương",
         color: "blue",
     },

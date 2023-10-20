@@ -164,22 +164,20 @@ const products = [
         `,
     },
     {
-        title: "Áo Nỉ Dài Tay 1",
-        price: '539000',
+        title: "Áo 2 Dây Dáng Ôm 1",
+        price: '149000',
         image01: product_07_image_01,
         image02: product_07_image_02,
-        categorySlug: "ao-ni",
-        colors: ["blue", "black"],
-        slug: "ao-ni-dai-tay-1",
-        size: ["m", "l"],
+        categorySlug: "ao-2-day",
+        colors: ["yellow", "white"],
+        slug: "ao-2-day-dang-om-1",
+        size: ["s", "m"],
         description: `
             <div>
-                <p>- Áo thu đông nữ chất liệu nỉ dày dặn.</p>
-                <p>- Thành phần: 60% Polyester + 35% Cotton + 5% Spandex.</p>
-                <p>- Mặt trong có lớp lông nhung mềm mại, giữ form và rất ấm.</p>
-                <p>- Kiểu rộng cơ bản thích hợp với mọi dáng người.</p>
-                <p>- Điểm nhấn là hình in trẻ trung, cá tính trước ngực.</p>
-                <p>- Chiếc áo có thể mặc với nhiều phong cách và hoàn cảnh như: đi chơi, đi làm hoặc ở nhà đều phù hợp.</p>
+                <p>- Áo 2 dây nữ dáng ôm khoẻ khoắn, năng động.</p>
+                <p>- Thành phần: 95% Cotton + 5% Spandex.</p>
+                <p>- Chất vải thấm hút mồ hôi tốt, co giãn, đàn hồi ôm theo đường cong cơ thể.</p>
+                <p>- Thích hợp mặc ở nhà, mặc phối đồ đa dạng đi chơi, tập luyện thể thao.</p>
             </div>
         `,
     },
@@ -259,22 +257,20 @@ const products = [
         `,
     },
     {
-        title: "Áo Nỉ Dài Tay 2",
-        price: '539000',
+        title: "Áo 2 Dây Dáng Ôm 2",
+        price: '149000',
         image01: product_12_image_01,
         image02: product_12_image_02,
-        categorySlug: "ao-ni",
-        colors: ["black", "blue"],
-        slug: "ao-ni-dai-tay-2",
-        size: ["m", "l"],
+        categorySlug: "ao-2-day",
+        colors: ["white", "yellow"],
+        slug: "ao-2-day-dang-om-2",
+        size: ["s", "m"],
         description: `
             <div>
-                <p>- Áo thu đông nữ chất liệu nỉ dày dặn.</p>
-                <p>- Thành phần: 60% Polyester + 35% Cotton + 5% Spandex.</p>
-                <p>- Mặt trong có lớp lông nhung mềm mại, giữ form và rất ấm.</p>
-                <p>- Kiểu rộng cơ bản thích hợp với mọi dáng người.</p>
-                <p>- Điểm nhấn là hình in trẻ trung, cá tính trước ngực.</p>
-                <p>- Chiếc áo có thể mặc với nhiều phong cách và hoàn cảnh như: đi chơi, đi làm hoặc ở nhà đều phù hợp.</p>
+                <p>- Áo 2 dây nữ dáng ôm khoẻ khoắn, năng động.</p>
+                <p>- Thành phần: 95% Cotton + 5% Spandex.</p>
+                <p>- Chất vải thấm hút mồ hôi tốt, co giãn, đàn hồi ôm theo đường cong cơ thể.</p>
+                <p>- Thích hợp mặc ở nhà, mặc phối đồ đa dạng đi chơi, tập luyện thể thao.</p>
             </div>
         `,
     },
