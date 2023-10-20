@@ -170,15 +170,22 @@
     }
 
     &__logo {
+        min-width: 85px;
+
         @include tablet {
             position: absolute;
             top: 50%;
             left: 50%;
+            min-width: unset;
             transform: translate(-50%, -50%);
         }
 
         img {
-            height: 36px;
+            height: 40px;
+
+            @include tablet {
+                height: 32px;
+            }
 
             @include mobile {
                 height: 24px;

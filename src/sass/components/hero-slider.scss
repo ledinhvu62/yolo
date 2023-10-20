@@ -51,7 +51,7 @@
 
             &__title,
             &__description {
-                margin-bottom: 60px;
+                margin-bottom: 30px;
 
                 @include tablet {
                     margin-bottom: 15px;
@@ -61,8 +61,8 @@
             &__title {
                 font-family: "M PLUS Rounded 1c", sans-serif;
                 font-weight: 600;
-                font-size: 4.5rem;
-                line-height: 6.75rem;
+                font-size: 3rem;
+                line-height: 4.5rem;
                 overflow: hidden;
 
                 @include tablet {

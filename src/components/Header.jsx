@@ -4,19 +4,15 @@ import { useSelector, useDispatch } from 'react-redux'
 
 import { set, remove } from '../redux/search/keywordSearchSlice'
 
-import logo from '../assets/images/logo.png'
+import logo from '../assets/images/logo.svg'
 
 const mainNav = [
-    {
-        display: "Trang chủ",
-        path: "/"
-    },
     {
         display: "Sản phẩm",
         path: "/catalog"
     },
     {
-        display: "Sale",
+        display: "Giảm giá",
         path: "/sale"
     },
     {
@@ -130,7 +126,9 @@ const Header = () => {
                             </div>
                         </div>
                         <div className="header__menu__item header__menu__right__item">
-                            <i className="bx bx-user"></i>
+                            <Link to="/user">
+                                <i className="bx bx-user"></i>
+                            </Link>
                         </div>
                     </div>
                 </div>
