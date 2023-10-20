@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
+import '../../node_modules/swiped-events/dist/swiped-events.min.js'
 
 const Slider = props => {
     const data = props.data

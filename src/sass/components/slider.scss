@@ -42,24 +42,16 @@
         color: $txt-white;
 
         @include mobile {
-            font-size: 1.75rem;
+            display: none;
         }
     }
 
     &__btn-prev {
         left: 15px;
-
-        @include mobile {
-            left: 10px;
-        }
     }
 
     &__btn-next {
         right: 15px;
-
-        @include mobile {
-            right: 10px;
-        }
     }
 
     &__dot {
