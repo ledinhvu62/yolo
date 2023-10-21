@@ -14,7 +14,7 @@ import productData from '../assets/fake-data/products'
 
 const Home = () => {
     return (
-        <Helmet title="Trang chủ">
+        <Helmet title='Trang chủ'>
             {/* slider */}
             <Slider
                 data={slider}
@@ -33,13 +33,18 @@ const Home = () => {
                         gap={20}
                     >
                         {
-                            policy.map((item, index) => <Link key={index} to="/policy">
-                                <PolicyCard
-                                    name={item.name}
-                                    description={item.description}
-                                    icon={item.icon}
-                                />
-                            </Link>)
+                            policy.map((item, index) => (
+                                <Link
+                                    key={index}
+                                    to='/policy'
+                                >
+                                    <PolicyCard
+                                        name={item.name}
+                                        description={item.description}
+                                        icon={item.icon}
+                                    />
+                                </Link>
+                            ))
                         }
                     </Grid>
                 </SectionBody>

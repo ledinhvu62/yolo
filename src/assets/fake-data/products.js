@@ -50,14 +50,14 @@ const product_16_image_02 = require('../images/products/product-16 (2).jpg')
 
 const products = [
     {
-        title: "Áo Thun Clean Việt Nam 1",
+        title: 'Áo Thun Clean Việt Nam 1',
         price: '329000',
         image01: product_01_image_01,
         image02: product_01_image_02,
-        categorySlug: "ao-thun",
-        colors: ["turquoise", "blue", "white"],
-        slug: "ao-thun-clean-viet-nam-1",
-        size: ["s", "m", "l"],
+        categorySlug: 'ao-thun',
+        colors: ['turquoise', 'blue', 'white'],
+        slug: 'ao-thun-clean-viet-nam-1',
+        size: ['s', 'm', 'l'],
         description: `
             <div>
                 <p>- Áo thun nữ form suông rộng thoải mái, thành phần: 60% Cotton + 20% Polyester + 20% Recycle Polyester.</p>
@@ -69,14 +69,14 @@ const products = [
         `,
     },
     {
-        title: "Áo Thun Croptop 1",
+        title: 'Áo Thun Croptop 1',
         price: '199000',
         image01: product_02_image_01,
         image02: product_02_image_02,
-        categorySlug: "ao-thun",
-        colors: ["white", "black", "blue"],
-        slug: "ao-thun-croptop-1",
-        size: ["s"],
+        categorySlug: 'ao-thun',
+        colors: ['white', 'black', 'blue'],
+        slug: 'ao-thun-croptop-1',
+        size: ['s'],
         description: `
             <div>
                 <p>- Áo croptop nữ cá tính với chữ in nổi bật trước ngực, in puff tạo hiệu ứng nổi đặc biệt.</p>
@@ -88,14 +88,14 @@ const products = [
         `,
     },
     {
-        title: "Áo Thun Dập Chữ Nổi",
+        title: 'Áo Thun Dập Chữ Nổi',
         price: '299000',
         image01: product_03_image_01,
         image02: product_03_image_02,
-        categorySlug: "ao-thun",
-        colors: ["turquoise", "black"],
-        slug: "ao-thun-dap-chu-noi",
-        size: ["s", "m"],
+        categorySlug: 'ao-thun',
+        colors: ['turquoise', 'black'],
+        slug: 'ao-thun-dap-chu-noi',
+        size: ['s', 'm'],
         description: `
             <div>
                 <p>- Chất liệu 100% Cotton.</p>
@@ -107,14 +107,14 @@ const products = [
         `,
     },
     {
-        title: "Áo Thun Yoguu 1",
+        title: 'Áo Thun Yoguu 1',
         price: '329000',
         image01: product_04_image_01,
         image02: product_04_image_02,
-        categorySlug: "ao-thun",
-        colors: ["orange", "black", "turquoise", "white"],
-        slug: "ao-thun-yoguu-1",
-        size: ["l", "xl"],
+        categorySlug: 'ao-thun',
+        colors: ['orange', 'black', 'turquoise', 'white'],
+        slug: 'ao-thun-yoguu-1',
+        size: ['l', 'xl'],
         description: `
             <div>
                 <p>- Áo thun YOGUU dấu ấn khằng định chất riêng thế hệ trẻ.</p>
@@ -126,14 +126,14 @@ const products = [
         `,
     },
     {
-        title: "Áo Thun In Gấu",
+        title: 'Áo Thun In Gấu',
         price: '249000',
         image01: product_05_image_01,
         image02: product_05_image_02,
-        categorySlug: "ao-thun",
-        colors: ["black"],
-        slug: "ao-thun-in-gau",
-        size: ["s"],
+        categorySlug: 'ao-thun',
+        colors: ['black'],
+        slug: 'ao-thun-in-gau',
+        size: ['s'],
         description: `
             <div>
                 <p>- Áo thun nữ Cotton BCI (tổ chức phi lợi nhuận toàn cầu về chương trình bông bền vững).</p>
@@ -146,14 +146,14 @@ const products = [
         `,
     },
     {
-        title: "Áo Thun In Tràn",
+        title: 'Áo Thun In Tràn',
         price: '369000',
         image01: product_06_image_01,
         image02: product_06_image_02,
-        categorySlug: "ao-thun",
-        colors: ["orange", "turquoise"],
-        slug: "ao-thun-in-tran",
-        size: ["s", "m"],
+        categorySlug: 'ao-thun',
+        colors: ['orange', 'turquoise'],
+        slug: 'ao-thun-in-tran',
+        size: ['s', 'm'],
         description: `
             <div>
                 <p>- Một thiết kế áo phông nữ kiểu dáng freesize - rộng rãi, thoải mái.</p>
@@ -164,14 +164,14 @@ const products = [
         `,
     },
     {
-        title: "Áo 2 Dây Dáng Ôm 1",
+        title: 'Áo 2 Dây Dáng Ôm 1',
         price: '149000',
         image01: product_07_image_01,
         image02: product_07_image_02,
-        categorySlug: "ao-2-day",
-        colors: ["yellow", "white"],
-        slug: "ao-2-day-dang-om-1",
-        size: ["s", "m"],
+        categorySlug: 'ao-2-day',
+        colors: ['yellow', 'white'],
+        slug: 'ao-2-day-dang-om-1',
+        size: ['s', 'm'],
         description: `
             <div>
                 <p>- Áo 2 dây nữ dáng ôm khoẻ khoắn, năng động.</p>
@@ -182,14 +182,14 @@ const products = [
         `,
     },
     {
-        title: "Áo Polo Siro Rayon 1",
+        title: 'Áo Polo Siro Rayon 1',
         price: '349000',
         image01: product_08_image_01,
         image02: product_08_image_02,
-        categorySlug: "ao-polo",
-        colors: ["red", "black", "orange", "white"],
-        slug: "ao-polo-siro-rayon-1",
-        size: ["s", "m", "l"],
+        categorySlug: 'ao-polo',
+        colors: ['red', 'black', 'orange', 'white'],
+        slug: 'ao-polo-siro-rayon-1',
+        size: ['s', 'm', 'l'],
         description: `
             <div>
                 <p>- Áo polo nữ bo kẻ hiện đại, mềm thoáng.</p>
@@ -200,14 +200,14 @@ const products = [
         `,
     },
     {
-        title: "Áo Thun Croptop 2",
+        title: 'Áo Thun Croptop 2',
         price: '199000',
         image01: product_09_image_01,
         image02: product_09_image_02,
-        categorySlug: "ao-thun",
-        colors: ["black", "blue", "white"],
-        slug: "ao-thun-croptop-2",
-        size: ["s"],
+        categorySlug: 'ao-thun',
+        colors: ['black', 'blue', 'white'],
+        slug: 'ao-thun-croptop-2',
+        size: ['s'],
         description: `
             <div>
                 <p>- Áo croptop nữ cá tính với chữ in nổi bật trước ngực, in puff tạo hiệu ứng nổi đặc biệt.</p>
@@ -219,14 +219,14 @@ const products = [
         `,
     },
     {
-        title: "Áo Thun Yoguu 2",
+        title: 'Áo Thun Yoguu 2',
         price: '329000',
         image01: product_10_image_01,
         image02: product_10_image_02,
-        categorySlug: "ao-thun",
-        colors: ["turquoise", "black", "orange", "white"],
-        slug: "ao-thun-yoguu-2",
-        size: ["l", "xl"],
+        categorySlug: 'ao-thun',
+        colors: ['turquoise', 'black', 'orange', 'white'],
+        slug: 'ao-thun-yoguu-2',
+        size: ['l', 'xl'],
         description: `
             <div>
                 <p>- Áo thun YOGUU dấu ấn khằng định chất riêng thế hệ trẻ.</p>
@@ -238,14 +238,14 @@ const products = [
         `,
     },
     {
-        title: "Áo Thun Clean Việt Nam 2",
+        title: 'Áo Thun Clean Việt Nam 2',
         price: '329000',
         image01: product_11_image_01,
         image02: product_11_image_02,
-        categorySlug: "ao-thun",
-        colors: ["blue", "turquoise", "white"],
-        slug: "ao-thun-clean-viet-nam-2",
-        size: ["s", "m", "l"],
+        categorySlug: 'ao-thun',
+        colors: ['blue', 'turquoise', 'white'],
+        slug: 'ao-thun-clean-viet-nam-2',
+        size: ['s', 'm', 'l'],
         description: `
             <div>
                 <p>- Áo thun nữ form suông rộng thoải mái, thành phần: 60% Cotton + 20% Polyester + 20% Recycle Polyester.</p>
@@ -257,14 +257,14 @@ const products = [
         `,
     },
     {
-        title: "Áo 2 Dây Dáng Ôm 2",
+        title: 'Áo 2 Dây Dáng Ôm 2',
         price: '149000',
         image01: product_12_image_01,
         image02: product_12_image_02,
-        categorySlug: "ao-2-day",
-        colors: ["white", "yellow"],
-        slug: "ao-2-day-dang-om-2",
-        size: ["s", "m"],
+        categorySlug: 'ao-2-day',
+        colors: ['white', 'yellow'],
+        slug: 'ao-2-day-dang-om-2',
+        size: ['s', 'm'],
         description: `
             <div>
                 <p>- Áo 2 dây nữ dáng ôm khoẻ khoắn, năng động.</p>
@@ -275,14 +275,14 @@ const products = [
         `,
     },
     {
-        title: "Áo Thun Ignite",
+        title: 'Áo Thun Ignite',
         price: '349000',
         image01: product_13_image_01,
         image02: product_13_image_02,
-        categorySlug: "ao-thun",
-        colors: ["black", "white"],
-        slug: "ao-thun-ignite",
-        size: ["m"],
+        categorySlug: 'ao-thun',
+        colors: ['black', 'white'],
+        slug: 'ao-thun-ignite',
+        size: ['m'],
         description: `
             <div>
                 <p>- Chất liệu Bột Ngô: 80% Cotton + 20% Polyester I-scra Softcool.</p>
@@ -294,14 +294,14 @@ const products = [
         `,
     },
     {
-        title: "Áo Polo Siro Rayon 2",
+        title: 'Áo Polo Siro Rayon 2',
         price: '349000',
         image01: product_14_image_01,
         image02: product_14_image_02,
-        categorySlug: "ao-polo",
-        colors: ["white", "black", "orange", "red"],
-        slug: "ao-polo-siro-rayon-2",
-        size: ["s", "m", "l"],
+        categorySlug: 'ao-polo',
+        colors: ['white', 'black', 'orange', 'red'],
+        slug: 'ao-polo-siro-rayon-2',
+        size: ['s', 'm', 'l'],
         description: `
             <div>
                 <p>- Áo polo nữ bo kẻ hiện đại, mềm thoáng.</p>
@@ -312,14 +312,14 @@ const products = [
         `,
     },
     {
-        title: "Áo Thun Croptop 3",
+        title: 'Áo Thun Croptop 3',
         price: '199000',
         image01: product_15_image_01,
         image02: product_15_image_02,
-        categorySlug: "ao-thun",
-        colors: ["blue", "black", "white"],
-        slug: "ao-thun-croptop-3",
-        size: ["s"],
+        categorySlug: 'ao-thun',
+        colors: ['blue', 'black', 'white'],
+        slug: 'ao-thun-croptop-3',
+        size: ['s'],
         description: `
             <div>
                 <p>- Áo croptop nữ cá tính với chữ in nổi bật trước ngực, in puff tạo hiệu ứng nổi đặc biệt.</p>
@@ -331,14 +331,14 @@ const products = [
         `,
     },
     {
-        title: "Áo Polo Siro Rayon 3",
+        title: 'Áo Polo Siro Rayon 3',
         price: '349000',
         image01: product_16_image_01,
         image02: product_16_image_02,
-        categorySlug: "ao-polo",
-        colors: ["black", "orange", "red", "white"],
-        slug: "ao-polo-siro-rayon-3",
-        size: ["s", "m", "l"],
+        categorySlug: 'ao-polo',
+        colors: ['black', 'orange', 'red', 'white'],
+        slug: 'ao-polo-siro-rayon-3',
+        size: ['s', 'm', 'l'],
         description: `
             <div>
                 <p>- Áo polo nữ bo kẻ hiện đại, mềm thoáng.</p>
@@ -359,20 +359,19 @@ const getProducts = (count) => {
     return products.slice(start, start + count)
 }
 
-const getProductBySlug = (slug) => products.find(e => e.slug === slug)
+const getProductBySlug = (slug) => products.find(product => product.slug === slug)
 
 const getCartItemsInfo = (cartItems) => {
     let res = []
     if (cartItems.length > 0) {
-        cartItems.forEach(e => {
-            let product = getProductBySlug(e.slug)
+        cartItems.forEach(item => {
+            let product = getProductBySlug(item.slug)
             res.push({
-                ...e,
-                product: product
+                ...item,
+                product,
             })
         })
     }
-
     return res.sort((a, b) => a.id > b.id ? 1 : (a.id < b.id ? -1 : 0))
 }
 
@@ -393,7 +392,7 @@ const productData = {
     getProducts,
     getProductBySlug,
     getCartItemsInfo,
-    getProductByKeyword
+    getProductByKeyword,
 }
 
 export default productData

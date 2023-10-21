@@ -12,10 +12,12 @@ const Button = props => {
             className={`btn ${color} ${bg} ${size} ${animate}`}
             onClick={props.onClick ? () => props.onClick() : null}
         >
-            <span className="btn__txt">{props.children}</span>
+            <span className='btn__txt'>
+                {props.children}
+            </span>
             {
                 props.icon ? (
-                    <span className="btn__icon">
+                    <span className='btn__icon'>
                         <i className={`${props.icon} bx-tada`}></i>
                     </span>
                 ) : null
@@ -30,7 +32,7 @@ Button.propTypes = {
     size: PropTypes.string,
     icon: PropTypes.string,
     animate: PropTypes.bool,
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
 }
 
 export default Button

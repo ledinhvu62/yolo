@@ -5,7 +5,7 @@ import Grid from './Grid'
 import ProductCard from './ProductCard'
 
 const InfinityList = props => {
-    const perLoad = 8 // items each load
+    const perLoad = 8
 
     const listRef = useRef(null)
     const [data, setData] = useState([])
@@ -26,10 +26,10 @@ const InfinityList = props => {
             }
         }
 
-        window.addEventListener("scroll", handleScrollPage)
+        window.addEventListener('scroll', handleScrollPage)
 
         return () => {
-            window.removeEventListener("scroll", handleScrollPage)
+            window.removeEventListener('scroll', handleScrollPage)
         }
     }, [])
 
@@ -41,7 +41,7 @@ const InfinityList = props => {
             if (load && index <= maxIndex) {
                 const start = perLoad * index
                 const end = start + perLoad
-                
+
                 setData(data.concat(props.data.slice(start, end)))
                 setIndex(index + 1)
             }
@@ -77,7 +77,7 @@ const InfinityList = props => {
 }
 
 InfinityList.propTypes = {
-    data: PropTypes.array.isRequired
+    data: PropTypes.array.isRequired,
 }
 
 export default InfinityList

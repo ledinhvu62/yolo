@@ -99,11 +99,10 @@
             }
             
             &__del {
-                font-size: 1.5rem;
+                font-size: 1.75rem;
+                cursor: pointer;
 
                 i {
-                    cursor: pointer;
-
                     &:hover {
                         color: $main-color;
                     }

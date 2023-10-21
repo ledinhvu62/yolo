@@ -18,18 +18,18 @@ const CartItem = props => {
         setQuantity(props.item.quantity)
     }, [props.item])
 
-    const updateQuantity = (opt) => {
-        if (opt === '+') {
+    const updateQuantity = (option) => {
+        if (option === '+') {
             dispatch(updateItem({
                 ...item,
-                quantity: quantity + 1
+                quantity: quantity + 1,
             }))
         }
 
-        if (opt === '-') {
+        if (option === '-') {
             dispatch(updateItem({
                 ...item,
-                quantity: quantity - 1 === 0 ? 1 : quantity - 1
+                quantity: quantity - 1 === 0 ? 1 : quantity - 1,
             }))
         }
     }
@@ -39,40 +39,43 @@ const CartItem = props => {
     }
 
     return (
-        <div className="cart__item">
-            <div className="cart__item__image">
-                <img src={item.product.image01} alt="Ảnh sản phẩm" />
+        <div className='cart__item'>
+            <div className='cart__item__image'>
+                <img src={item.product.image01} alt='Ảnh sản phẩm' />
             </div>
-            <div className="cart__item__info">
-                <div className="cart__item__info__name">
+            <div className='cart__item__info'>
+                <div className='cart__item__info__name'>
                     <Link to={`/catalog/${item.slug}`}>
                         {`${item.product.title} - ${item.color} - ${item.size}`}
                     </Link>
                 </div>
-                <div className="cart__item__info__price">
+                <div className='cart__item__info__price'>
                     {numberWithCommas(+item.product.price)}đ
                 </div>
-                <div className="cart__item__info__quantity">
-                    <div className="product__info__item__quantity">
+                <div className='cart__item__info__quantity'>
+                    <div className='product__info__item__quantity'>
                         <div
                             className={`product__info__item__quantity__btn-minus ${quantity === 1 ? '' : 'active'}`}
                             onClick={() => updateQuantity('-')}
                         >
-                            <i className="bx bx-minus"></i>
+                            <i className='bx bx-minus'></i>
                         </div>
-                        <div className="product__info__item__quantity__input">
+                        <div className='product__info__item__quantity__input'>
                             {quantity}
                         </div>
                         <div
-                            className="product__info__item__quantity__btn-plus"
+                            className='product__info__item__quantity__btn-plus'
                             onClick={() => updateQuantity('+')}
                         >
-                            <i className="bx bx-plus"></i>
+                            <i className='bx bx-plus'></i>
                         </div>
                     </div>
                 </div>
-                <div className="cart__item__info__del">
-                    <i className="bx bx-trash" onClick={() => removeCartItem()}></i>
+                <div
+                    className='cart__item__info__del'
+                    onClick={() => removeCartItem()}
+                >
+                    <i className='bx bx-trash'></i>
                 </div>
             </div>
         </div>
@@ -80,7 +83,7 @@ const CartItem = props => {
 }
 
 CartItem.propTypes = {
-    item: PropTypes.object
+    item: PropTypes.object,
 }
 
 export default CartItem

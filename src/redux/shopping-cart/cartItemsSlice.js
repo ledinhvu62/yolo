@@ -1,9 +1,9 @@
-import { createSlice } from "@reduxjs/toolkit"
+import { createSlice } from '@reduxjs/toolkit'
 
 const items = localStorage.getItem('cartItems') !== null ? JSON.parse(localStorage.getItem('cartItems')) : []
 
 const initialState = {
-    value: items
+    value: items,
 }
 
 export const cartItemsSlice = createSlice({
@@ -20,16 +20,15 @@ export const cartItemsSlice = createSlice({
                 state.value = [...state.value, {
                     ...newItem,
                     id: duplicate[0].id,
-                    quantity: newItem.quantity + duplicate[0].quantity
+                    quantity: newItem.quantity + duplicate[0].quantity,
                 }]
             } else {
                 state.value = [...state.value, {
                     ...newItem,
-                    id: state.value.length > 0 ? state.value[state.value.length - 1].id + 1 : 1
+                    id: state.value.length > 0 ? state.value[state.value.length - 1].id + 1 : 1,
                 }]
             }
             localStorage.setItem('cartItems', JSON.stringify(sortItems(state.value)))
-            console.log(state.value)
         },
         updateItem: (state, action) => {
             const itemUpdate = action.payload
@@ -49,7 +48,7 @@ export const cartItemsSlice = createSlice({
             const item = action.payload
             state.value = delItem(state.value, item)
             localStorage.setItem('cartItems', JSON.stringify(sortItems(state.value)))
-        }
+        },
     }
 })
 

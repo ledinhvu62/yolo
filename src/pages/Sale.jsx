@@ -11,7 +11,7 @@ const Sale = () => {
     const saleProducts = productData.getProducts(10)
 
     return (
-        <Helmet title="Sale">
+        <Helmet title='Giảm giá'>
             <Section>
                 <SectionBody>
                     <Grid

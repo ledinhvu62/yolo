@@ -60,8 +60,8 @@ function Validator(options) {
                     var formValues = Array.from(enableInputs).reduce(function(values, input) { // convert NodeList sang array
                         switch (input.type) {
                             case 'radio':
-                                values[input.name] = formElement.querySelector(`input[name="${input.name}"]:checked`).value
-                                break;
+                                values[input.name] = formElement.querySelector(`input[name='${input.name}']:checked`).value
+                                break
                             case 'checkbox':
                                 if (!input.matches(':checked')) {
                                     if (!values[input.name]) {
@@ -81,7 +81,7 @@ function Validator(options) {
                                 values[input.name] = input.value
                         }
                         return values
-                    }, {});
+                    }, {})
                     options.onSubmit(formValues)
                 } else { // submit với hành vi mặc định của trình duyệt
                     formElement.submit()
@@ -122,7 +122,7 @@ Validator.isRequired = function(selector, message) { // k dùng Validator.protot
         test: function(value) {
             return value ? undefined : message || 'Vui lòng nhập trường này'
         }
-    };
+    }
 }
 
 Validator.isEmail = function(selector, message) {
@@ -132,7 +132,7 @@ Validator.isEmail = function(selector, message) {
             var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/ // eslint-disable-line
             return regex.test(value) ? undefined : message || 'Trường này phải là email' // test() ở đây là method có sẵn của regex
         }
-    };
+    }
 }
 
 Validator.minLength = function(selector, min, message) {
@@ -141,7 +141,7 @@ Validator.minLength = function(selector, min, message) {
         test: function(value) {
             return value.length >= min ? undefined : message || `Vui lòng nhập tối thiểu ${min} ký tự`
         }
-    };
+    }
 }
 
 Validator.isConfirmed = function(selector, getConfirmValue, message) {
@@ -150,7 +150,7 @@ Validator.isConfirmed = function(selector, getConfirmValue, message) {
         test: function(value) {
             return value === getConfirmValue() ? undefined : message || 'Giá trị nhập vào không chính xác'
         }
-    };
+    }
 }
 
 export default Validator

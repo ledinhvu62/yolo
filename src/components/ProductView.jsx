@@ -17,9 +17,9 @@ const ProductView = props => {
     if (product === undefined) {
         product = {
             price: 0,
-            title: "",
+            title: '',
             colors: [],
-            size: []
+            size: [],
         }
     }
 
@@ -28,8 +28,8 @@ const ProductView = props => {
     const [size, setSize] = useState(product.size[0])
     const [quantity, setQuantity] = useState(1)
 
-    const updateQuantity = (type) => {
-        if (type === 'plus') {
+    const updateQuantity = (option) => {
+        if (option === 'plus') {
             setQuantity(quantity + 1)
         } else {
             setQuantity(quantity - 1 < 1 ? 1 : quantity - 1)
@@ -49,9 +49,9 @@ const ProductView = props => {
             color,
             size,
             quantity,
-            price: product.price
+            price: product.price,
         }))
-        alert("Thêm vào giỏ hàng thành công")
+        alert('Thêm vào giỏ hàng thành công')
     }
 
     const navigate = useNavigate()
@@ -62,50 +62,52 @@ const ProductView = props => {
             color,
             size,
             quantity,
-            price: product.price
+            price: product.price,
         }))
         navigate('/cart')
     }
 
     return (
-        <div className="product">
-            <div className="product__images">
-                <div className="product__images__list">
+        <div className='product'>
+            <div className='product__images'>
+                <div className='product__images__list'>
                     <div
-                        className="product__images__list__item"
+                        className='product__images__list__item'
                         onMouseOver={() => setPreviewImg(product.image01)}
                     >
-                        <img src={product.image01} alt="Ảnh sản phẩm 1" />
+                        <img src={product.image01} alt='Ảnh sản phẩm 1' />
                     </div>
                     <div
-                        className="product__images__list__item"
+                        className='product__images__list__item'
                         onMouseOver={() => setPreviewImg(product.image02)}
                     >
-                        <img src={product.image02} alt="Ảnh sản phẩm 2" />
+                        <img src={product.image02} alt='Ảnh sản phẩm 2' />
                     </div>
                 </div>
-                <div className="product__images__main">
-                    <img src={previewImg} alt="Ảnh sản phẩm" />
+                <div className='product__images__main'>
+                    <img src={previewImg} alt='Ảnh sản phẩm' />
                 </div>
-                <div className="product-description">
-                    <div className="product-description__title">
+                <div className='product-description'>
+                    <div className='product-description__title'>
                         Chi tiết sản phẩm
                     </div>
-                    <div className="product-description__content" dangerouslySetInnerHTML={{ __html: product.description }}></div>
+                    <div className='product-description__content' dangerouslySetInnerHTML={{ __html: product.description }}></div>
                 </div>
             </div>
-            <div className="product__info">
-                <h2 className="product__info__title">{product.title}</h2>
-                <div className="product__info__item">
-                    <span className="product__info__item__price">
+            <div className='product__info'>
+                <h2 className='product__info__title'>
+                    {product.title}
+                </h2>
+                <div className='product__info__item'>
+                    <span className='product__info__item__price'>
                         {numberWithCommas(product.price)}đ
                     </span>
                 </div>
-                <div className="product__info__item">
-                    <div className="product__info__item__title">
+                <div className='product__info__item'>
+                    <div className='product__info__item__title'>
                         Màu sắc:
                     </div>
-                    <div className="product__info__item__list">
+                    <div className='product__info__item__list'>
                         {
                             product.colors.map((item, index) => (
                                 <div
@@ -119,11 +121,11 @@ const ProductView = props => {
                         }
                     </div>
                 </div>
-                <div className="product__info__item">
-                    <div className="product__info__item__title">
+                <div className='product__info__item'>
+                    <div className='product__info__item__title'>
                         Kích cỡ:
                     </div>
-                    <div className="product__info__item__list">
+                    <div className='product__info__item__list'>
                         {
                             product.size.map((item, index) => (
                                 <div
@@ -131,7 +133,7 @@ const ProductView = props => {
                                     className={`product__info__item__list__item ${size === item ? 'active' : ''}`}
                                     onClick={() => setSize(item)}
                                 >
-                                    <span className="product__info__item__list__item__size">
+                                    <span className='product__info__item__list__item__size'>
                                         {item}
                                     </span>
                                 </div>
@@ -139,59 +141,59 @@ const ProductView = props => {
                         }
                     </div>
                 </div>
-                <div className="product__info__item">
-                    <div className="product__info__item__title">
+                <div className='product__info__item'>
+                    <div className='product__info__item__title'>
                         Số lượng:
                     </div>
-                    <div className="product__info__item__quantity">
+                    <div className='product__info__item__quantity'>
                         <div
                             className={`product__info__item__quantity__btn-minus ${quantity === 1 ? '' : 'active'}`}
                             onClick={() => updateQuantity('minus')}
                         >
-                            <i className="bx bx-minus"></i>
+                            <i className='bx bx-minus'></i>
                         </div>
-                        <div className="product__info__item__quantity__input">
+                        <div className='product__info__item__quantity__input'>
                             {quantity}
                         </div>
                         <div
-                            className="product__info__item__quantity__btn-plus"
+                            className='product__info__item__quantity__btn-plus'
                             onClick={() => updateQuantity('plus')}
                         >
-                            <i className="bx bx-plus"></i>
+                            <i className='bx bx-plus'></i>
                         </div>
                     </div>
                 </div>
-                <div className="product__info__item">
+                <div className='product__info__item'>
                     <Button
-                        color="main"
-                        backgroundColor="white"
-                        size="block"
+                        color='main'
+                        backgroundColor='white'
+                        size='block'
                         onClick={() => addToCart()}
                     >
                         Thêm vào giỏ hàng
                     </Button>
                 </div>
-                <div className="product__info__item">
+                <div className='product__info__item'>
                     <Button
-                        size="block"
+                        size='block'
                         onClick={() => goToCart()}
                     >
                         Mua ngay
                     </Button>
                 </div>
             </div>
-            <div className="product-description tablet-mobile">
-                <div className="product-description__title">
+            <div className='product-description tablet-mobile'>
+                <div className='product-description__title'>
                     Chi tiết sản phẩm
                 </div>
-                <div className="product-description__content" dangerouslySetInnerHTML={{ __html: product.description }}></div>
+                <div className='product-description__content' dangerouslySetInnerHTML={{ __html: product.description }}></div>
             </div>
         </div>
     )
 }
 
 ProductView.propTypes = {
-    product: PropTypes.object
+    product: PropTypes.object,
 }
 
 export default ProductView

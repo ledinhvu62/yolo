@@ -1,31 +1,31 @@
 const colors = [
     {
-        display: "Cam",
-        color: "orange",
+        display: 'Cam',
+        color: 'orange',
     },
     {
-        display: "Đen",
-        color: "black",
+        display: 'Đen',
+        color: 'black',
     },
     {
-        display: "Đỏ",
-        color: "red",
+        display: 'Đỏ',
+        color: 'red',
     },
     {
-        display: "Trắng",
-        color: "white",
+        display: 'Trắng',
+        color: 'white',
     },
     {
-        display: "Vàng",
-        color: "yellow",
+        display: 'Vàng',
+        color: 'yellow',
     },
     {
-        display: "Xanh dương",
-        color: "blue",
+        display: 'Xanh dương',
+        color: 'blue',
     },
     {
-        display: "Xanh ngọc",
-        color: "turquoise",
+        display: 'Xanh ngọc',
+        color: 'turquoise',
     },
 ]
 

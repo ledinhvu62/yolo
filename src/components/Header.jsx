@@ -8,17 +8,17 @@ import logo from '../assets/images/logo.svg'
 
 const mainNav = [
     {
-        display: "Sản phẩm",
-        path: "/catalog"
+        display: 'Sản phẩm',
+        path: '/catalog',
     },
     {
-        display: "Giảm giá",
-        path: "/sale"
+        display: 'Giảm giá',
+        path: '/sale',
     },
     {
-        display: "Liên hệ",
-        path: "/contact"
-    }
+        display: 'Liên hệ',
+        path: '/contact',
+    },
 ]
 
 const Header = () => {
@@ -43,10 +43,10 @@ const Header = () => {
     }
 
     useEffect(() => {
-        window.addEventListener("scroll", handleScroll)
+        window.addEventListener('scroll', handleScroll)
 
         return () => {
-            window.removeEventListener("scroll", handleScroll)
+            window.removeEventListener('scroll', handleScroll)
         }
     }, [])
 
@@ -67,20 +67,32 @@ const Header = () => {
     }, [pathname, dispatch])
 
     return (
-        <div className="header" ref={headerRef}>
-            <div className="container">
-                <div className="header__menu">
-                    <div className="header__menu__mobile-toggle" onClick={menuToggle}>
-                        <i className="bx bx-menu"></i>
+        <div
+            ref={headerRef}
+            className='header'
+        >
+            <div className='container'>
+                <div className='header__menu'>
+                    <div
+                        className='header__menu__mobile-toggle'
+                        onClick={menuToggle}
+                    >
+                        <i className='bx bx-menu'></i>
                     </div>
-                    <div className="header__logo">
-                        <Link to="/">
-                            <img src={logo} alt="Logo Yolo" />
+                    <div className='header__logo'>
+                        <Link to='/'>
+                            <img src={logo} alt='Logo Yolo' />
                         </Link>
                     </div>
-                    <div className="header__menu__left" ref={menuLeft}>
-                        <div className="header__menu__left__close" onClick={menuToggle}>
-                            <i className="bx bx-chevron-left"></i>
+                    <div
+                        ref={menuLeft}
+                        className='header__menu__left'
+                    >
+                        <div
+                            className='header__menu__left__close'
+                            onClick={menuToggle}
+                        >
+                            <i className='bx bx-chevron-left'></i>
                         </div>
                         {
                             mainNav.map((item, index) => (
@@ -97,37 +109,46 @@ const Header = () => {
                         }
                     </div>
 
-                    <div className="header__search" ref={searchRef}>
+                    <div
+                        ref={searchRef}
+                        className='header__search'
+                    >
                         <input
-                            className="header__search__input"
+                            className='header__search__input'
+                            type='text'
                             value={keyword}
-                            type="text"
-                            placeholder="Tìm kiếm"
+                            placeholder='Tìm kiếm'
                             onChange={e => dispatch(set(e.target.value))}
                             onKeyDown={e => e.key === 'Enter' && navigate('/search')}
                         />
-                        <div className="header__search__btn" onClick={searchToggle}>
-                            <Link to="/search">
-                                <i className="bx bx-search"></i>
+                        <div
+                            className='header__search__btn'
+                            onClick={searchToggle}
+                        >
+                            <Link to='/search'>
+                                <i className='bx bx-search'></i>
                             </Link>
                         </div>
                     </div>
 
-                    <div className="header__menu__right">
-                        <div className="header__menu__item header__menu__right__item" onClick={searchToggle}>
-                            <i className="bx bx-search"></i>
+                    <div className='header__menu__right'>
+                        <div
+                            className='header__menu__item header__menu__right__item'
+                            onClick={searchToggle}
+                        >
+                            <i className='bx bx-search'></i>
                         </div>
-                        <div className="header__menu__item header__menu__right__item">
-                            <Link to="/cart">
-                                <i className="bx bx-shopping-bag"></i>
+                        <div className='header__menu__item header__menu__right__item'>
+                            <Link to='/cart'>
+                                <i className='bx bx-shopping-bag'></i>
                             </Link>
                             <div className={`header__menu__right__item__quantity ${totalProducts > 0 ? 'active' : ''}`}>
                                 {totalProducts}
                             </div>
                         </div>
-                        <div className="header__menu__item header__menu__right__item">
-                            <Link to="/user">
-                                <i className="bx bx-user"></i>
+                        <div className='header__menu__item header__menu__right__item'>
+                            <Link to='/user'>
+                                <i className='bx bx-user'></i>
                             </Link>
                         </div>
                     </div>

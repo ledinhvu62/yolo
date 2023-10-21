@@ -16,7 +16,7 @@ const Helmet = props => {
 }
 
 Helmet.propTypes = {
-    title: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired,
 }
 
 export default Helmet

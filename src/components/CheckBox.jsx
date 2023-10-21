@@ -11,10 +11,15 @@ const CheckBox = props => {
     }
 
     return (
-        <label className="custom-checkbox">
-            <input type="checkbox" ref={inputRef} onChange={onChange} checked={props.checked} />
-            <span className="custom-checkbox__checkmark">
-                <i className="bx bx-check"></i>
+        <label className='custom-checkbox'>
+            <input
+                ref={inputRef}
+                type='checkbox'
+                checked={props.checked}
+                onChange={onChange}
+            />
+            <span className='custom-checkbox__checkmark'>
+                <i className='bx bx-check'></i>
             </span>
             {props.label}
         </label>
@@ -23,7 +28,7 @@ const CheckBox = props => {
 
 CheckBox.propTypes = {
     label: PropTypes.string.isRequired,
-    checked: PropTypes.bool
+    checked: PropTypes.bool,
 }
 
 export default CheckBox

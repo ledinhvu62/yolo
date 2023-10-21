@@ -12,13 +12,13 @@ import Search from '../pages/Search'
 const RoutesApp = () => {
     return (
         <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/catalog" element={<Catalog />} />
-            <Route path="/catalog/:slug" element={<Product />} />
-            <Route path="/sale" element={<Sale />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/search" element={<Search />} />
+            <Route path='/' element={<Home />} />
+            <Route path='/catalog' element={<Catalog />} />
+            <Route path='/catalog/:slug' element={<Product />} />
+            <Route path='/sale' element={<Sale />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/cart' element={<Cart />} />
+            <Route path='/search' element={<Search />} />
         </Routes>
     )
 }

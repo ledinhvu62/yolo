@@ -24,31 +24,41 @@ const Cart = () => {
     }, [cartItems])
 
     return (
-        <Helmet title="Giỏ hàng">
-            <div className="cart">
-                <div className="cart__list">
-                    <h2 className="cart__list__title">Giỏ hàng</h2>
+        <Helmet title='Giỏ hàng'>
+            <div className='cart'>
+                <div className='cart__list'>
+                    <h2 className='cart__list__title'>
+                        Giỏ hàng
+                    </h2>
                     {
                         cartProducts.map((item, index) => (
                             <CartItem item={item} key={index} />
                         ))
                     }
                 </div>
-                <div className="cart__info">
-                    <div className="cart__info__txt">
-                        <p>Bạn đang có {totalProducts} sản phẩm trong giỏ hàng</p>
-                        <div className="cart__info__txt__price">
-                            <span>Thành tiền:</span>
-                            <span>{numberWithCommas(totalPrice)}đ</span>
+                <div className='cart__info'>
+                    <div className='cart__info__txt'>
+                        <p>
+                            Bạn đang có {totalProducts} sản phẩm trong giỏ hàng
+                        </p>
+                        <div className='cart__info__txt__price'>
+                            <span>
+                                Thành tiền:
+                            </span>
+                            <span>
+                                {numberWithCommas(totalPrice)}đ
+                            </span>
                         </div>
                     </div>
-                    <div className="cart__info__btn">
-                        <Button size="block">Đặt hàng</Button>
-                        <Link to="/catalog">
+                    <div className='cart__info__btn'>
+                        <Button size='block'>
+                            Đặt hàng
+                        </Button>
+                        <Link to='/catalog'>
                             <Button
-                                color="main"
-                                backgroundColor="white"
-                                size="block"
+                                color='main'
+                                backgroundColor='white'
+                                size='block'
                             >
                                 Tiếp tục mua hàng
                             </Button>

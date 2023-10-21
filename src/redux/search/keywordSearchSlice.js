@@ -1,7 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit"
+import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    value: ''
+    value: '',
 }
 
 export const keywordSearchSlice = createSlice({
@@ -13,7 +13,7 @@ export const keywordSearchSlice = createSlice({
         },
         remove: (state) => {
             state.value = ''
-        }
+        },
     }
 })
 
