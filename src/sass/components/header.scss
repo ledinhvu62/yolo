@@ -95,12 +95,12 @@
                     position: absolute;
                     top: -20%;
                     right: -40%;
-                    font-size: 1rem;
-                    font-weight: 600;
-                    background-color: $main-color;
-                    color: $txt-white;
                     width: 25px;
                     height: 25px;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    color: $txt-white;
+                    background-color: $main-color;
                     border-radius: 50%;
                     visibility: hidden;
 
@@ -128,24 +128,33 @@
 
                 @include tablet {
                     min-width: unset;
+                    width: 100%;
+                    height: 60px;
+                }
+
+                & > * {
+                    @include tablet {
+                        @include flex(center, flex-start);
+                        height: 100%;
+                        padding-left: 30px;
+                    }
                 }
             }
 
             @include tablet {
                 @include flex(flex-start, flex-start);
                 flex-direction: column;
-                background-color: $main-bg;
                 position: absolute;
                 left: 0;
                 top: 0;
                 width: 100%;
                 height: 100vh;
                 padding-top: 60px;
-                padding-left: 30px;
+                font-size: 1.75rem;
+                background-color: $main-bg;
                 transform: translateX(-100%);
                 transition: transform 0.5s ease;
                 z-index: 100;
-                font-size: 1.75rem;
 
                 &.active {
                     transform: translateX(0);
@@ -153,11 +162,6 @@
 
                 &__item ~ &__item {
                     margin-left: unset;
-                    margin-top: 20px;
-
-                    @include tablet {
-                        margin-top: 30px;
-                    }
                 }
 
                 &__close {
