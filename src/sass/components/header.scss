@@ -125,9 +125,14 @@
 
             &__item {
                 min-width: 100px;
+
+                @include tablet {
+                    min-width: unset;
+                }
             }
 
             @include tablet {
+                @include flex(flex-start, flex-start);
                 flex-direction: column;
                 background-color: $main-bg;
                 position: absolute;
@@ -135,11 +140,12 @@
                 top: 0;
                 width: 100%;
                 height: 100vh;
-                justify-content: flex-start;
-                padding-top: 30px;
+                padding-top: 60px;
+                padding-left: 30px;
                 transform: translateX(-100%);
                 transition: transform 0.5s ease;
                 z-index: 100;
+                font-size: 1.75rem;
 
                 &.active {
                     transform: translateX(0);
@@ -148,13 +154,18 @@
                 &__item ~ &__item {
                     margin-left: unset;
                     margin-top: 20px;
+
+                    @include tablet {
+                        margin-top: 30px;
+                    }
                 }
 
                 &__close {
                     display: block;
                     position: absolute;
-                    left: 20px;
-                    font-size: 2.5rem;
+                    top: 15px;
+                    right: 15px;
+                    font-size: 3rem;
                 }
             }
         }

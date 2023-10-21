@@ -6,8 +6,6 @@
     }
 
     &__info {
-        position: sticky;
-        top: calc(#{$header-shrink-height} + 20px);
         margin-top: 30px;
         padding: 20px;
         box-shadow: $box-shadow;
@@ -17,7 +15,6 @@
             width: 100%;
             margin-right: 0;
             margin-bottom: 30px;
-            position: unset;
         }
 
         &__txt {
@@ -42,7 +39,7 @@
             }
         }
 
-        &__btn > * {
+        &__btn > * > * {
             margin-bottom: 20px;
         }
     }

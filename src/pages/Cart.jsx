@@ -51,9 +51,11 @@ const Cart = () => {
                         </div>
                     </div>
                     <div className='cart__info__btn'>
-                        <Button size='block'>
-                            Đặt hàng
-                        </Button>
+                        <Link to=''>
+                            <Button size='block'>
+                                Đặt hàng
+                            </Button>
+                        </Link>
                         <Link to='/catalog'>
                             <Button
                                 color='main'

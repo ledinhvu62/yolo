@@ -15,7 +15,7 @@ const info = [
 const aboutLinks = [
     {
         display: 'Giới thiệu',
-        path: '/about',
+        path: '',
     },
     {
         display: 'Liên hệ',
@@ -23,34 +23,34 @@ const aboutLinks = [
     },
     {
         display: 'Tuyển dụng',
-        path: '/about',
+        path: '',
     },
     {
         display: 'Tin tức',
-        path: '/about',
+        path: '',
     },
     {
         display: 'Hệ thống cửa hàng',
-        path: '/about',
+        path: '',
     },
 ]
 
 const customerSupportLinks = [
     {
         display: 'Chính sách đổi trả',
-        path: '/about',
+        path: '',
     },
     {
         display: 'Chính sách bảo hành',
-        path: '/about',
+        path: '',
     },
     {
         display: 'Chính sách thanh toán',
-        path: '/about',
+        path: '',
     },
     {
         display: 'Chính sách bảo mật',
-        path: '/about',
+        path: '',
     },
 ]
 

@@ -92,7 +92,7 @@ const Header = () => {
                             className='header__menu__left__close'
                             onClick={menuToggle}
                         >
-                            <i className='bx bx-chevron-left'></i>
+                            <i className='bx bx-x'></i>
                         </div>
                         {
                             mainNav.map((item, index) => (
@@ -147,7 +147,7 @@ const Header = () => {
                             </div>
                         </div>
                         <div className='header__menu__item header__menu__right__item'>
-                            <Link to='/user'>
+                            <Link to=''>
                                 <i className='bx bx-user'></i>
                             </Link>
                         </div>
