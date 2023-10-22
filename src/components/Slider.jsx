@@ -62,7 +62,7 @@ const Slider = props => {
                 data.map((item, index) => (
                     <div
                         key={index}
-                        className={`slider__item ${index === activeSlide ? 'active' : ''}`}
+                        className={`slider__image ${index === activeSlide ? 'active' : ''}`}
                     >
                         <Link to={`${item.path}`}>
                             <img src={item.img} alt='Banner' />
