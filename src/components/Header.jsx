@@ -50,6 +50,13 @@ const Header = () => {
     const keyword = useSelector((state) => state.keywordSearch.value)
     const navigate = useNavigate()
 
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            searchToggle()
+            navigate('/search')
+        }
+    }
+
     useEffect(() => {
         if (pathname !== '/search') {
             dispatch(remove())
@@ -100,28 +107,6 @@ const Header = () => {
                         </nav>
                     </div>
 
-                    <div
-                        ref={searchRef}
-                        className='header__search'
-                    >
-                        <input
-                            className='header__search__input'
-                            type='text'
-                            value={keyword}
-                            placeholder='Tìm kiếm'
-                            onChange={e => dispatch(set(e.target.value))}
-                            onKeyDown={e => e.key === 'Enter' && navigate('/search')}
-                        />
-                        <div
-                            className='header__search__btn'
-                            onClick={searchToggle}
-                        >
-                            <Link to='/search'>
-                                <i className='bx bx-search'></i>
-                            </Link>
-                        </div>
-                    </div>
-
                     <div className='header__menu__right'>
                         <div
                             className='header__menu__item header__menu__right__item'
@@ -142,6 +127,34 @@ const Header = () => {
                                 <i className='bx bx-user'></i>
                             </Link>
                         </div>
+                    </div>
+                </div>
+
+                <div
+                    ref={searchRef}
+                    className='header__search-box'
+                >
+                    <input
+                        className='header__search-box__input'
+                        type='text'
+                        value={keyword}
+                        placeholder='Tìm kiếm'
+                        onChange={e => dispatch(set(e.target.value))}
+                        onKeyDown={e => handleKeyDown(e)}
+                    />
+                    <div
+                        className='header__search-box__btn'
+                        onClick={searchToggle}
+                    >
+                        <Link to='/search'>
+                            <i className='bx bx-search'></i>
+                        </Link>
+                    </div>
+                    <div
+                        className='header__search-box__close-btn'
+                        onClick={searchToggle}
+                    >
+                        <i className='bx bx-x'></i>
                     </div>
                 </div>
             </div>

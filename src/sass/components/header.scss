@@ -47,16 +47,8 @@
                 @include flex(center, center);
                 position: relative;
 
-                @include tablet {
-                    margin-left: 10px;
-                }
-
                 &:first-child {
-                    display: none;
-
-                    @include tablet {
-                        display: block;
-                    }
+                    cursor: pointer;
                 }
 
                 i {
@@ -96,7 +88,7 @@
                 @include tablet {
                     margin-left: 20px;
                 }
-        
+
                 @include mobile {
                     margin-left: 10px;
                 }
@@ -119,7 +111,7 @@
                     @include flex(center, center);
                     height: 100%;
                     list-style: none;
-    
+
                     @include tablet {
                         @include flex(flex-start, flex-start);
                         flex-direction: column;
@@ -176,7 +168,7 @@
                 padding-top: 60px;
                 background-color: $main-bg;
                 transform: translateX(-100%);
-                transition: transform 0.5s ease;
+                transition: transform 0.3s ease;
                 z-index: 100;
 
                 &.active {
@@ -227,76 +219,76 @@
         }
     }
 
-    &__search {
+    &__search-box {
         @include flex(center, center);
-        width: 180px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        padding: 10px 200px;
+        background-color: $main-bg;
+        pointer-events: none;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+        z-index: 100;
 
         @include tablet {
-            display: none;
-
-            &.active {
-                @include flex(center, center);
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                padding: 0 20px;
-                animation: slideDown 0.5s ease;
-
-                @keyframes slideDown {
-                    from {
-                        opacity: 0;
-                        transform: translateY(-50%);
-                    }
-                    to {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                }
-            }
+            @include flex(flex-start, center);
+            height: 100vh;
+            padding: 60px 20px;
+            transform: translateX(100%);
         }
 
-        @include mobile {
-            &.active {
-                padding: 0 10px;
-            }
+        &.active {
+            pointer-events: auto;
+            transform: translateX(0);
         }
-
+    
         &__input {
-            padding: 5px;
-            width: 80%;
-            height: 35px;
+            padding: 8px;
+            width: 85%;
+            height: 40px;
             font-size: 1.25rem;
-            line-height: 1.25rem;
             color: $txt-second-color;
             outline: none;
-            border: 1px solid;
+            border: 1px solid $txt-second-color;
             border-right: none;
-            border-top-left-radius: 4px;
-            border-bottom-left-radius: 4px;
-
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+    
             &:hover {
-                border-color: $main-color; 
+                border: 2px solid $main-color;
+                border-right: none;
             }
         }
-
+    
         &__btn {
-            @include flex(center, center);
             flex: 1;
-            height: 35px;
-            color: $txt-white;
+            min-width: 60px;
+            height: 40px;
             background-color: $main-color;
-            border-top-right-radius: 4px;
-            border-bottom-right-radius: 4px;
-
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            
             a {
                 @include flex(center, center);
                 width: 100%;
                 height: 100%;
+                font-size: 2rem;
+                color: $txt-white;
+            }
+        }
 
-                &:hover {
-                    color: $txt-white;
-                }
+        &__close-btn {
+            @include flex(center, center);
+            height: 40px;
+            margin-left: 30px;
+            font-size: 3rem;
+            cursor: pointer;
+
+            @include tablet {
+                margin-left: 10px;
             }
         }
     }

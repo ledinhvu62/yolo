@@ -3,10 +3,10 @@
     flex-direction: column;
 
     &__title {
+        width: 100%;
+        margin-bottom: 20px;
         text-align: center;
         font-size: 1.75rem;
-        margin: 40px 0;
-        width: 100%;
 
         span {
             color: $main-color;
