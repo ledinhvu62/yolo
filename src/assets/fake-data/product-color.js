@@ -29,4 +29,13 @@ const colors = [
     },
 ]
 
-export default colors
+const getAllColors = () => colors
+
+const getColor = (color) => colors.find(clr => clr.color === color)
+
+const colorData = {
+    getAllColors,
+    getColor,
+}
+
+export default colorData

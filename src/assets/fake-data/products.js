@@ -361,6 +361,8 @@ const getProducts = (count) => {
 
 const getProductBySlug = (slug) => products.find(product => product.slug === slug)
 
+const getProductsByCategorySlug = (categorySlug) => products.filter(product => product.categorySlug === categorySlug)
+
 const getCartItemsInfo = (cartItems) => {
     let res = []
     if (cartItems.length > 0) {
@@ -391,6 +393,7 @@ const productData = {
     getAllProducts,
     getProducts,
     getProductBySlug,
+    getProductsByCategorySlug,
     getCartItemsInfo,
     getProductByKeyword,
 }

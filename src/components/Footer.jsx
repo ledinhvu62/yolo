@@ -7,7 +7,7 @@ import logo from '../assets/images/logo.svg'
 
 const info = [
     'Mã số thuế: 1234567890',
-    'Địa chỉ: Số 04 Phan Chu Trinh, P.12, Q.Bình Thạnh, TP.Hồ Chí Minh',
+    'Địa chỉ: 530 Trương Công Định, Phường 8, Thành phố Vũng Tàu',
     'Số điện thoại: 0123456789',
     'Email: cskh@yolo.vn',
 ]

@@ -22,7 +22,6 @@
 
                 .form-label {
                     font-size: 1.25rem;
-                    font-weight: 700;
                     margin-bottom: 6px;
 
                     em {
@@ -31,15 +30,16 @@
                 }
 
                 .form-control {
-                    padding: 10px;
                     width: 100%;
+                    padding: 10px;
                     font-size: 1.25rem;
-                    border: 1px solid;
-                    border-radius: 4px;
+                    color: $txt-second-color;
+                    border: 1px solid $border-main-color;
+                    border-radius: 8px;
                     outline: none;
 
                     &:hover {
-                        border-color: $main-color;
+                        border: 2px solid $main-color;
                     }
                 }
 
@@ -56,7 +56,7 @@
 
                 &.invalid {
                     .form-control {
-                        border-color: #f33a58;
+                        border: 1px solid #f33a58;
                     }
 
                     .form-message {

@@ -1,4 +1,4 @@
-const category = [
+const categories = [
     {
         display: 'Áo 2 dây',
         categorySlug: 'ao-2-day',
@@ -13,4 +13,13 @@ const category = [
     },
 ]
 
-export default category
+const getAllCategories = () => categories
+
+const getCategory = (slug) => categories.find(category => category.categorySlug === slug)
+
+const categoryData = {
+    getAllCategories,
+    getCategory,
+}
+
+export default categoryData

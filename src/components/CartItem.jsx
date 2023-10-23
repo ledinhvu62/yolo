@@ -3,15 +3,20 @@ import PropTypes from 'prop-types'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 
+import colorData from '../assets/fake-data/product-color'
+import sizeData from '../assets/fake-data/product-size'
+
 import { updateItem, removeItem } from '../redux/shopping-cart/cartItemsSlice'
 
 import numberWithCommas from '../utils/numberWithCommas'
 
 const CartItem = props => {
     const dispatch = useDispatch()
-
     const [item, setItem] = useState(props.item)
     const [quantity, setQuantity] = useState(props.item.quantity)
+    
+    const color = colorData.getColor(props.item.color)
+    const size = sizeData.getSize(props.item.size)
 
     useEffect(() => {
         setItem(props.item)
@@ -44,38 +49,43 @@ const CartItem = props => {
                 <img src={item.product.image01} alt='Ảnh sản phẩm' />
             </div>
             <div className='cart__item__info'>
-                <div className='cart__item__info__name'>
+                <div className='cart__item__info__left'>
                     <Link to={`/catalog/${item.slug}`}>
-                        {`${item.product.title} - ${item.color} - ${item.size}`}
+                        {item.product.title}
                     </Link>
+                    <span>
+                        {`${color.display} - ${size.display}`}
+                    </span>
                 </div>
-                <div className='cart__item__info__price'>
-                    {numberWithCommas(+item.product.price)}đ
-                </div>
-                <div className='cart__item__info__quantity'>
-                    <div className='product__info__item__quantity'>
-                        <div
-                            className={`product__info__item__quantity__btn-minus ${quantity === 1 ? '' : 'active'}`}
-                            onClick={() => updateQuantity('-')}
-                        >
-                            <i className='bx bx-minus'></i>
-                        </div>
-                        <div className='product__info__item__quantity__input'>
-                            {quantity}
-                        </div>
-                        <div
-                            className='product__info__item__quantity__btn-plus'
-                            onClick={() => updateQuantity('+')}
-                        >
-                            <i className='bx bx-plus'></i>
+                <div className='cart__item__info__right'>
+                    <div className='cart__item__info__price'>
+                        {numberWithCommas(+item.product.price)}đ
+                    </div>
+                    <div className='cart__item__info__quantity'>
+                        <div className='product__info__item__quantity'>
+                            <div
+                                className={`product__info__item__quantity__btn-minus ${quantity === 1 ? '' : 'active'}`}
+                                onClick={() => updateQuantity('-')}
+                            >
+                                <i className='bx bx-minus'></i>
+                            </div>
+                            <div className='product__info__item__quantity__input'>
+                                {quantity}
+                            </div>
+                            <div
+                                className='product__info__item__quantity__btn-plus'
+                                onClick={() => updateQuantity('+')}
+                            >
+                                <i className='bx bx-plus'></i>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div
-                    className='cart__item__info__del'
-                    onClick={() => removeCartItem()}
-                >
-                    <i className='bx bx-trash'></i>
+                    <div
+                        className='cart__item__info__btn-delete'
+                        onClick={() => removeCartItem()}
+                    >
+                        <i className='bx bx-trash'></i>
+                    </div>
                 </div>
             </div>
         </div>

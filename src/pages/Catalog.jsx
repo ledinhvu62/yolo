@@ -6,9 +6,9 @@ import Button from '../components/Button'
 import InfinityList from '../components/InfinityList'
 
 import productData from '../assets/fake-data/products'
-import category from '../assets/fake-data/category'
-import colors from '../assets/fake-data/product-color'
-import size from '../assets/fake-data/product-size'
+import categoryData from '../assets/fake-data/category'
+import colorData from '../assets/fake-data/product-color'
+import sizeData from '../assets/fake-data/product-size'
 
 const Catalog = () => {
     const initFilter = {
@@ -18,6 +18,9 @@ const Catalog = () => {
     }
 
     const productList = productData.getAllProducts()
+    const categoryList = categoryData.getAllCategories()
+    const colorList = colorData.getAllColors()
+    const sizeList = sizeData.getAllSizes()
 
     const filterRef = useRef(null)
     const [products, setProducts] = useState(productList)
@@ -125,7 +128,7 @@ const Catalog = () => {
                         </div>
                         <div className='catalog__filter__widget__content'>
                             {
-                                category.map((item, index) => (
+                                categoryList.map((item, index) => (
                                     <div
                                         key={index}
                                         className='catalog__filter__widget__content__item'
@@ -146,7 +149,7 @@ const Catalog = () => {
                         </div>
                         <div className='catalog__filter__widget__content'>
                             {
-                                colors.map((item, index) => (
+                                colorList.map((item, index) => (
                                     <div
                                         key={index}
                                         className='catalog__filter__widget__content__item'
@@ -167,7 +170,7 @@ const Catalog = () => {
                         </div>
                         <div className='catalog__filter__widget__content'>
                             {
-                                size.map((item, index) => (
+                                sizeList.map((item, index) => (
                                     <div
                                         key={index}
                                         className='catalog__filter__widget__content__item'

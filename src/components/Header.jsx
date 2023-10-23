@@ -12,16 +12,16 @@ const mainNav = [
         path: '/catalog',
     },
     {
-        display: 'Áo thun',
-        path: '/ao-thun',
+        display: 'Áo 2 dây',
+        path: '/ao-2-day',
     },
     {
         display: 'Áo polo',
         path: '/ao-polo',
     },
     {
-        display: 'Áo 2 dây',
-        path: '/ao-2-day',
+        display: 'Áo thun',
+        path: '/ao-thun',
     },
     {
         display: 'Liên hệ',

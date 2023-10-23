@@ -1,4 +1,4 @@
-const size = [
+const sizes = [
     {
         display: 'S',
         size: 's',
@@ -17,4 +17,13 @@ const size = [
     },
 ]
 
-export default size
+const getAllSizes = () => sizes
+
+const getSize = (size) => sizes.find(sz => sz.size === size)
+
+const sizeData = {
+    getAllSizes,
+    getSize,
+}
+
+export default sizeData

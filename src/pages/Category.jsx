@@ -1,4 +1,5 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 
 import Helmet from '../components/Helmet'
 import Section, { SectionBody } from '../components/Section'
@@ -6,12 +7,16 @@ import Grid from '../components/Grid'
 import ProductCard from '../components/ProductCard'
 
 import productData from '../assets/fake-data/products'
+import categoryData from '../assets/fake-data/category'
 
-const Sale = () => {
-    const saleProducts = productData.getProducts(10)
+const Category = () => {
+    const { categorySlug } = useParams()
+
+    const products = productData.getProductsByCategorySlug(categorySlug)
+    const category = categoryData.getCategory(categorySlug)
 
     return (
-        <Helmet title='Giảm giá'>
+        <Helmet title={category.display}>
             <Section>
                 <SectionBody>
                     <Grid
@@ -21,7 +26,7 @@ const Sale = () => {
                         gap={20}
                     >
                         {
-                            saleProducts.map((item, index) => (
+                            products.map((item, index) => (
                                 <ProductCard
                                     key={index}
                                     img01={item.image01}
@@ -39,4 +44,4 @@ const Sale = () => {
     )
 }
 
-export default Sale
+export default Category

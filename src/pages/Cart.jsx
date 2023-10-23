@@ -43,7 +43,7 @@ const Cart = () => {
                         </p>
                         <div className='cart__info__txt__price'>
                             <span>
-                                Thành tiền:
+                                Tổng tiền tạm tính:
                             </span>
                             <span>
                                 {numberWithCommas(totalPrice)}đ
