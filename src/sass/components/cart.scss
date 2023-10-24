@@ -1,60 +1,68 @@
 .cart {
-    @include flex(flex-start, center);
-
-    @include tablet {
-        flex-wrap: wrap;
+    &__title {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        text-transform: uppercase;
     }
 
-    &__info {
-        margin-top: 30px;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: $box-shadow;
+    &__content {
+        @include flex(flex-start, space-between);
 
-        @include mobile {
-            width: 100%;
-            margin-bottom: 30px;
-            margin-right: 0;
+        @include tablet {
+            @include flex(center, flex-start);
+            flex-direction: column;
+        }
+
+        &__list {
+            flex: 1;
+            margin-right: 20px;
+    
+            @include tablet {
+                width: 100%;
+                margin-right: unset;
+            }
+        }
+
+        &__info {
+            width: 40%;
+            padding: 20px;
+            background-color: $main-bg;
+            border-radius: 8px;
+            box-shadow: $box-shadow;
+
+            @include tablet {
+                width: 60%;
+            }
+    
+            @include mobile {
+                width: 100%;
+            }
+    
+            &__txt {
+                font-size: 1.25rem;
+
+                &__price {
+                    @include flex(center, space-between);
+                    padding: 10px 0;
+                    font-weight: bold;
+                }
+            }
+
+            &__btn > * > * {
+                margin-top: 10px;
+            }
         }
 
         &__txt {
-            & > * {
-                margin-bottom: 10px;
-            }
-
-            p {
-                font-size: 1.25rem;
-            }
-
-            &__price {
-                @include flex(center, space-between);
-                padding: 10px 0;
-                font-size: 1.25rem;
-
-                span:nth-child(2) {
-                    font-size: 1.75rem;
-                    font-weight: bold;
-                    color: $main-color;
-                }
-            }
-        }
-
-        &__btn > *:last-child > * {
-            margin-top: 10px;
-        }
-    }
-
-    &__list {
-        flex-grow: 1;
-        margin-right: 20px;
-
-        @include tablet {
-            margin-right: unset;
-        }
-
-        &__title {
             margin-bottom: 20px;
-            font-size: 1.75rem;
+            font-size: 1.25rem;
+            color: $txt-second-color;
+        }
+
+        &.empty {
+            @include flex(center, center);
+            flex-direction: column;
+            min-height: 70vh;
         }
     }
 
@@ -86,6 +94,13 @@
                 padding: 15px 0;
             }
 
+            &__left,
+            &__right {
+                @include mobile {
+                    width: 100%;
+                }
+            }
+
             &__left {
                 @include flex(flex-start, center);
                 flex-direction: column;
@@ -111,16 +126,9 @@
                 & > * ~ * {
                     margin-left: 15px;
 
-                    @include mobile {
+                    @include tablet {
                         margin-left: 30px;
                     }
-                }
-            }
-
-            &__left,
-            &__right {
-                @include mobile {
-                    width: 100%;
                 }
             }
             
@@ -129,12 +137,9 @@
             }
             
             &__btn-delete {
+                color: $txt-second-color;
                 font-size: 1.75rem;
                 cursor: pointer;
-
-                i:hover {
-                    color: $main-color;
-                }
             }
         }
     }

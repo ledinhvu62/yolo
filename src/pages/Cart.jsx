@@ -26,46 +26,69 @@ const Cart = () => {
     return (
         <Helmet title='Giỏ hàng'>
             <div className='cart'>
-                <div className='cart__list'>
-                    <h2 className='cart__list__title'>
-                        Giỏ hàng
-                    </h2>
+                <h2 className='cart__title'>
+                    Giỏ hàng
+                </h2>
+                <div className={`cart__content ${totalProducts ? '' : 'empty'}`}>
                     {
-                        cartProducts.map((item, index) => (
-                            <CartItem item={item} key={index} />
-                        ))
+                        totalProducts ? (
+                            <>
+                                <div className='cart__content__list'>
+                                    {
+                                        cartProducts.map((item, index) => (
+                                            <CartItem item={item} key={index} />
+                                        ))
+                                    }
+                                </div>
+                                <div className='cart__content__info'>
+                                    <div className='cart__content__info__txt'>
+                                        <p>
+                                            Bạn có {totalProducts} sản phẩm trong giỏ hàng
+                                        </p>
+                                        <div className='cart__content__info__txt__price'>
+                                            <span>
+                                                Tổng đơn hàng:
+                                            </span>
+                                            <span>
+                                                {numberWithCommas(totalPrice)}đ
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div className='cart__content__info__btn'>
+                                        <Link to=''>
+                                            <Button size='block'>
+                                                Đặt hàng
+                                            </Button>
+                                        </Link>
+                                        <Link to='/catalog'>
+                                            <Button
+                                                color='main'
+                                                backgroundColor='white'
+                                                size='block'
+                                            >
+                                                Tiếp tục mua hàng
+                                            </Button>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </>
+                        ) : (
+                            <>
+                                <span className='cart__content__txt'>
+                                    Giỏ hàng của bạn đang trống
+                                </span>
+                                <Link to='/catalog'>
+                                    <Button
+                                        color='main'
+                                        backgroundColor='white'
+                                        size='block'
+                                    >
+                                        Tiếp tục mua hàng
+                                    </Button>
+                                </Link>
+                            </>
+                        )
                     }
-                </div>
-                <div className='cart__info'>
-                    <div className='cart__info__txt'>
-                        <p>
-                            Bạn đang có {totalProducts} sản phẩm trong giỏ hàng
-                        </p>
-                        <div className='cart__info__txt__price'>
-                            <span>
-                                Tổng tiền tạm tính:
-                            </span>
-                            <span>
-                                {numberWithCommas(totalPrice)}đ
-                            </span>
-                        </div>
-                    </div>
-                    <div className='cart__info__btn'>
-                        <Link to=''>
-                            <Button size='block'>
-                                Đặt hàng
-                            </Button>
-                        </Link>
-                        <Link to='/catalog'>
-                            <Button
-                                color='main'
-                                backgroundColor='white'
-                                size='block'
-                            >
-                                Tiếp tục mua hàng
-                            </Button>
-                        </Link>
-                    </div>
                 </div>
             </div>
         </Helmet>

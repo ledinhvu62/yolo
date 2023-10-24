@@ -8,16 +8,16 @@
 
     input {
         position: absolute;
+        width: 0;
+        height: 0;
         opacity: 0;
         cursor: pointer;
-        height: 0;
-        width: 0;
     }
 
     &__checkmark {
-        margin-right: 10px;
         height: 15px;
         width: 15px;
+        margin-right: 10px;
         border: 1px solid $txt-second-color;
 
         i {
@@ -27,9 +27,9 @@
     }
 
     input:checked ~ &__checkmark {
+        color: $txt-white;
         background-color: $main-color;
         border: 1px solid $main-color;
-        color: $txt-white;
     }
 
     input:checked ~ &__checkmark > i {

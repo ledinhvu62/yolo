@@ -50,13 +50,13 @@ const product_16_image_02 = require('../images/products/product-16 (2).jpg')
 
 const products = [
     {
-        title: 'Áo Thun Clean Việt Nam 1',
+        title: 'Áo Thun Clean 1',
         price: '329000',
         image01: product_01_image_01,
         image02: product_01_image_02,
         categorySlug: 'ao-thun',
         colors: ['turquoise', 'blue', 'white'],
-        slug: 'ao-thun-clean-viet-nam-1',
+        slug: 'ao-thun-clean-1',
         size: ['s', 'm', 'l'],
         description: `
             <div>
@@ -238,13 +238,13 @@ const products = [
         `,
     },
     {
-        title: 'Áo Thun Clean Việt Nam 2',
+        title: 'Áo Thun Clean 2',
         price: '329000',
         image01: product_11_image_01,
         image02: product_11_image_02,
         categorySlug: 'ao-thun',
         colors: ['blue', 'turquoise', 'white'],
-        slug: 'ao-thun-clean-viet-nam-2',
+        slug: 'ao-thun-clean-2',
         size: ['s', 'm', 'l'],
         description: `
             <div>

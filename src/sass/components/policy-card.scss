@@ -4,8 +4,8 @@
     height: 100%;
     padding: 20px;
     margin: 0 auto;
-    box-shadow: $box-shadow;
     border-radius: 8px;
+    box-shadow: $box-shadow;
     transition: transform 0.5s ease;
 
     @include mobile {
@@ -30,14 +30,14 @@
         width: 60%;
 
         &__name {
+            margin-bottom: 10px;
             font-size: 1.25rem;
             font-weight: 600;
-            margin-bottom: 10px;
         }
 
         &__description {
-            font-size: 1rem;
             color: $txt-second-color;
+            font-size: 1rem;
             line-height: 1.5rem;
         }
     }

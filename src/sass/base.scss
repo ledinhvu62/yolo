@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "SVN-Gilroy Medium";
+    src: local("SVN-Gilroy Medium"), url("../fonts/SVN-Gilroy Medium.otf") format("truetype");
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -15,7 +20,7 @@ html {
 }
 
 body {
-    font-family: "Segeo UI", sans-serif;
+    font-family: "SVN-Gilroy Medium", sans-serif;
 }
 
 ul {

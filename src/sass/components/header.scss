@@ -24,16 +24,7 @@
         @include flex(center, space-between);
         height: 100%;
         font-size: 1.5rem;
-
-        &__item {
-            text-align: center;
-        }
-
-        &__item.active,
-        &__item:hover {
-            color: $main-color;
-        }
-
+        
         &__left,
         &__right {
             @include flex(center, center);
@@ -49,6 +40,10 @@
 
                 &:first-child {
                     cursor: pointer;
+                }
+
+                & > *:hover {
+                    color: $txt-main-color;
                 }
 
                 i {
@@ -134,7 +129,6 @@
                     height: 100%;
                     padding: 0 15px;
                     font-size: 1.25rem;
-                    font-weight: 600;
                     text-transform: uppercase;
 
                     @include tablet {
@@ -147,6 +141,7 @@
 
                 & > *:hover,
                 &.active {
+                    color: $main-color;
                     border-bottom: 3px solid $main-color;
 
                     @include tablet {
@@ -250,6 +245,7 @@
             width: 85%;
             height: 40px;
             font-size: 1.25rem;
+            font-family: inherit;
             color: $txt-second-color;
             outline: none;
             border: 1px solid $border-main-color;
