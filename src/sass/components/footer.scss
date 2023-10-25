@@ -1,7 +1,7 @@
 .footer {
     padding: 40px 0;
-    box-shadow: $box-shadow;
     font-size: 1.1rem;
+    box-shadow: $box-shadow;
 
     & > * > * > * {
         @include mobile {
@@ -11,35 +11,40 @@
         }
     }
 
-    &__title {
-        text-transform: uppercase;
-        margin-bottom: 1.5rem;
-        font-weight: 600;
-    }
+    &__item {
+        &:first-child a {
+            display: block;
+        }
 
-    &__content {
-        p {
+        &__title {
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        &:first-child a,
+        &__content p {
             margin-bottom: 1rem;
             line-height: 1.875rem;
         }
-    }
 
-    &__logo {
-        height: 38px;
-        margin-bottom: 25px;
-
-        @include mobile {
-            height: 28px;
+        &__logo {
+            height: 38px;
+            margin-bottom: 25px;
+    
+            @include mobile {
+                height: 28px;
+            }
         }
-    }
 
-    &__social-link {
-        margin-right: 15px;
-
-        i {
-            font-size: 2.25rem;
-            color: $main-color;
-            border: $main-color;
+        &__social-link {
+            margin-right: 15px;
+    
+            i {
+                font-size: 2.25rem;
+                color: $main-color;
+                border: $main-color;
+            }
         }
     }
 
