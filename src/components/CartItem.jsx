@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import colorData from '../assets/fake-data/product-color'
 import sizeData from '../assets/fake-data/product-size'
@@ -11,6 +11,7 @@ import { updateItem, removeItem } from '../redux/shopping-cart/cartItemsSlice'
 import numberWithCommas from '../utils/numberWithCommas'
 
 const CartItem = props => {
+    const navigate = useNavigate()
     const dispatch = useDispatch()
     const [item, setItem] = useState(props.item)
     const [quantity, setQuantity] = useState(props.item.quantity)
@@ -45,7 +46,10 @@ const CartItem = props => {
 
     return (
         <div className='cart__item'>
-            <div className='cart__item__image'>
+            <div
+                className='cart__item__image'
+                onClick={() => navigate(`/catalog/${item.slug}`)}
+            >
                 <img src={item.product.image01} alt='Ảnh sản phẩm' />
             </div>
             <div className='cart__item__info'>

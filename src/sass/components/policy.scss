@@ -2,16 +2,21 @@
     @include flex(flex-start, center);
     margin-bottom: 40px;
 
-    @include tablet {
-        display: none;
-    }
-
     &__item {
         @include flex(center, center);
         flex-direction: column;
         width: 15%;
         margin: 0 20px;
         transition: transform 0.5s ease;
+
+        @include tablet {
+            width: 20%;
+        }
+
+        @include mobile {
+            width: 30%;
+            margin: 0 5px;
+        }
 
         &:hover {
             transform: translateY(-15px);
@@ -32,6 +37,16 @@
             color: $txt-white;
             background-color: $main-color;
             border-radius: 50%;
+
+            @include tablet {
+                width: 50px;
+                height: 50px;
+            }
+
+            @include mobile {
+                width: 40px;
+                height: 40px;
+            }
     
             &:hover {
                 box-shadow: 0 5px 5px rgba(149, 157, 165, 0.6);
@@ -39,6 +54,14 @@
     
             i {
                 font-size: 2.5rem;
+
+                @include tablet {
+                    font-size: 2rem;
+                }
+
+                @include mobile {
+                    font-size: 1.75rem;
+                }
             }
         }
     
@@ -48,6 +71,12 @@
             color: $txt-second-color;
             font-size: 1.25rem;
             line-height: 1.875rem;
+
+            @include tablet {
+                margin-top: 5px;
+                font-size: 1.1rem;
+                line-height: 1.65rem;
+            }
         }
     }
 }

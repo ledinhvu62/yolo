@@ -5,7 +5,7 @@ import Grid from './Grid'
 import ProductCard from './ProductCard'
 
 const InfinityList = props => {
-    const perLoad = 8
+    const perLoad = props.videoPerLoad
 
     const listRef = useRef(null)
     const [data, setData] = useState([])
@@ -54,10 +54,10 @@ const InfinityList = props => {
     return (
         <div ref={listRef}>
             <Grid
-                col={4}
-                mdCol={3}
-                smCol={2}
-                gap={20}
+                col={props.col}
+                mdCol={props.mdCol}
+                smCol={props.smCol}
+                gap={props.gap}
             >
                 {
                     data.map((item, index) => (
@@ -78,6 +78,11 @@ const InfinityList = props => {
 
 InfinityList.propTypes = {
     data: PropTypes.array.isRequired,
+    videoPerLoad: PropTypes.number.isRequired,
+    col: PropTypes.number.isRequired,
+    mdCol: PropTypes.number.isRequired,
+    smCol: PropTypes.number.isRequired,
+    gap: PropTypes.number.isRequired,
 }
 
 export default InfinityList

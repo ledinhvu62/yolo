@@ -207,7 +207,14 @@ const Catalog = () => {
                     </Button>
                 </div>
                 <div className='catalog__content'>
-                    <InfinityList data={products} />
+                    <InfinityList
+                        data={products}
+                        videoPerLoad={8}
+                        col={4}
+                        mdCol={3}
+                        smCol={2}
+                        gap={20}
+                    />
                 </div>
             </div>
         </Helmet>
