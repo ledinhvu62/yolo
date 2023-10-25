@@ -143,7 +143,7 @@ const Header = () => {
                         onKeyDown={e => handleKeyDown(e)}
                     />
                     <div
-                        className='header__search-box__btn'
+                        className='header__search-box__search-btn'
                         onClick={searchToggle}
                     >
                         <Link to='/search'>

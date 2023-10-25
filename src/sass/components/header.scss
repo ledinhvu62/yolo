@@ -42,7 +42,7 @@
                     cursor: pointer;
                 }
 
-                & > *:hover {
+                & > *:first-child:hover {
                     color: $txt-main-color;
                 }
 
@@ -139,7 +139,7 @@
                     }
                 }
 
-                & > *:hover,
+                &:hover,
                 &.active {
                     color: $main-color;
                     border-bottom: 3px solid $main-color;
@@ -147,10 +147,6 @@
                     @include tablet {
                         border-bottom: unset;
                     }
-                }
-
-                &.active:hover {
-                    border-bottom: unset;
                 }
             }
 
@@ -259,7 +255,7 @@
             }
         }
     
-        &__btn {
+        &__search-btn {
             flex: 1;
             min-width: 60px;
             height: 40px;
