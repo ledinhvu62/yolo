@@ -48,6 +48,18 @@ const product_15_image_02 = require('../images/products/product-15 (2).jpg')
 const product_16_image_01 = require('../images/products/product-16 (1).jpg')
 const product_16_image_02 = require('../images/products/product-16 (2).jpg')
 
+const product_17_image_01 = require('../images/products/product-17 (1).jpg')
+const product_17_image_02 = require('../images/products/product-17 (2).jpg')
+
+const product_18_image_01 = require('../images/products/product-18 (1).jpg')
+const product_18_image_02 = require('../images/products/product-18 (2).jpg')
+
+const product_19_image_01 = require('../images/products/product-19 (1).jpg')
+const product_19_image_02 = require('../images/products/product-19 (2).jpg')
+
+const product_20_image_01 = require('../images/products/product-20 (1).jpg')
+const product_20_image_02 = require('../images/products/product-20 (2).jpg')
+
 const products = [
     {
         title: 'Áo Thun Clean 1',
@@ -345,6 +357,80 @@ const products = [
                 <p>- Công nghệ Siro compact với mật độ xơ cao, được xoắn gọn gàng và xe đôi nên bề mặt vải mịn màng.</p>
                 <p>- Hạn chế xù lông hơn 17% và bền hơn 20% so với các loại vải khác cùng dòng.</p>
                 <p>- Sản phẩm dễ chăm sóc, có thể giặt máy.</p>
+            </div>
+        `,
+    },
+    {
+        title: 'Áo Polo Thể Thao 1',
+        price: '379000',
+        image01: product_17_image_01,
+        image02: product_17_image_02,
+        categorySlug: 'ao-polo',
+        colors: ['pink', 'black', 'orange'],
+        slug: 'ao-polo-the-thao-1',
+        size: ['m'],
+        description: `
+            <div>
+                <p>- Chất liệu: Airycool với thành phần 88% Nylon + 12% Spandex.</p>
+                <p>- Công nghệ Freezing tiến tiến giúp giải nhiệt cơ thể cho ngày hè mát mẻ.</p>
+                <p>- Thông thoáng, thấm hút mồ hôi tốt.</p>
+                <p>- Khả năng co giãn, giữ form tốt.</p>
+            </div>
+        `,
+    },
+    {
+        title: 'Áo Thun Vải Bamboo',
+        price: '199000',
+        image01: product_18_image_01,
+        image02: product_18_image_02,
+        categorySlug: 'ao-thun',
+        colors: ['white'],
+        slug: 'ao-thun-vai-bamboo',
+        size: ['s'],
+        description: `
+            <div>
+                <p>- Áo thun nữ chất liệu vải Single Bamboo, thành phần: 95% Bamboo + 5% Spandex.</p>
+                <p>- Vải có nguồn gốc từ tre nên rất thân thiện môi trường, lành tính, an toàn với người sử dụng.</p>
+                <p>- Mềm mại, thông thoáng, thấm hút tốt.</p>
+                <p>- Khả năng co giãn đàn hồi tốt, độ bền cao.</p>
+                <p>- Kiểu dáng ôm vừa vặn, tôn dáng.</p>
+            </div>
+        `,
+    },
+    {
+        title: 'Áo Polo Thể Thao 2',
+        price: '379000',
+        image01: product_19_image_01,
+        image02: product_19_image_02,
+        categorySlug: 'ao-polo',
+        colors: ['black', 'orange', 'pink'],
+        slug: 'ao-polo-the-thao-2',
+        size: ['m'],
+        description: `
+            <div>
+                <p>- Chất liệu: Airycool với thành phần 88% Nylon + 12% Spandex.</p>
+                <p>- Công nghệ Freezing tiến tiến giúp giải nhiệt cơ thể cho ngày hè mát mẻ.</p>
+                <p>- Thông thoáng, thấm hút mồ hôi tốt.</p>
+                <p>- Khả năng co giãn, giữ form tốt.</p>
+            </div>
+        `,
+    },
+    {
+        title: 'Áo Thun Cotton USA',
+        price: '299000',
+        image01: product_20_image_01,
+        image02: product_20_image_02,
+        categorySlug: 'ao-thun',
+        colors: ['white', 'orange'],
+        slug: 'ao-thun-cotton-usa',
+        size: ['l'],
+        description: `
+            <div>
+                <p>- Chất liệu: 100% Cotton.</p>
+                <p>- Kiểu dáng freesize rộng mang đến sự thoải mái khi mặc.</p>
+                <p>- Điểm nhấn hình in mảng lớn nổi bật với chú mèo đeo kính.</p>
+                <p>- Thích hợp để tôn lên nét trẻ trung, cá tính của chị em.</p>
+                <p>- Có thể mix với quần short, chân váy hoặc quần jeans mặc đi chơi, đi làm.</p>
             </div>
         `,
     },

@@ -12,6 +12,10 @@ const colors = [
         color: 'red',
     },
     {
+        display: 'Hồng',
+        color: 'pink',
+    },
+    {
         display: 'Trắng',
         color: 'white',
     },
