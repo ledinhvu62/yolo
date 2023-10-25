@@ -69,6 +69,7 @@ const Contact = () => {
                                         className='form-control'
                                         name='fullname'
                                         type='text'
+                                        spellCheck={false}
                                     />
                                     <span className='form-message'></span>
                                 </div>
@@ -85,6 +86,7 @@ const Contact = () => {
                                         className='form-control'
                                         name='email'
                                         type='email'
+                                        spellCheck={false}
                                     />
                                     <span className='form-message'></span>
                                 </div>
@@ -102,6 +104,7 @@ const Contact = () => {
                                     className='form-control form-textarea'
                                     name='content'
                                     type='text'
+                                    spellCheck={false}
                                 />
                                 <span className='form-message'></span>
                             </div>

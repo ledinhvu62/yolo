@@ -125,6 +125,7 @@ const Header = () => {
                         placeholder='Tìm kiếm'
                         onChange={e => dispatch(set(e.target.value))}
                         onKeyDown={e => handleKeyDown(e)}
+                        spellCheck={false}
                     />
                     <div
                         className='header__search-box__search-btn'
