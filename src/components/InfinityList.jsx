@@ -15,7 +15,7 @@ const InfinityList = props => {
     useEffect(() => {
         setData(props.data.slice(0, perLoad))
         setIndex(1)
-    }, [props.data])
+    }, [perLoad, props.data])
 
     useEffect(() => {
         const handleScrollPage = () => {
@@ -49,7 +49,7 @@ const InfinityList = props => {
 
         getItems()
         setLoad(false)
-    }, [load, index, data, props.data])
+    }, [load, index, data, perLoad, props.data])
 
     return (
         <div ref={listRef}>
