@@ -1,0 +1,53 @@
+.policy {
+    @include flex(flex-start, center);
+    margin-bottom: 40px;
+
+    @include tablet {
+        display: none;
+    }
+
+    &__item {
+        @include flex(center, center);
+        flex-direction: column;
+        width: 15%;
+        margin: 0 20px;
+        transition: transform 0.5s ease;
+
+        &:hover {
+            transform: translateY(-15px);
+        }
+
+        &:first-child {
+            margin-left: unset;
+        }
+
+        &:last-child {
+            margin-right: unset;
+        }
+
+        &__icon {
+            @include flex(center, center);
+            width: 60px;
+            height: 60px;
+            color: $txt-white;
+            background-color: $main-color;
+            border-radius: 50%;
+    
+            &:hover {
+                box-shadow: 0 5px 5px rgba(149, 157, 165, 0.6);
+            }
+    
+            i {
+                font-size: 2.5rem;
+            }
+        }
+    
+        &__description {
+            margin-top: 15px;
+            text-align: center;
+            color: $txt-second-color;
+            font-size: 1.25rem;
+            line-height: 1.875rem;
+        }
+    }
+}

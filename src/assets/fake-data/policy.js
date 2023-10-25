@@ -1,23 +1,23 @@
 const policy = [
     {
-        name: 'Miễn phí giao hàng',
-        description: 'Miễn phí ship với đơn hàng tối thiểu 300,000đ',
-        icon: 'bx bx-shopping-bag',
+        id: 1,
+        description: 'Freeship với đơn hàng trên 300,000đ',
+        icon: 'bx bx-basket',
     },
     {
-        name: 'Thanh toán COD',
-        description: 'Thanh toán khi nhận hàng (COD)',
+        id: 2,
+        description: 'Thanh toán khi nhận hàng',
         icon: 'bx bx-credit-card',
     },
     {
-        name: 'Khách hàng VIP',
+        id: 3,
         description: 'Ưu đãi dành cho khách hàng VIP',
         icon: 'bx bx-diamond',
     },
     {
-        name: 'Hỗ trợ bảo hành',
-        description: 'Đổi và sửa chữa sản phẩm tại tất cả cửa hàng',
-        icon: 'bx bx-donate-heart',
+        id: 4,
+        description: 'Bảo hành miễn phí trong 6 tháng',
+        icon: 'bx bx-store',
     },
 ]
 

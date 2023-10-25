@@ -1,10 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 import Helmet from '../components/Helmet'
 import Slider from '../components/Slider'
 import Section, { SectionTitle, SectionBody } from '../components/Section'
-import PolicyCard from '../components/PolicyCard'
+import Policy from '../components/Policy'
 import Grid from '../components/Grid'
 import ProductCard from '../components/ProductCard'
 
@@ -23,33 +22,9 @@ const Home = () => {
             />
             {/* end slider */}
 
-            {/* policy section */}
-            <Section>
-                <SectionBody>
-                    <Grid
-                        col={4}
-                        mdCol={2}
-                        smCol={1}
-                        gap={20}
-                    >
-                        {
-                            policy.map((item, index) => (
-                                <Link
-                                    key={index}
-                                    to='/policy'
-                                >
-                                    <PolicyCard
-                                        name={item.name}
-                                        description={item.description}
-                                        icon={item.icon}
-                                    />
-                                </Link>
-                            ))
-                        }
-                    </Grid>
-                </SectionBody>
-            </Section>
-            {/* end policy section */}
+            {/* policy */}
+            <Policy data={policy} />
+            {/* end policy */}
 
             {/* best selling section */}
             <Section>
@@ -109,7 +84,7 @@ const Home = () => {
             </Section>
             {/* end new arrival section */}
 
-            {/* popular product section */}
+            {/* recommended product section */}
             <Section>
                 <SectionTitle>
                     Gợi ý cho bạn
@@ -136,7 +111,7 @@ const Home = () => {
                     </Grid>
                 </SectionBody>
             </Section>
-            {/* end popular product section */}
+            {/* end recommended product section */}
         </Helmet>
     )
 }
