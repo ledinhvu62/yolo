@@ -17,13 +17,17 @@ const Header = () => {
     
     const { pathname } = useLocation()
     const navigationList = navigationData.getAllNavigation()
-    const activeNav = navigationList.findIndex(e => e.path === pathname)
+    const activeNav = navigationList.findIndex(e => e.path === pathname.replace('/', ''))
 
     const menuLeft = useRef(null)
     const menuToggle = () => menuLeft.current.classList.toggle('active')
 
     const searchRef = useRef(null)
-    const searchToggle = () => searchRef.current.classList.toggle('active')
+    const inputSearchRef = useRef(null)
+    const searchToggle = () => {
+        searchRef.current.classList.toggle('active')
+        searchRef.current.classList.contains('active') && inputSearchRef.current.focus()
+    }
 
     const dispatch = useDispatch()
     const keyword = useSelector((state) => state.keywordSearch.value)
@@ -114,6 +118,7 @@ const Header = () => {
                     className='header__search-box'
                 >
                     <input
+                        ref={inputSearchRef}
                         className='header__search-box__input'
                         type='text'
                         value={keyword}

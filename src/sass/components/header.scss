@@ -119,8 +119,8 @@
                 height: 100%;
 
                 @include tablet {
-                    max-width: unset;
                     width: 100%;
+                    max-width: unset;
                     height: 60px;
                 }
 

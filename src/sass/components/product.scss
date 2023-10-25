@@ -48,10 +48,10 @@
 
     &__info {
         flex-grow: 1;
-        padding-top: 2rem;
-
+        
         @include tablet {
             width: 100%;
+            margin-top: 2rem;
         }
 
         &__title {
@@ -77,35 +77,22 @@
 
                 &__item {
                     @include flex(center, center);
-                    width: 50px;
-                    height: 50px;
+                    width: 40px;
+                    height: 40px;
                     margin-right: 1rem;
                     border: 2px solid $border-main-color;
                     border-radius: 50%;
                     cursor: pointer;
 
-                    @include mobile {
-                        width: 40px;
-                        height: 40px;
-                    }
-
+                    &:hover,
                     &.active {
                         border-color: $main-color;
                     }
 
-                    &:hover {
-                        border-color: $main-color;
-                    }
-
                     .circle {
-                        width: 40px;
-                        height: 40px;
+                        width: 30px;
+                        height: 30px;
                         border-radius: 50%;
-
-                        @include mobile {
-                            width: 30px;
-                            height: 30px;
-                        }
                     }
 
                     &__size {
