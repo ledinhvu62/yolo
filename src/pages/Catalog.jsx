@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 
 import Helmet from '../components/Helmet'
+import Breadcrumbs from '../components/Breadcrumbs'
 import CheckBox from '../components/CheckBox'
 import Button from '../components/Button'
 import InfinityList from '../components/InfinityList'
@@ -111,6 +112,7 @@ const Catalog = () => {
 
     return (
         <Helmet title='Sản phẩm'>
+            <Breadcrumbs />
             <div className='catalog'>
                 <div
                     ref={filterRef}

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
 import Helmet from '../components/Helmet'
+import Breadcrumbs from '../components/Breadcrumbs'
 import Section, { SectionBody, SectionTitle } from '../components/Section'
 import Grid from '../components/Grid'
 import ProductCard from '../components/ProductCard'
@@ -21,6 +22,7 @@ const Product = () => {
 
     return (
         <Helmet title={product.title}>
+            <Breadcrumbs />
             <Section>
                 <SectionBody>
                     <ProductView product={product} />

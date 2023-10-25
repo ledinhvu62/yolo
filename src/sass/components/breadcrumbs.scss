@@ -1,0 +1,32 @@
+.breadcrumbs {
+    @include flex(center, flex-start);
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+    background-color: pink;
+
+    @include tablet {
+        display: none;
+    }
+
+    &__item {
+        & > a {
+            margin: 0 8px;
+        }
+
+        &:first-child a {
+            margin-left: unset;
+        }
+
+        &:last-child {
+            a {
+                margin-right: unset;
+                font-weight: 600;
+                pointer-events: none;
+            }
+
+            span {
+                display: none;     
+            }
+        }
+    }
+}

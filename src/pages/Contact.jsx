@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 
 import Helmet from '../components/Helmet'
+import Breadcrumbs from '../components/Breadcrumbs'
 import Grid from '../components/Grid'
 import Button from '../components/Button'
 
@@ -28,6 +29,7 @@ const Contact = () => {
 
     return (
         <Helmet title='Liên hệ'>
+            <Breadcrumbs />
             <div className='contact'>
                 <Grid
                     col={2}

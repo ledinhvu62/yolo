@@ -2,43 +2,22 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 
-import { set, remove } from '../redux/search/keywordSearchSlice'
-
+import navigationData from '../assets/fake-data/navigation'
 import logo from '../assets/images/logo.svg'
 
-const mainNav = [
-    {
-        display: 'Sản phẩm',
-        path: '/catalog',
-    },
-    {
-        display: 'Áo 2 dây',
-        path: '/ao-2-day',
-    },
-    {
-        display: 'Áo polo',
-        path: '/ao-polo',
-    },
-    {
-        display: 'Áo thun',
-        path: '/ao-thun',
-    },
-    {
-        display: 'Liên hệ',
-        path: '/contact',
-    },
-]
+import { set, remove } from '../redux/search/keywordSearchSlice'
 
 const Header = () => {
     const cartItems = useSelector((state) => state.cartItems.value)
     const [totalProducts, setTotalProducts] = useState(0)
-
+    
     useEffect(() => {
         setTotalProducts(cartItems.reduce((total, item) => total + (+item.quantity), 0))
     }, [cartItems])
-
+    
     const { pathname } = useLocation()
-    const activeNav = mainNav.findIndex(e => e.path === pathname)
+    const navigationList = navigationData.getAllNavigation()
+    const activeNav = navigationList.findIndex(e => e.path === pathname)
 
     const menuLeft = useRef(null)
     const menuToggle = () => menuLeft.current.classList.toggle('active')
@@ -64,7 +43,7 @@ const Header = () => {
     }, [pathname, dispatch])
 
     return (
-        <div className='header'>
+        <header className='header'>
             <div className='container'>
                 <div className='header__menu'>
                     <div
@@ -91,7 +70,7 @@ const Header = () => {
                         <nav>
                             <ul>
                                 {
-                                    mainNav.map((item, index) => (
+                                    navigationList.map((item, index) => (
                                         <li
                                             key={index}
                                             className={`header__menu__left__item ${index === activeNav ? 'active' : ''}`}
@@ -158,7 +137,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </header>
     )
 }
 

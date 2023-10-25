@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 
 import Helmet from '../components/Helmet'
+import Breadcrumbs from '../components/Breadcrumbs'
 import Section, { SectionBody } from '../components/Section'
 import Grid from '../components/Grid'
 import ProductCard from '../components/ProductCard'
@@ -17,6 +18,7 @@ const Category = () => {
 
     return (
         <Helmet title={category.display}>
+            <Breadcrumbs />
             <Section>
                 <SectionBody>
                     <Grid
