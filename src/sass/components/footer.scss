@@ -39,6 +39,10 @@
 
         &__social-link {
             margin-right: 15px;
+
+            &:last-child {
+                margin-right: unset;
+            }
     
             i {
                 font-size: 2.25rem;

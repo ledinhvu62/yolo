@@ -1,22 +1,21 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
-import '../../node_modules/swiped-events/dist/swiped-events.min.js'
 
 const Slider = props => {
     const data = props.data
     const timeOut = props.timeOut ? props.timeOut : 3000
 
-    const [activeSlide, setActiveSlide] = useState(0)
     const sliderRef = useRef(null)
-
-    const nextSlide = useCallback(() => {
-        const index = activeSlide + 1 === data.length ? 0 : activeSlide + 1
-        setActiveSlide(index)
-    }, [activeSlide, data])
+    const [activeSlide, setActiveSlide] = useState(0)
 
     const prevSlide = useCallback(() => {
         const index = activeSlide - 1 < 0 ? data.length - 1 : activeSlide - 1
+        setActiveSlide(index)
+    }, [activeSlide, data])
+
+    const nextSlide = useCallback(() => {
+        const index = activeSlide + 1 === data.length ? 0 : activeSlide + 1
         setActiveSlide(index)
     }, [activeSlide, data])
 
@@ -64,7 +63,7 @@ const Slider = props => {
                         key={index}
                         className={`slider__image ${index === activeSlide ? 'active' : ''}`}
                     >
-                        <Link to={`${item.path}`}>
+                        <Link to={item.path}>
                             <img src={item.img} alt='Banner' />
                         </Link>
                     </div>
@@ -75,6 +74,12 @@ const Slider = props => {
                 onClick={prevSlide}
             >
                 <i className='bx bx-chevron-left'></i>
+            </div>
+            <div
+                className='slider__btn-next'
+                onClick={nextSlide}
+            >
+                <i className='bx bx-chevron-right'></i>
             </div>
             <div className='slider__dot'>
                 {
@@ -87,12 +92,6 @@ const Slider = props => {
                         </div>
                     ))
                 }
-            </div>
-            <div
-                className='slider__btn-next'
-                onClick={nextSlide}
-            >
-                <i className='bx bx-chevron-right'></i>
             </div>
         </div>
     )

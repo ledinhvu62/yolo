@@ -7,6 +7,8 @@ import { Provider } from 'react-redux'
 
 import Layout from './components/Layout'
 
+import '../node_modules/swiped-events/dist/swiped-events.min.js'
+
 import './sass/index.scss'
 import '../node_modules/boxicons/css/boxicons.min.css'
 

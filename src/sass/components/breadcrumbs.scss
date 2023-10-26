@@ -3,10 +3,6 @@
     margin-bottom: 20px;
     font-size: 1.25rem;
 
-    @include tablet {
-        display: none;
-    }
-
     &__item {
         & > a {
             margin: 0 8px;
