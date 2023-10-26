@@ -15,9 +15,11 @@
     }
 
     &__checkmark {
-        height: 15px;
+        @include flex(center, center);
         width: 15px;
+        height: 15px;
         margin-right: 10px;
+        border-radius: 4px;
         border: 1px solid $txt-second-color;
 
         i {

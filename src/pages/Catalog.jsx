@@ -119,10 +119,10 @@ const Catalog = () => {
                     className='catalog__filter'
                 >
                     <div
-                        className='catalog__filter__close'
+                        className='catalog__filter__btn-close'
                         onClick={() => showHideFilter()}
                     >
-                        <i className='bx bx-left-arrow-alt'></i>
+                        <i className='bx bx-x'></i>
                     </div>
                     <div className='catalog__filter__widget'>
                         <div className='catalog__filter__widget__title'>
@@ -190,7 +190,7 @@ const Catalog = () => {
                     <div className='catalog__filter__widget'>
                         <div className='catalog__filter__widget__content'>
                             <Button
-                                size='sm'
+                                size='block'
                                 onClick={clearFilter}
                             >
                                 Xóa bộ lọc

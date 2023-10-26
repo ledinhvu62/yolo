@@ -7,36 +7,33 @@
 
     &__filter {
         width: 20%;
+        margin-right: 20px;
 
         @include tablet {
             position: fixed;
-            top: $header-tablet-height;
+            top: 0;
             left: 0;
-            width: max-content;
+            width: 100%;
             height: 100vh;
-            padding: 1rem;
+            margin-right: unset;
+            padding: 1rem 3rem;
             background-color: $main-bg;
-            box-shadow: $box-shadow;
             z-index: 100;
             transform: translateX(-100%);
             transition: transform 0.3s ease;
-        }
-
-        @include mobile {
-            top: $header-mobile-height;
         }
 
         &.active {
             transform: translateX(0);
         }
 
-        &__close {
+        &__btn-close {
             display: none;
 
             @include tablet {
                 display: block;
-                margin-bottom: 1rem;
-                font-size: 2rem;
+                font-size: 3rem;
+                text-align: right;
             }
         }
 
@@ -44,17 +41,43 @@
             margin-bottom: 2rem;
 
             &__title {
-                margin-bottom: 16px;
+                margin-bottom: 1rem;
                 font-size: 1.25rem;
-                font-weight: 600;
+                font-weight: bold;
                 text-transform: capitalize;
+
+                @include mobile {
+                    font-size: 1.5rem;
+                }
             }
 
             &__content {
                 color: $txt-second-color;
 
+                @include tablet {
+                    @include flex(flex-start, flex-start);
+                    flex-wrap: wrap;
+                }
+
                 &__item {
-                    margin-bottom: 13px;
+                    margin-bottom: 1rem;
+                    font-size: 1.1rem;
+
+                    @include tablet {
+                        width: 50%;
+                    }
+
+                    @include mobile {
+                        font-size: 1.25rem;
+                    }
+                }
+
+                button {
+                    font-size: 1.1rem;
+
+                    @include tablet {
+                        font-size: 1.25rem;
+                    }
                 }
             }
         }
