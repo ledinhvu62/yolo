@@ -3,14 +3,20 @@
     flex-direction: column;
 
     &__title {
-        width: 100%;
-        margin-bottom: 20px;
-        text-align: center;
-        font-size: 1.75rem;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
 
+    &__txt {
+        width: 100%;
+        margin: 20px 0;
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+        text-align: center;
+        
         span {
             color: $main-color;
-            font-weight: 600;
+            font-weight: bold;
         }
     }
 
