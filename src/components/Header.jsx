@@ -117,23 +117,25 @@ const Header = () => {
                     ref={searchRef}
                     className='header__search-box'
                 >
-                    <input
-                        ref={inputSearchRef}
-                        className='header__search-box__input'
-                        type='text'
-                        value={keyword}
-                        placeholder='Tìm kiếm'
-                        onChange={e => dispatch(set(e.target.value))}
-                        onKeyDown={e => handleKeyDown(e)}
-                        spellCheck={false}
-                    />
-                    <div
-                        className='header__search-box__search-btn'
-                        onClick={searchToggle}
-                    >
-                        <Link to='/search'>
-                            <i className='bx bx-search'></i>
-                        </Link>
+                    <div className='header__search-box__wrapper'>
+                        <input
+                            ref={inputSearchRef}
+                            className='header__search-box__wrapper__input'
+                            type='text'
+                            value={keyword}
+                            placeholder='Tìm kiếm'
+                            onChange={e => dispatch(set(e.target.value))}
+                            onKeyDown={e => handleKeyDown(e)}
+                            spellCheck={false}
+                        />
+                        <div
+                            className='header__search-box__wrapper__search-btn'
+                            onClick={searchToggle}
+                        >
+                            <Link to='/search'>
+                                <i className='bx bx-search'></i>
+                            </Link>
+                        </div>
                     </div>
                     <div
                         className='header__search-box__close-btn'

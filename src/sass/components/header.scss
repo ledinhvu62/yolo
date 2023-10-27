@@ -235,46 +235,49 @@
             pointer-events: auto;
             transform: translateX(0);
         }
-    
-        &__input {
-            padding: 8px;
-            width: 85%;
+
+        &__wrapper {
+            @include flex(center, flex-start);
+            flex: 1;
             height: 40px;
-            font-family: inherit;
-            font-size: 1.25rem;
-            line-height: 1.875rem;
-            color: $txt-second-color;
-            outline: none;
             border: 1px solid $border-main-color;
-            border-right: none;
-            border-top-left-radius: 8px;
-            border-bottom-left-radius: 8px;
-    
+            border-radius: 9999px;
+            overflow: hidden;
+
             &:hover {
                 border: 2px solid $main-color;
-                border-right: none;
             }
-        }
-    
-        &__search-btn {
-            flex: 1;
-            min-width: 60px;
-            height: 40px;
-            background-color: $main-color;
-            border-top-right-radius: 8px;
-            border-bottom-right-radius: 8px;
-            
-            a {
-                @include flex(center, center);
-                width: 100%;
+
+            &__input {
+                flex: 1;
+                min-width: 50px;
                 height: 100%;
-                font-size: 2rem;
-                color: $txt-white;
+                padding: 10px 20px;
+                font-family: inherit;
+                font-size: 1.25rem;
+                line-height: 1.875rem;
+                color: $txt-second-color;
+                outline: none;
+                border: none;
+            }
+        
+            &__search-btn {
+                width: 50px;
+                height: 100%;
+                
+                a {
+                    @include flex(center, center);
+                    width: 100%;
+                    height: 100%;
+                    font-size: 2rem;
+                    color: $txt-second-color;
+                }
             }
         }
 
         &__close-btn {
             @include flex(center, center);
+            width: 40px;
             height: 40px;
             margin-left: 30px;
             font-size: 3rem;
