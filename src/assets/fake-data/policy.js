@@ -1,23 +1,22 @@
+const policy_image_01 = require('../images/policy/policy_1.png')
+const policy_image_02 = require('../images/policy/policy_2.png')
+const policy_image_03 = require('../images/policy/policy_3.png')
+
 const policy = [
     {
         id: 1,
-        description: 'Freeship với đơn hàng trên 300,000đ',
-        icon: 'bx bx-basket',
+        img: policy_image_01,
+        description: 'Freeship cho đơn hàng từ 300k',
     },
     {
         id: 2,
-        description: 'Thanh toán khi nhận hàng',
-        icon: 'bx bx-credit-card',
+        img: policy_image_02,
+        description: 'Vô vàn coupon 33k 77k',
     },
     {
         id: 3,
-        description: 'Ưu đãi dành cho khách hàng VIP',
-        icon: 'bx bx-diamond',
-    },
-    {
-        id: 4,
-        description: 'Bảo hành miễn phí trong 6 tháng',
-        icon: 'bx bx-store',
+        img: policy_image_03,
+        description: 'Quà tặng tri ân cho khách VIP',
     },
 ]
 

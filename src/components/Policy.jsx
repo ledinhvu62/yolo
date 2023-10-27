@@ -12,8 +12,8 @@ const Policy = props => {
                         key={item.id}
                         className='policy__item'
                     >
-                        <div className='policy__item__icon'>
-                            <i className={item.icon}></i>
+                        <div className='policy__item__image'>
+                            <img src={item.img} alt='Ảnh chính sách' />
                         </div>
                         <span className='policy__item__description'>
                             {item.description}
