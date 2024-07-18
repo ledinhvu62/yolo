@@ -6,6 +6,7 @@ import productRouter from './routes/productRoute.js'
 import userRouter from './routes/userRoute.js'
 import cartRouter from './routes/cartRoute.js'
 import 'dotenv/config.js'
+import path from 'path'
 
 // app config
 const app = express()
@@ -23,6 +24,12 @@ app.use('/api/product', productRouter)
 app.use('/api/user', userRouter)
 app.use('/api/cart', cartRouter)
 app.use('/images', express.static('uploads'))
+
+app.use(express.static('frontend/build'))
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
+  });
 
 app.get('/', (req, res) => {
     res.send('API Working')
