@@ -36,5 +36,6 @@ app.listen(port, () => {
     console.log('Server started')
 })
 
+module.exports = app
 
 //mongodb+srv://ledinhvu6:ledinhvu6@cluster0.4w0ljax.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
