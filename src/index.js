@@ -12,13 +12,15 @@ import '../node_modules/swiped-events/dist/swiped-events.min.js'
 import './sass/index.scss'
 import '../node_modules/boxicons/css/boxicons.min.css'
 
+import '../node_modules/react-toastify/dist/ReactToastify.css'
+
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-    <React.StrictMode>
+    //<React.StrictMode>
         <Provider store={store}>
             <Layout />
         </Provider>
-    </React.StrictMode>
+    //</React.StrictMode>
 )
 
 // If you want to start measuring performance in your app, pass a function

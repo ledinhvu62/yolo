@@ -1,0 +1,55 @@
+.add__product__view {
+    width: 100%;
+    margin-left: 100px;
+    margin-top: 40px;
+    color: #6d6d6d;
+    font-size: 16px;
+
+    & form {
+        @include flex(flex-start, center);
+        flex-direction: column;
+        gap: 20px;
+
+        & button {
+            width: 120px;
+            border: none;
+            padding: 10px;
+            background-color: $main-color;
+            color: white;
+            cursor: pointer;
+            font-family: inherit;
+        }
+    }
+
+    &__form__item {
+        @include flex(flex-start, center);
+        flex-direction: column;
+        width: 100%;
+        
+        & p {
+            margin-bottom: 8px;
+        }
+
+        & * {
+            width: 30%;
+        }
+
+        & input,
+        & textarea,
+        & select {
+            padding: 10px;
+            font-size: 10pt;
+            font-family: inherit;
+        }
+    }
+
+    &__form__checkbox {
+        @include flex(flex-start, flex-start);
+        gap: 20px;
+        width: 50%;
+        
+        & input {
+            width: 100%;
+        }
+    }
+}

@@ -6,10 +6,11 @@ import CheckBox from '../components/CheckBox'
 import Button from '../components/Button'
 import InfinityList from '../components/InfinityList'
 
-import productData from '../assets/fake-data/products'
 import categoryData from '../assets/fake-data/category'
 import colorData from '../assets/fake-data/product-color'
 import sizeData from '../assets/fake-data/product-size'
+
+import { useSelector } from 'react-redux'
 
 const Catalog = () => {
     const initFilter = {
@@ -18,7 +19,8 @@ const Catalog = () => {
         size: [],
     }
 
-    const productList = productData.getAllProducts()
+    const productList = useSelector((state) => state.productList.value)
+
     const categoryList = categoryData.getAllCategories()
     const colorList = colorData.getAllColors()
     const sizeList = sizeData.getAllSizes()
@@ -89,7 +91,7 @@ const Catalog = () => {
 
         if (filter.color.length > 0) {
             temp = temp.filter(e => {
-                const check = e.colors.find(color => filter.color.includes(color))
+                const check = e.color.find(color => filter.color.includes(color))
                 return check !== undefined
             })
         }

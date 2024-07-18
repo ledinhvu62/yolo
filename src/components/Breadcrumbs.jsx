@@ -2,9 +2,9 @@ import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 import navigationData from '../assets/fake-data/navigation'
-import productData from '../assets/fake-data/products'
+//import productData from '../assets/fake-data/products'
 
-const Breadcrumbs = () => {
+const Breadcrumbs = ({ title }) => {
     const location = useLocation()
     const slugs = location.pathname.split('/')
 
@@ -17,7 +17,7 @@ const Breadcrumbs = () => {
                         className='breadcrumbs__item'
                     >
                         <Link to={`/${slug}`}>
-                            {slug ? (navigationData.getNavigation(slug)?.display || productData.getProductBySlug(slug).title) : 'Trang chủ'}
+                            {slug ? (navigationData.getNavigation(slug)?.display || title) : 'Trang chủ'}
                         </Link>
                         <span>
                             /

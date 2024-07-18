@@ -1,0 +1,27 @@
+.admin__panel {
+    @include flex(flex-start, center);
+    flex-direction: column;
+    width: 100%;
+    max-width: 1620px;
+    padding: 60px 120px;
+    margin: auto;
+
+    &__logo {
+        width: 100px;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 16pt;
+        margin: 10px 0;
+    }
+
+    &__sidebar__content {
+        @include flex(flex-start, center);
+        width: 100%;
+    }
+
+    &__content {
+        width: 80%;
+    }
+}

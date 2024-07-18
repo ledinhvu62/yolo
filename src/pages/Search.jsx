@@ -5,21 +5,31 @@ import { useSearchParams } from 'react-router-dom'
 import Helmet from '../components/Helmet'
 import InfinityList from '../components/InfinityList'
 
-import productData from '../assets/fake-data/products'
-
 const Search = () => {
     const keyword = useSelector((state) => state.keywordSearch.value)
 
     const keywordRef = useRef(null)
-    const [products, setProducts] = useState([])
+    const [products, setProducts] = useState([]) // eslint-disable-line
     const [searchParams, setSearchParams] = useSearchParams({}) // eslint-disable-line
 
     useEffect(() => {
-        setProducts(productData.getProductByKeyword(keyword))
+        //setProducts(productData.getProductByKeyword(keyword))
         setSearchParams({ keyword })
         keywordRef.current.innerText = ` ${keyword}`
         window.scrollTo(0, 0)
     }, [setSearchParams]) // eslint-disable-line
+
+/*     const getProductByKeyword = (keywordSearch) => {
+        const keywordStandard = removeVietnameseTones(keywordSearch)
+        if (!keywordStandard) {
+            return []
+        }
+    
+        const keywords = keywordStandard.split(' ')
+        return products.filter((product) => {
+            return keywords.some((keyword) => product.slug.toLowerCase().includes(keyword.toLowerCase()))
+        })
+    } */
 
     return (
         <Helmet title='Tìm kiếm'>

@@ -8,6 +8,8 @@ import Category from '../pages/Category'
 import Contact from '../pages/Contact'
 import Cart from '../pages/Cart'
 import Search from '../pages/Search'
+import Order from '../pages/Order'
+import AdminPanel from '../pages/AdminPanel'
 
 const RoutesApp = () => {
     return (
@@ -19,6 +21,8 @@ const RoutesApp = () => {
             <Route path='/contact' element={<Contact />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='/search' element={<Search />} />
+            <Route path='/order' element={<Order />} />
+            <Route path='/admin' element={<AdminPanel />} />
         </Routes>
     )
 }

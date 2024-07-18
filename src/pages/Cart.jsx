@@ -6,25 +6,23 @@ import Helmet from '../components/Helmet'
 import Button from '../components/Button'
 import CartItem from '../components/CartItem'
 
-import productData from '../assets/fake-data/products'
-
 import numberWithCommas from '../utils/numberWithCommas'
+import { ToastContainer } from 'react-toastify'
 
 const Cart = () => {
     const cartItems = useSelector((state) => state.cartItems.value)
-
-    const [cartProducts, setCartProducts] = useState([])
+ 
     const [totalProducts, setTotalProducts] = useState(0)
     const [totalPrice, setTotalPrice] = useState(0)
 
     useEffect(() => {
-        setCartProducts(productData.getCartItemsInfo(cartItems))
         setTotalProducts(cartItems.reduce((total, item) => total + (+item.quantity), 0))
         setTotalPrice(cartItems.reduce((total, item) => total + ((+item.quantity) * (+item.price)), 0))
     }, [cartItems])
 
     return (
         <Helmet title='Giỏ hàng'>
+            <ToastContainer />
             <div className='cart'>
                 <h2 className='cart__title'>
                     Giỏ hàng
@@ -35,7 +33,7 @@ const Cart = () => {
                             <>
                                 <div className='cart__content__list'>
                                     {
-                                        cartProducts.map((item, index) => (
+                                        cartItems.map((item, index) => (
                                             <CartItem item={item} key={index} />
                                         ))
                                     }
@@ -55,7 +53,7 @@ const Cart = () => {
                                         </div>
                                     </div>
                                     <div className='cart__content__info__btn'>
-                                        <Link to=''>
+                                        <Link to='/order'>
                                             <Button size='block'>
                                                 Đặt hàng
                                             </Button>

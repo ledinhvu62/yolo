@@ -5,15 +5,15 @@ const slider_03 = require('../images/slider/slider_3.png')
 const slider = [
     {
         img: slider_01,
-        path: '/catalog/ao-thun-croptop-3',
+        path: '/ao-thun',
     },
     {
         img: slider_02,
-        path: '/catalog/ao-polo-siro-rayon-3',
+        path: '/ao-polo',
     },
     {
         img: slider_03,
-        path: '/catalog/ao-2-day-dang-om-1',
+        path: '/ao-so-mi',
     },
 ]
 

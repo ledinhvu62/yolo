@@ -9,9 +9,12 @@ import ProductCard from '../components/ProductCard'
 
 import slider from '../assets/fake-data/slider'
 import policy from '../assets/fake-data/policy'
-import productData from '../assets/fake-data/products'
+
+import { useSelector } from 'react-redux'
 
 const Home = () => {
+    const products = useSelector((state) => state.productList.value)
+
     return (
         <Helmet title='Trang chủ'>
             {/* slider */}
@@ -39,12 +42,12 @@ const Home = () => {
                         gap={20}
                     >
                         {
-                            productData.getProducts(5).map((item, index) => (
+                            products.map((item, index) => (
                                 <ProductCard
                                     key={index}
                                     img01={item.image01}
                                     img02={item.image02}
-                                    name={item.title}
+                                    name={item.name}
                                     price={+item.price}
                                     slug={item.slug}
                                 />
@@ -68,12 +71,12 @@ const Home = () => {
                         gap={20}
                     >
                         {
-                            productData.getProducts(10).map((item, index) => (
+                            products.map((item, index) => (
                                 <ProductCard
                                     key={index}
                                     img01={item.image01}
                                     img02={item.image02}
-                                    name={item.title}
+                                    name={item.name}
                                     price={+item.price}
                                     slug={item.slug}
                                 />
@@ -97,12 +100,12 @@ const Home = () => {
                         gap={20}
                     >
                         {
-                            productData.getProducts(10).map((item, index) => (
+                            products.map((item, index) => (
                                 <ProductCard
                                     key={index}
                                     img01={item.image01}
                                     img02={item.image02}
-                                    name={item.title}
+                                    name={item.name}
                                     price={+item.price}
                                     slug={item.slug}
                                 />

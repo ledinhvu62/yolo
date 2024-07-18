@@ -37,10 +37,7 @@
             &__item {
                 @include flex(center, center);
                 position: relative;
-
-                &:first-child {
-                    cursor: pointer;
-                }
+                cursor: pointer;
 
                 & > *:first-child:hover {
                     color: $txt-main-color;
@@ -287,5 +284,35 @@
                 margin-left: 10px;
             }
         }
+    }
+}
+
+.profile {
+    &__dropdown {
+        position: absolute;
+        right: 0;
+        top: 30px;
+        z-index: 1;
+        display: none;
+
+        & li {
+            list-style: none;
+            font-size: 12pt;
+            width: 100px;
+        }
+
+        & li:hover {
+            color: $main-color;
+        }
+    }
+
+    &:hover &__dropdown {
+        @include flex(center, center);
+        flex-direction: column;
+        gap: 5px;
+        background-color: white;
+        padding: 12px;
+        border-radius: 4px;
+        box-shadow: $box-shadow;
     }
 }

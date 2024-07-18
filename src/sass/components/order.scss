@@ -1,0 +1,82 @@
+.order {
+    @include flex(flex-start, space-between);
+    @include tablet {
+        flex-direction: column;
+    }
+    gap: 60px;
+    margin-top: 100px;
+
+    &__left {
+        width: 60%;
+
+        @include tablet {
+            width: 100%;
+        }
+        
+        &__title {
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 50px;
+        }
+
+        & input,
+        & select {
+            font-family: inherit;
+            margin-bottom: 15px;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #c5c5c5;
+            border-radius: 4px;
+            outline-color: $main-color;
+        }
+
+        & option {
+            height: 60px;
+        }
+
+        &__multi__fields {
+            @include flex(flex-start, space-between);
+
+            @include mobile {
+                flex-direction: column;
+            }
+            gap: 10px;
+        }
+    }
+
+    &__right {
+        @include flex(flex-start, center);
+        flex-direction: column;
+        flex: 1;
+        width: 100%;
+
+        & h2 {
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 50px;
+        }
+
+        &__item {
+            @include flex(center, space-between);
+            width: 100%;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: $txt-second-color;
+        }
+
+        &__item:nth-last-child(2) {
+            font-weight: 600;
+            color: $main-color;
+        }
+
+        &__item:nth-last-child(3) {
+            font-style: italic;
+            color: $txt-second-color;
+        }
+
+        & a {
+            margin-top: 30px;
+            width: 100%;
+        }
+    }
+}

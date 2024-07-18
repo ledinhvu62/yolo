@@ -104,3 +104,15 @@ img {
 .grid {
     display: grid;
 }
+
+.toast {
+    &__success {
+        font-family: "SVN-Gilroy Medium", sans-serif !important;
+        color: #119611 !important;
+    }
+
+    &__error {
+        font-family: "SVN-Gilroy Medium", sans-serif !important;
+        color: #e82e2e !important;
+    }
+}

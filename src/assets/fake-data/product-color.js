@@ -1,5 +1,9 @@
 const colors = [
     {
+        display: 'Be',
+        color: 'beige',
+    },
+    {
         display: 'Cam',
         color: 'orange',
     },
@@ -16,6 +20,14 @@ const colors = [
         color: 'pink',
     },
     {
+        display: 'Nâu',
+        color: 'brown',
+    },
+    {
+        display: 'Tím',
+        color: 'purple',
+    },
+    {
         display: 'Trắng',
         color: 'white',
     },
@@ -24,12 +36,16 @@ const colors = [
         color: 'yellow',
     },
     {
+        display: 'Xám',
+        color: 'gray',
+    },
+    {
         display: 'Xanh dương',
         color: 'blue',
     },
     {
-        display: 'Xanh ngọc',
-        color: 'turquoise',
+        display: 'Xanh lá',
+        color: 'green',
     },
 ]
 

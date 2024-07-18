@@ -436,33 +436,6 @@ const products = [
     },
 ]
 
-const getAllProducts = () => products
-
-const getProducts = (count) => {
-    const max = products.length - count
-    const min = 0
-    const start = Math.floor(Math.random() * (max - min) + min)
-    return products.slice(start, start + count)
-}
-
-const getProductBySlug = (slug) => products.find(product => product.slug === slug)
-
-const getProductsByCategorySlug = (categorySlug) => products.filter(product => product.categorySlug === categorySlug)
-
-const getCartItemsInfo = (cartItems) => {
-    let res = []
-    if (cartItems.length > 0) {
-        cartItems.forEach(item => {
-            let product = getProductBySlug(item.slug)
-            res.push({
-                ...item,
-                product,
-            })
-        })
-    }
-    return res.sort((a, b) => a.id > b.id ? 1 : (a.id < b.id ? -1 : 0))
-}
-
 const getProductByKeyword = (keywordSearch) => {
     const keywordStandard = removeVietnameseTones(keywordSearch)
     if (!keywordStandard) {
@@ -476,11 +449,6 @@ const getProductByKeyword = (keywordSearch) => {
 }
 
 const productData = {
-    getAllProducts,
-    getProducts,
-    getProductBySlug,
-    getProductsByCategorySlug,
-    getCartItemsInfo,
     getProductByKeyword,
 }
 

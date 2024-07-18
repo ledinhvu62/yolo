@@ -1,30 +1,22 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useNavigate } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 import Button from './Button'
 
-import { addItem } from '../redux/shopping-cart/cartItemsSlice'
-
 import numberWithCommas from '../utils/numberWithCommas'
+import { ToastContainer } from 'react-toastify'
+import { addItemWithSync } from '../redux/shopping-cart/cartItemsSlice'
 
-const ProductView = props => {
+const ProductView = ({ product = { price: 0, name: '', color: [], size: [] } }) => {
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
-    let product = props.product
-
-    if (product === undefined) {
-        product = {
-            price: 0,
-            title: '',
-            colors: [],
-            size: [],
-        }
-    }
+    const url = useSelector((state) => state.url.value)
 
     const [previewImg, setPreviewImg] = useState(product.image01)
-    const [color, setColor] = useState(product.colors[0])
+    const [color, setColor] = useState(product.color[0])
     const [size, setSize] = useState(product.size[0])
     const [quantity, setQuantity] = useState(1)
 
@@ -39,53 +31,45 @@ const ProductView = props => {
     useEffect(() => {
         setPreviewImg(product.image01)
         setQuantity(1)
-        setColor(product.colors[0])
+        setColor(product.color[0])
         setSize(product.size[0])
     }, [product])
 
     const addToCart = () => {
-        dispatch(addItem({
-            slug: product.slug,
+        dispatch(addItemWithSync({
+            _id: product._id,
             color,
             size,
-            quantity,
             price: product.price,
+            quantity,
         }))
-        alert('Thêm vào giỏ hàng thành công')
     }
-
-    const navigate = useNavigate()
-
+    
     const goToCart = () => {
-        dispatch(addItem({
-            slug: product.slug,
-            color,
-            size,
-            quantity,
-            price: product.price,
-        }))
+        addToCart()
         navigate('/cart')
     }
 
     return (
         <div className='product'>
+            <ToastContainer />
             <div className='product__images'>
                 <div className='product__images__list'>
                     <div
                         className='product__images__list__item'
                         onMouseOver={() => setPreviewImg(product.image01)}
                     >
-                        <img src={product.image01} alt='Ảnh sản phẩm 1' />
+                        <img src={`${url}/images/${product.image01}`} alt='Ảnh sản phẩm 1' />
                     </div>
                     <div
                         className='product__images__list__item'
                         onMouseOver={() => setPreviewImg(product.image02)}
                     >
-                        <img src={product.image02} alt='Ảnh sản phẩm 2' />
+                        <img src={`${url}/images/${product.image02}`} alt='Ảnh sản phẩm 2' />
                     </div>
                 </div>
                 <div className='product__images__main'>
-                    <img src={previewImg} alt='Ảnh sản phẩm' />
+                    <img src={`${url}/images/${previewImg}`} alt='Ảnh sản phẩm' />
                 </div>
                 <div className='product-description'>
                     <div className='product-description__title'>
@@ -96,7 +80,7 @@ const ProductView = props => {
             </div>
             <div className='product__info'>
                 <h2 className='product__info__title'>
-                    {product.title}
+                    {product.name}
                 </h2>
                 <div className='product__info__item'>
                     <span className='product__info__item__price'>
@@ -109,7 +93,7 @@ const ProductView = props => {
                     </div>
                     <div className='product__info__item__list'>
                         {
-                            product.colors.map((item, index) => (
+                            product.color.map((item, index) => (
                                 <div
                                     key={index}
                                     className={`product__info__item__list__item ${color === item ? 'active' : ''}`}

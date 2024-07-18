@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 import Helmet from '../components/Helmet'
@@ -7,22 +7,45 @@ import Section, { SectionBody, SectionTitle } from '../components/Section'
 import Grid from '../components/Grid'
 import ProductCard from '../components/ProductCard'
 import ProductView from '../components/ProductView'
-
-import productData from '../assets/fake-data/products'
+import axios from 'axios'
+import { useSelector } from 'react-redux'
 
 const Product = () => {
     const { slug } = useParams()
     
-    const product = productData.getProductBySlug(slug)
-    const relatedProducts = productData.getProducts(10)
+    const url = useSelector((state) => state.url.value)
+    const [product, setProduct] = useState({
+        price: 0,
+        name: '',
+        color: [],
+        size: [],
+    })
+
+    const [relatedProducts, setRelatedProducts] = useState([])
+
+    const fetchData = useCallback(async (slug) => {
+        const response = await axios.get(`${url}/api/product/query`, { params: { slug } })
+        if (response.data.success) {
+            setProduct(response.data.data)
+        }
+    }, [url])
+
+    const getRelatedProducts = useCallback(async (slug) => {
+        const response = await axios.get(`${url}/api/product/related-products`, { params: { slug } })
+        if (response.data.success) {
+            setRelatedProducts(response.data.data)
+        }
+    }, [url])
 
     useEffect(() => {
+        fetchData(slug)
+        getRelatedProducts(slug)
         window.scrollTo(0, 0)
-    }, [product])
+    }, [slug, fetchData, getRelatedProducts])
 
     return (
-        <Helmet title={product.title}>
-            <Breadcrumbs />
+        <Helmet title={product.name}>
+            <Breadcrumbs title={product.name} />
             <Section>
                 <SectionBody>
                     <ProductView product={product} />
@@ -39,13 +62,13 @@ const Product = () => {
                         smCol={2}
                         gap={20}
                     >
-                        {
+                       {
                             relatedProducts.map((item, index) => (
                                 <ProductCard
                                     key={index}
                                     img01={item.image01}
                                     img02={item.image02}
-                                    name={item.title}
+                                    name={item.name}
                                     price={+item.price}
                                     slug={item.slug}
                                 />

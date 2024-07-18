@@ -4,16 +4,16 @@ const navigation = [
         path: 'catalog',
     },
     {
-        display: 'Áo 2 dây',
-        path: 'ao-2-day',
-    },
-    {
         display: 'Áo polo',
         path: 'ao-polo',
     },
     {
         display: 'Áo thun',
         path: 'ao-thun',
+    },
+    {
+        display: 'Áo sơ mi',
+        path: 'ao-so-mi',
     },
     {
         display: 'Liên hệ',

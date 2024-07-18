@@ -7,9 +7,13 @@ import logo from '../assets/images/logo.svg'
 
 import { set, remove } from '../redux/search/keywordSearchSlice'
 
-const Header = () => {
+import { removeToken } from '../redux/token/tokenSlice'
+
+const Header = ({ setShowLogin }) => {
     const cartItems = useSelector((state) => state.cartItems.value)
     const [totalProducts, setTotalProducts] = useState(0)
+
+    const token = useSelector((state) => state.token.value)
     
     useEffect(() => {
         setTotalProducts(cartItems.reduce((total, item) => total + (+item.quantity), 0))
@@ -38,6 +42,11 @@ const Header = () => {
             searchToggle()
             navigate('/search')
         }
+    }
+
+    const logout = () => {
+        dispatch(removeToken())
+        navigate('/')
     }
 
     useEffect(() => {
@@ -105,11 +114,19 @@ const Header = () => {
                                 {totalProducts}
                             </div>
                         </div>
-                        <div className='header__menu__right__item'>
-                            <Link to=''>
-                                <i className='bx bx-user'></i>
-                            </Link>
+                        {!token ? <div className='header__menu__right__item' onClick={() => setShowLogin(true)}>
+                            <i className='bx bx-user'></i>
                         </div>
+                        : 
+                        <div className='header__menu__right__item profile'>
+                            <i className='bx bx-user profile'></i>
+                            <ul className='profile__dropdown'>
+                                <li>Đơn hàng</li>
+                                <hr />
+                                <li onClick={logout}>Đăng xuất</li>
+                            </ul>
+                        </div>
+                        }
                     </div>
                 </div>
 

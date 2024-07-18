@@ -2,14 +2,22 @@
 @import "./mixins";
 @import "./base";
 
+@import "./components/add-product-view";
+@import "./components/list-product-view";
+@import "./components/confirm-popup";
+
+@import "./components/admin-panel";
 @import "./components/breadcrumbs";
 @import "./components/button";
 @import "./components/custom-checkbox";
 @import "./components/footer";
 @import "./components/header";
+@import "./components/login-popup";
+@import "./components/order";
 @import "./components/policy";
 @import "./components/product-card";
 @import "./components/section";
+@import "./components/sidebar";
 @import "./components/slider";
 
 @import "./components/cart";

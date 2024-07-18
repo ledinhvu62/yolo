@@ -1,0 +1,23 @@
+.sidebar {
+    width: 20%;
+    min-height: 100vh;
+    border: none;
+    border-right: 1.5px solid #a9a9a9;
+
+    &__options {
+        padding-top: 50px;
+        @include flex(flex-start, center);
+        flex-direction: column;
+        gap: 20px;
+
+        &__item {
+            font-size: 12pt;
+            width: 100%;
+            gap: 12px;
+            border: 1px solid #a9a9a9;
+            padding: 10px;
+            border-radius: 3px 0 0 3px;
+            cursor: pointer;
+        }
+    }
+}
