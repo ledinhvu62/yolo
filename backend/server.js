@@ -9,7 +9,7 @@ import 'dotenv/config.js'
 
 // app config
 const app = express()
-const port = process.env.PORT || 4000
+const port = 4000
 
 // middleware
 app.use(express.json())
@@ -23,8 +23,6 @@ app.use('/api/product', productRouter)
 app.use('/api/user', userRouter)
 app.use('/api/cart', cartRouter)
 app.use('/images', express.static('uploads'))
-
-app.disable('etag')
 
 app.get('/', (req, res) => {
     res.send('API Working')
