@@ -24,6 +24,8 @@ app.use('/api/user', userRouter)
 app.use('/api/cart', cartRouter)
 app.use('/images', express.static('uploads'))
 
+app.disable('etag')
+
 app.get('/', (req, res) => {
     res.send('API Working')
 })
