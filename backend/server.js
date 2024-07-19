@@ -7,11 +7,11 @@ import userRouter from './routes/userRoute.js'
 import cartRouter from './routes/cartRoute.js'
 import 'dotenv/config.js'
 
-// app config
+// App config
 const app = express()
 const port = process.env.PORT || 4000
 
-// middleware
+// Middleware
 app.use(express.json())
 app.use(cors())
 
