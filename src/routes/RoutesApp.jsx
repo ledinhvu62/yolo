@@ -14,7 +14,7 @@ import AdminPanel from '../pages/AdminPanel'
 const RoutesApp = () => {
     return (
         <Routes>
-            <Route path='/' element={<Home />} />
+            <Route exact path='/' element={<Home />} />
             <Route path='/catalog' element={<Catalog />} />
             <Route path='/catalog/:slug' element={<Product />} />
             <Route path='/:categorySlug' element={<Category />} />
