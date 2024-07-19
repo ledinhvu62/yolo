@@ -25,12 +25,9 @@ app.use('/api/user', userRouter)
 app.use('/api/cart', cartRouter)
 app.use('/images', express.static('uploads'))
 
-const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, '..', 'frontend', 'build')));
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'frontend', 'build', 'index.html'));
-});
+app.get('/', (req, res) => {
+  res.send('API Working')
+})
 
 app.listen(port, () => {
     console.log('Server started')
