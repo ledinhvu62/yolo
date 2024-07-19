@@ -6,11 +6,12 @@ import Sidebar from '../components/Sidebar'
 import logo from '../assets/images/logo.svg'
 import AddProductView from '../components/AddProductView'
 import ListProductView from '../components/ListProductView'
+import { useSelector } from 'react-redux'
 
 const AdminPanel = () => {
 
     const [currView, setCurrView] = useState('add-product-view')
-    const url = 'http://localhost:4000'
+    const url = useSelector((state) => state.url.value)
 
     return (
         <Helmet title='Trang quản trị'>
