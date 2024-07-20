@@ -13,10 +13,7 @@ const port = process.env.PORT || 4000
 
 // Middleware
 app.use(express.json())
-app.use(cors({
-  origin: 'https://yolo-ledinhvu.vercel.app',
-  credentials: true
-}))
+app.use(cors())
 
 // DB Connection
 connectDB()
@@ -34,6 +31,5 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log('Server started')
 })
-
 
 //mongodb+srv://ledinhvu6:ledinhvu6@cluster0.4w0ljax.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
