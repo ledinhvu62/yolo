@@ -6,7 +6,6 @@ import cloudinary from '../config/cloudinary.js'
 
 const productRouter = express.Router()
 
-// Image Storage Engine
 const storage = multer.diskStorage({
     destination: 'uploads',
     filename: (req, file, cb) => {
