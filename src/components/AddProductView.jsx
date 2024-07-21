@@ -89,21 +89,26 @@ const AddProductView = ({ url }) => {
         })
         formData.append('slug', changeToSlug(data.name))
 
-        const response = await axios.post(`${url}/api/product/add`, formData, {
-            headers: {
-              'Content-Type': 'multipart/form-data'
-    }})
-        if (response.data.success) {
-            setData({
+        try {
+            const response = await axios.post(`${url}/api/product/add`, formData, {
+              headers: {
+                'Content-Type': 'multipart/form-data'
+              }
+            });
+            if (response.data.success) {
+              setData({
                 name: '',
                 description: '',
                 price: '',
                 color: [],
                 size: [],
                 categorySlug: 'ao-thun',
-            })
-            setImage([])
-        }
+              });
+              setImage([]);
+            }
+          } catch (error) {
+            console.error('Error adding product:', error);
+          }
     }
 
     useEffect(() => {
