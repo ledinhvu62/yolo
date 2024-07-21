@@ -9,15 +9,11 @@ import 'dotenv/config.js'
 
 // App config
 const app = express()
-const port = process.env.PORT || 4000
+const port = 4000
 
 // Middleware
 app.use(express.json())
-app.use(cors({
-  origin: 'https://yolo-ledinhvu.vercel.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'Access-Control-Allow-Origin']
-}))
+app.use(cors())
 
 // DB Connection
 connectDB()
