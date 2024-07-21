@@ -14,10 +14,9 @@ const port = process.env.PORT || 4000
 // Middleware
 app.use(express.json())
 app.use(cors({
-  origin: 'https://yolo-ledinhvu.vercel.app',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,
-  optionsSuccessStatus: 204
+  origin: '*', // Allow all origins or specify your frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'Access-Control-Allow-Origin']
 }))
 
 // DB Connection
