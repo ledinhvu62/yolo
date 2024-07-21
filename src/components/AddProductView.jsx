@@ -89,7 +89,16 @@ const AddProductView = ({ url }) => {
         })
         formData.append('slug', changeToSlug(data.name))
         
-        const response = await axios.post(`${url}/api/product/add`, formData)
+        //const response = await axios.post(`${url}/api/product/add`, formData)
+
+        const response = await fetch(`${url}/api/product/add`, {
+            method: "POST",
+            body: formData,
+            headers: {
+                "Content-Type": "application/json",
+              },
+          });
+
         if (response.data.success) {
             setData({
                 name: '',
