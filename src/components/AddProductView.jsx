@@ -88,27 +88,19 @@ const AddProductView = ({ url }) => {
             formData.append('image', image[index])
         })
         formData.append('slug', changeToSlug(data.name))
-
-        try {
-            const response = await axios.post(`${url}/api/product/add`, formData, {
-              headers: {
-                'Content-Type': 'multipart/form-data'
-              }
-            });
-            if (response.data.success) {
-              setData({
+        
+        const response = await axios.post(`${url}/api/product/add`, formData)
+        if (response.data.success) {
+            setData({
                 name: '',
                 description: '',
                 price: '',
                 color: [],
                 size: [],
                 categorySlug: 'ao-thun',
-              });
-              setImage([]);
-            }
-          } catch (error) {
-            console.error('Error adding product:', error);
-          }
+            })
+            setImage([])
+        }
     }
 
     useEffect(() => {
@@ -124,7 +116,7 @@ const AddProductView = ({ url }) => {
                         let newArr = [...image]
                         newArr[0] = e.target.files[0]
                         setImage(newArr)
-                        }} type="file" id='image' required />
+                    }} type="file" id='image' required />
                 </div>
                 <div className="add__product__view__form__item flex-col">
                     <p>Tải lên hình ảnh 2</p>
@@ -132,7 +124,7 @@ const AddProductView = ({ url }) => {
                         let newArr = [...image]
                         newArr[1] = e.target.files[0]
                         setImage(newArr)
-                        }} type="file" id='image' required />
+                    }} type="file" id='image' required />
                 </div>
                 <div className="add__product__view__form__item flex-col">
                     <p>Tên sản phẩm</p>
