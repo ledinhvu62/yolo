@@ -99,17 +99,7 @@ const AddProductView = ({ url }) => {
               },
           });
 
-        if (response.data.success) {
-            setData({
-                name: '',
-                description: '',
-                price: '',
-                color: [],
-                size: [],
-                categorySlug: 'ao-thun',
-            })
-            setImage([])
-        }
+        
     }
 
     useEffect(() => {
