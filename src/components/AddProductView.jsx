@@ -89,7 +89,17 @@ const AddProductView = ({ url }) => {
         })
         formData.append('slug', changeToSlug(data.name))
 
-        const response = await axios.post(`${url}/api/product/add`, formData)
+        //const response = await axios.post(`${url}/api/product/add`, formData)
+        const response = await axios({
+
+            method: 'post',
+            url: `${url}/api/product/add`,
+            data: formData,
+            headers: {
+                'Content-Type': 'text/plain;charset=utf-8',
+            }
+        })
+
         if (response.data.success) {
             setData({
                 name: '',
@@ -116,7 +126,7 @@ const AddProductView = ({ url }) => {
                         let newArr = [...image]
                         newArr[0] = e.target.files[0]
                         setImage(newArr)
-                        }} type="file" id='image' required />
+                    }} type="file" id='image' required />
                 </div>
                 <div className="add__product__view__form__item flex-col">
                     <p>Tải lên hình ảnh 2</p>
@@ -124,7 +134,7 @@ const AddProductView = ({ url }) => {
                         let newArr = [...image]
                         newArr[1] = e.target.files[0]
                         setImage(newArr)
-                        }} type="file" id='image' required />
+                    }} type="file" id='image' required />
                 </div>
                 <div className="add__product__view__form__item flex-col">
                     <p>Tên sản phẩm</p>
