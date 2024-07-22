@@ -89,7 +89,7 @@ const AddProductView = ({ url }) => {
         })
         formData.append('slug', changeToSlug(data.name))
         
-        const response = await axios.post(`${url}/api/product/add`, formData)
+        const response = await axios.post(`${url}/api/v1/product`, formData)
         if (response.data.success) {
             setData({
                 name: '',

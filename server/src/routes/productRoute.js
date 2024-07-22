@@ -1,8 +1,6 @@
 import express from 'express'
 import { addProduct, listProduct, removeProduct, getProduct, getRelatedProducts } from '../controllers/productController.js'
 import multer from 'multer'
-import { CloudinaryStorage } from 'multer-storage-cloudinary'
-import cloudinary from '../config/cloudinary.js'
 
 const productRouter = express.Router()
 
@@ -15,8 +13,8 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage })
 
-productRouter.post('/add', upload.array('image'), addProduct)
-productRouter.get('/list', listProduct)
+productRouter.post('/', upload.array('image'), addProduct)
+productRouter.get('/', listProduct)
 productRouter.post('/remove', removeProduct)
 // Test
 productRouter.get('/query', getProduct)
