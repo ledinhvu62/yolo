@@ -72,7 +72,7 @@ const AddProductView = ({ url }) => {
     }
 
     const onSubmitHandler = async (event) => {
-        //event.preventDefault()
+        event.preventDefault()
         const formData = new FormData()
         formData.append('name', data.name)
         formData.append('description', data.description)
@@ -88,8 +88,8 @@ const AddProductView = ({ url }) => {
             formData.append('image', image[index])
         })
         formData.append('slug', changeToSlug(data.name))
-
-        const response = await axios.post(`https://yolo-ledinhvu.vercel.app/api/product/add`, formData)
+        
+        const response = await axios.post(`${url}/api/product/add`, formData)
         if (response.data.success) {
             setData({
                 name: '',
