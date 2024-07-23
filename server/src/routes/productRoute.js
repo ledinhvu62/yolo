@@ -2,13 +2,24 @@ import express from 'express'
 import { addProduct, listProduct, removeProduct, getProduct, getRelatedProducts } from '../controllers/productController.js'
 import multer from 'multer'
 
+import { CloudinaryStorage } from 'multer-storage-cloudinary'
+import cloudinary from '../config/cloudinary.js'
+
 const productRouter = express.Router()
 
-const storage = multer.diskStorage({
+/* const storage = multer.diskStorage({
     destination: 'uploads',
     filename: (req, file, cb) => {
         return cb(null, `${Date.now()}${file.originalname}`)
     }
+}) */
+const storage = new CloudinaryStorage({
+    cloudinary: cloudinary,
+    params: {
+        folder: 'products',
+        format: async (req, file) => 'jpg',
+        public_id: (req, file) => `${Date.now()}_${file.originalname}`,
+    },
 })
 
 const upload = multer({ storage })
