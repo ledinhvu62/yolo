@@ -39,8 +39,7 @@ app.listen(port, () => {
 
 const app = express()
 const corsOptions = {
-    origin: 'https://yolo-client-eta.vercel.app', // Your frontend domain
-    optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
+    origin: '*', // Your frontend domain
 }
 
 app.use(cors(corsOptions))
