@@ -43,7 +43,7 @@ const ListProductView = ({ url }) => {
             {data.map(item => {
                 return (
                     <div key={item._id} className='list__product__table'>
-                        <img src={`https://res.cloudinary.com/dctsfgd6x/image/upload/products/1721740031835_product-20 (2).jpg`} alt='Ảnh sản phẩm' />
+                        <img src={`https://res.cloudinary.com/dctsfgd6x/image/upload/${item.image01}`} alt='Ảnh sản phẩm' />
                         <p>{item.name}</p>
                         <p>{categoryData.getCategory(item.categorySlug).display}</p>
                         <p>{numberWithCommas(item.price)}đ</p>
