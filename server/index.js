@@ -1,11 +1,6 @@
 import express from 'express'
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
-
-import { connectDB } from './src/config/db.js'
-import productRouter from './src/routes/productRoute.js'
-import userRouter from './src/routes/userRoute.js'
-import cartRouter from './src/routes/cartRoute.js'
 import 'dotenv/config.js'
 
 import routes from "./src/routes/index.js"
