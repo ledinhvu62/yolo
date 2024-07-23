@@ -6,7 +6,8 @@ import numberWithCommas from '../utils/numberWithCommas'
 import { useSelector } from 'react-redux'
 
 const ProductCard = props => {
-    const url = useSelector((state) => state.url.value)
+    //const url = useSelector((state) => state.url.value)
+    const url = 'https://yolo-client-eta.vercel.app'
 
     return (
         <div className='product-card'>
