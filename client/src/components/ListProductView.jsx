@@ -19,7 +19,7 @@ const ListProductView = ({ url }) => {
     }, [url])
 
     const removeProduct = async (productId) => {
-        const response = await axios.post(`${url}/api/product/remove`, { id: productId })
+        const response = await axios.post(`${url}/api/v1/product/remove`, { id: productId })
         if (response.data.success) {
             await fetchData()
         }
@@ -43,7 +43,7 @@ const ListProductView = ({ url }) => {
             {data.map(item => {
                 return (
                     <div key={item._id} className='list__product__table'>
-                        <img src={`${url}/images/${item.image01}`} alt='Ảnh sản phẩm' />
+                        <img src={`https://res.cloudinary.com/dctsfgd6x/image/upload/1721740031835_product-20 (2).jpg`} alt='Ảnh sản phẩm' />
                         <p>{item.name}</p>
                         <p>{categoryData.getCategory(item.categorySlug).display}</p>
                         <p>{numberWithCommas(item.price)}đ</p>
