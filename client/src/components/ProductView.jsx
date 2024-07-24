@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useNavigate } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 import Button from './Button'
 
@@ -13,7 +13,7 @@ const ProductView = ({ product = { price: 0, name: '', images: [], color: [], si
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
-    const [previewImg, setPreviewImg] = useState(product?.images[0])
+    const [previewImg, setPreviewImg] = useState(product.images[0])
     const [color, setColor] = useState(product.color[0])
     const [size, setSize] = useState(product.size[0])
     const [quantity, setQuantity] = useState(1)
@@ -27,7 +27,7 @@ const ProductView = ({ product = { price: 0, name: '', images: [], color: [], si
     }
 
     useEffect(() => {
-        setPreviewImg(product.image01)
+        setPreviewImg(product.images[0])
         setQuantity(1)
         setColor(product.color[0])
         setSize(product.size[0])
