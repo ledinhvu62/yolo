@@ -17,6 +17,7 @@ const Product = () => {
     const [product, setProduct] = useState({
         price: 0,
         name: '',
+        images: [],
         color: [],
         size: [],
     })
