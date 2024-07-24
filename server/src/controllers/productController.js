@@ -23,21 +23,36 @@ const addProduct = async (req, res) => {
 
     try {
         await product.save()
-        res.json({success: true, message: 'Sản phẩm đã được thêm'})
+        res.json({ success: true, message: 'Sản phẩm đã được thêm' })
     } catch (error) {
         console.log(error)
-        res.json({success: false, message: 'Lỗi'})
+        res.json({ success: false, message: 'Lỗi' })
     }
 }
 
 // Get all product
-const listProduct = async (req, res) => {
+const getProducts = async (req, res) => {
     try {
-        const products = await productModel.find({})
-        res.json({success: true, data: products})
+        if (!Object.keys(req.query).length) {
+            const products = await productModel.find({})
+            return res.json({ success: true, data: products })
+        }
+        if (req.query.slug) {
+            const product = await productModel.findOne({ slug: req.query.slug })
+            return res.json({ success: true, data: product })
+        }
+        if (req.query._id) {
+            const product = await productModel.findById(req.query._id)
+            return res.json({ success: true, data: product })
+        }
+        if (req.query.category) {
+            const products = await productModel.find({ categorySlug: req.query.category })
+            return res.json({ success: true, data: products })
+        }
+        return res.json({ success: false, message: 'Tham số truy vấn không hợp lệ' })
     } catch (error) {
         console.log(error)
-        res.json({success: false, message: 'Lỗi'})
+        res.json({ success: false, message: 'Lỗi' })
     }
 }
 
@@ -45,32 +60,10 @@ const listProduct = async (req, res) => {
 const removeProduct = async (req, res) => {
     try {
         await productModel.findByIdAndDelete(req.params.productId)
-        res.json({success: true, message: 'Sản phẩm đã bị xóa'})
+        res.json({ success: true, message: 'Sản phẩm đã bị xóa' })
     } catch (error) {
         console.log(error)
-        res.json({success: false, message: 'Lỗi'})
-    }
-}
-
-// Test get product
-
-const getProduct = async (req, res) => {
-    try {
-        if (req.query.slug) {
-            const product = await productModel.findOne({slug: req.query.slug})
-            res.json({success: true, data: product})
-        }
-        else if (req.query._id) {
-            const product = await productModel.findById(req.query._id)
-            res.json({success: true, data: product})
-        }
-        else {
-            const products = await productModel.find({categorySlug: req.query.category})
-            res.json({success: true, data: products})
-        }
-    } catch (error) {
-        console.log(error)
-        res.json({success: false, message: 'Lỗi'})
+        res.json({ success: false, message: 'Lỗi' })
     }
 }
 
@@ -79,12 +72,12 @@ const getProduct = async (req, res) => {
 const getRelatedProducts = async (req, res) => {
     try {
         const product = await productModel.findOne({ slug: req.query.slug })
-        const relatedProducts = await productModel.find({categorySlug: product.categorySlug, _id: { $ne: product._id }})
-        res.json({success: true, data: relatedProducts})
+        const relatedProducts = await productModel.find({ categorySlug: product.categorySlug, _id: { $ne: product._id } })
+        res.json({ success: true, data: relatedProducts })
     } catch (error) {
         console.log(error)
-        res.json({success: false, message: 'Lỗi'})
+        res.json({ success: false, message: 'Lỗi' })
     }
 }
 
-export { addProduct, listProduct, removeProduct, getProduct, getRelatedProducts }
+export { addProduct, removeProduct, getProducts, getRelatedProducts }

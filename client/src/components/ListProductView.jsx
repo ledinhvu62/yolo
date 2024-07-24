@@ -15,7 +15,6 @@ const ListProductView = () => {
 
     const fetchData = useCallback(async () => {
         const response = await axios.get(`${url}/api/v1/products`)
-        console.log(response.data.data)
         if (response.data.success) {
             setData(response.data.data)
         }
