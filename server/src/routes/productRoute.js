@@ -24,14 +24,13 @@ const storage = new CloudinaryStorage({
     cloudinary: cloudinary,
     params: {
         folder: 'products',
-        format: async (req, file) => 'jpg',
         public_id: (req, file) => `${Date.now()}_${file.originalname}`,
     },
 })
 
 const upload = multer({ storage })
 
-productRouter.post('/', upload.array('image'), addProduct)
+productRouter.post('/', upload.array('images'), addProduct)
 productRouter.get('/', listProduct)
 productRouter.post('/remove', removeProduct)
 

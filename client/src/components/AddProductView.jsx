@@ -13,7 +13,7 @@ const AddProductView = ({ url }) => {
     const colorList = colorData.getAllColors()
     const sizeList = sizeData.getAllSizes()
 
-    const [image, setImage] = useState([])
+    const [images, setImages] = useState([])
 
     const [data, setData] = useState({
         name: '',
@@ -84,8 +84,8 @@ const AddProductView = ({ url }) => {
             formData.append('size', data.size[index])
         })
         formData.append('categorySlug', data.categorySlug)
-        image.forEach((item, index) => {
-            formData.append('image', image[index])
+        images.forEach((item, index) => {
+            formData.append('images', images[index])
         })
         formData.append('slug', changeToSlug(data.name))
         
@@ -99,7 +99,7 @@ const AddProductView = ({ url }) => {
                 size: [],
                 categorySlug: 'ao-thun',
             })
-            setImage([])
+            setImages([])
         }
     }
 
@@ -113,18 +113,18 @@ const AddProductView = ({ url }) => {
                 <div className="add__product__view__form__item flex-col">
                     <p>Tải lên hình ảnh 1</p>
                     <input onChange={(e) => {
-                        let newArr = [...image]
+                        let newArr = [...images]
                         newArr[0] = e.target.files[0]
-                        setImage(newArr)
-                    }} type="file" id='image' required />
+                        setImages(newArr)
+                    }} type="file" id='images' required />
                 </div>
                 <div className="add__product__view__form__item flex-col">
                     <p>Tải lên hình ảnh 2</p>
                     <input onChange={(e) => {
-                        let newArr = [...image]
+                        let newArr = [...images]
                         newArr[1] = e.target.files[0]
-                        setImage(newArr)
-                    }} type="file" id='image' required />
+                        setImages(newArr)
+                    }} type="file" id='images' required />
                 </div>
                 <div className="add__product__view__form__item flex-col">
                     <p>Tên sản phẩm</p>

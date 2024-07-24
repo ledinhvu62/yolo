@@ -45,8 +45,8 @@ const Home = () => {
                             products.map((item, index) => (
                                 <ProductCard
                                     key={index}
-                                    img01={item.image01}
-                                    img02={item.image02}
+                                    img01={item.images[0]}
+                                    img02={item.images[1]}
                                     name={item.name}
                                     price={+item.price}
                                     slug={item.slug}

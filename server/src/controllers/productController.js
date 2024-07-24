@@ -2,16 +2,18 @@ import productModel from '../models/productModel.js'
 import fs from 'fs'
 
 // Add product item
-
 const addProduct = async (req, res) => {
-    let image01_filename = `${req.files[0].filename}`
-    let image02_filename = `${req.files[1].filename}`
+    const files = req.files
+    const uploadPromises = files.map((file) =>
+        cloudinary.uploader.upload(file.path)
+    )
+    const uploadResults = await Promise.all(uploadPromises)
+    const imageUrls = uploadResults.map((result) => result.secure_url)
 
     const product = new productModel({
         name: req.body.name,
         price: req.body.price,
-        image01: image01_filename,
-        image02: image02_filename,
+        images: imageUrls,
         color: req.body.color,
         size: req.body.size,
         slug: req.body.slug,
