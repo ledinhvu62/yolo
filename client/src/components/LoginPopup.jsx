@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { set } from '../redux/token/tokenSlice'
 import axios from 'axios'
 
 const LoginPopup = ({ setShowLogin }) => {
 
     // Tạo biến tạm
-    const url = 'http://localhost:4000'
+    const url = useSelector((state) => state.url.value)
 
     const [title, setTitle] = useState('Đăng nhập')
     const [data, setData] = useState({
@@ -32,10 +32,10 @@ const LoginPopup = ({ setShowLogin }) => {
 
         let newUrl = url
         if (title === 'Đăng nhập') {
-            newUrl += '/api/user/login'
+            newUrl += '/api/v1/user/login'
         }
         else {
-            newUrl += '/api/user/register'
+            newUrl += '/api/v1/user/register'
         }
 
         const response = await axios.post(newUrl, data)

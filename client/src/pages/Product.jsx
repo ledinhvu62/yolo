@@ -24,14 +24,14 @@ const Product = () => {
     const [relatedProducts, setRelatedProducts] = useState([])
 
     const fetchData = useCallback(async (slug) => {
-        const response = await axios.get(`${url}/api/product/query`, { params: { slug } })
+        const response = await axios.get(`${url}/api/v1/product/query`, { params: { slug } })
         if (response.data.success) {
             setProduct(response.data.data)
         }
     }, [url])
 
     const getRelatedProducts = useCallback(async (slug) => {
-        const response = await axios.get(`${url}/api/product/related-products`, { params: { slug } })
+        const response = await axios.get(`${url}/api/v1/product/related-products`, { params: { slug } })
         if (response.data.success) {
             setRelatedProducts(response.data.data)
         }

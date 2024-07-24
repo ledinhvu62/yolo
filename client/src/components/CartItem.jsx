@@ -16,7 +16,7 @@ const CartItem = (props) => {
     const [item, setItem] = useState(props.item)
 
     const fetchData = useCallback(async (_id) => {
-        const response = await axios.get(`${url}/api/product/query`, {
+        const response = await axios.get(`${url}/api/v1/product/query`, {
             params: {
                 _id
             }

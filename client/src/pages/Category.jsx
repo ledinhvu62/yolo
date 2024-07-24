@@ -18,7 +18,7 @@ const Category = () => {
     const [products, setProducts] = useState([])
 
     const fetchData = useCallback(async (categorySlug) => {
-        const response = await axios.get(`${url}/api/product/query`, {
+        const response = await axios.get(`${url}/api/v1/product/query`, {
             params: {
               category: categorySlug
             }
