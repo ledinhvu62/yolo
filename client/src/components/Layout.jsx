@@ -32,7 +32,7 @@ const Layout = () => {
     const dispatchCart = useDispatch()
 
     const fetchCartData = useCallback(async (token) => {
-        const response = await axios.get(`${url}/api/v1/cart`, {}, { headers: { token } })
+        const response = await axios.get(`${url}/api/v1/cart`, { headers: { token } })
         if (response.data.success) {
             if (cartItems.length && response.data.cartData.length) {
                 console.log('Case A')

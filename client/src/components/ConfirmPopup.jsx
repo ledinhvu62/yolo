@@ -22,7 +22,7 @@ const ConfirmPopup = ({ setShowConfirm }) => {
     const dispatch = useDispatch()
 
     const onDeny = async () => {
-        const response = await axios.get(`${url}/api/v1/cart`, {}, { headers: { token } })
+        const response = await axios.get(`${url}/api/v1/cart`, { headers: { token } })
         if (response.data.success) {
             dispatch(setCartItems(response.data.cartData))
             setShowConfirm(false)
