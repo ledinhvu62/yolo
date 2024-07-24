@@ -7,7 +7,7 @@ import axios from 'axios'
 import colorData from '../assets/fake-data/product-color'
 import sizeData from '../assets/fake-data/product-size'
 
-import { updateItemWithSync, removeItemWithSync } from '../redux/shopping-cart/cartItemsSlice'
+import { updateItemWithSync, removeItemWithSync } from '../redux/features/cartItemsSlice'
 
 import numberWithCommas from '../utils/numberWithCommas'
 

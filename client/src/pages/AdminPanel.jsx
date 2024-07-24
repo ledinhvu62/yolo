@@ -6,7 +6,6 @@ import Sidebar from '../components/Sidebar'
 import logo from '../assets/images/logo.svg'
 import AddProductView from '../components/AddProductView'
 import ListProductView from '../components/ListProductView'
-import { useSelector } from 'react-redux'
 
 const AdminPanel = () => {
     const [currView, setCurrView] = useState('add-product-view')

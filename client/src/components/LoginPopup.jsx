@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import { useDispatch, useSelector } from 'react-redux'
-import { set } from '../redux/token/tokenSlice'
+import { set } from '../redux/features/tokenSlice'
 import axios from 'axios'
 
 const LoginPopup = ({ setShowLogin }) => {

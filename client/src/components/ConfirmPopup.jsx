@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux'
-import { setCartItems } from '../redux/shopping-cart/cartItemsSlice'
+import { setCartItems } from '../redux/features/cartItemsSlice'
 
 const ConfirmPopup = ({ setShowConfirm }) => {
     const url = useSelector((state) => state.url.value)

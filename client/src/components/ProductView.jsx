@@ -7,7 +7,7 @@ import Button from './Button'
 
 import numberWithCommas from '../utils/numberWithCommas'
 import { ToastContainer } from 'react-toastify'
-import { addItemWithSync } from '../redux/shopping-cart/cartItemsSlice'
+import { addItemWithSync } from '../redux/features/cartItemsSlice'
 
 const ProductView = ({ product = { price: 0, name: '', images: [], color: [], size: [] } }) => {
     const dispatch = useDispatch()

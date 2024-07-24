@@ -5,9 +5,9 @@ import { useSelector, useDispatch } from 'react-redux'
 import navigationData from '../assets/fake-data/navigation'
 import logo from '../assets/images/logo.svg'
 
-import { set, remove } from '../redux/search/keywordSearchSlice'
+import { set, remove } from '../redux/features/keywordSearchSlice'
 
-import { removeToken } from '../redux/token/tokenSlice'
+import { removeToken } from '../redux/features/tokenSlice'
 
 const Header = ({ setShowLogin }) => {
     const cartItems = useSelector((state) => state.cartItems.value)
