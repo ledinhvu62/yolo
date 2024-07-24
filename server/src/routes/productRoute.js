@@ -2,7 +2,7 @@ import express from 'express'
 import { addProduct, listProduct, removeProduct, getProduct, getRelatedProducts } from '../controllers/productController.js'
 import multer from 'multer'
 
-import { v2 as cloudinary } from 'cloudinary'
+import cloudinary from '../config/cloudinary.js'
 import { CloudinaryStorage } from 'multer-storage-cloudinary'
 
 const productRouter = express.Router()
@@ -13,12 +13,6 @@ const productRouter = express.Router()
         return cb(null, `${Date.now()}${file.originalname}`)
     }
 }) */
-
-cloudinary.config({
-    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-    api_key: process.env.CLOUDINARY_API_KEY,
-    api_secret: process.env.CLOUDINARY_API_SECRET,
-})
 
 const storage = new CloudinaryStorage({
     cloudinary: cloudinary,
