@@ -19,7 +19,7 @@ const upload = multer({ storage })
 
 productRouter.post('/', upload.array('images'), addProduct)
 productRouter.get('/', listProduct)
-productRouter.post('/remove', removeProduct)
+productRouter.delete('/:productId', removeProduct)
 
 // Test
 productRouter.get('/query', getProduct)

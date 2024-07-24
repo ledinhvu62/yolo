@@ -1,8 +1,7 @@
 import productModel from '../models/productModel.js'
-import fs from 'fs'
 import cloudinary from '../config/cloudinary.js'
 
-// Add product item
+// Add product
 const addProduct = async (req, res) => {
     const files = req.files
     const uploadPromises = files.map((file) =>
@@ -31,7 +30,7 @@ const addProduct = async (req, res) => {
     }
 }
 
-// Get all product list
+// Get all product
 const listProduct = async (req, res) => {
     try {
         const products = await productModel.find({})
@@ -42,13 +41,10 @@ const listProduct = async (req, res) => {
     }
 }
 
-// Remove product item
-
+// Remove product
 const removeProduct = async (req, res) => {
     try {
-        const product = await productModel.findById(req.body.id)
-        fs.unlink(`uploads/${product.image}`, () => {})
-        await productModel.findByIdAndDelete(req.body.id)
+        await productModel.findByIdAndDelete(req.params.productId)
         res.json({success: true, message: 'Sản phẩm đã bị xóa'})
     } catch (error) {
         console.log(error)

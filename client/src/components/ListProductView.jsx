@@ -22,7 +22,7 @@ const ListProductView = () => {
     }, [url])
 
     const removeProduct = async (productId) => {
-        const response = await axios.post(`${url}/api/v1/products/remove`, { id: productId })
+        const response = await axios.delete(`${url}/api/v1/products/${productId}`)
         if (response.data.success) {
             await fetchData()
         }
