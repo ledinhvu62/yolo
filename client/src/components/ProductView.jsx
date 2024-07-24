@@ -9,7 +9,7 @@ import numberWithCommas from '../utils/numberWithCommas'
 import { ToastContainer } from 'react-toastify'
 import { addItemWithSync } from '../redux/shopping-cart/cartItemsSlice'
 
-const ProductView = ({ product = { price: 0, name: '', color: [], size: [] } }) => {
+const ProductView = ({ product = { price: 0, name: '', images: [], color: [], size: [] } }) => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
