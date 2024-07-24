@@ -32,10 +32,10 @@ const LoginPopup = ({ setShowLogin }) => {
 
         let newUrl = url
         if (title === 'Đăng nhập') {
-            newUrl += '/api/v1/user/login'
+            newUrl += '/api/v1/users/login'
         }
         else {
-            newUrl += '/api/v1/user/register'
+            newUrl += '/api/v1/users/register'
         }
 
         const response = await axios.post(newUrl, data)

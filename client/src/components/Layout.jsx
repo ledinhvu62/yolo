@@ -22,7 +22,7 @@ const Layout = () => {
     const token = useSelector((state) => state.token.value)
 
     const fetchData = useCallback(async () => {
-        const response = await axios.get(`${url}/api/v1/product`)
+        const response = await axios.get(`${url}/api/v1/products`)
         if (response.data.success) {
             dispatch(set(response.data.data))
         }
