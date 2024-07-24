@@ -9,7 +9,7 @@ const ConfirmPopup = ({ setShowConfirm }) => {
     const token = useSelector((state) => state.token.value)
 
     const onConfirm = async () => {
-        const response = await axios.post(`${url}/api/v1/cart/set`, { cartData: cartItems }, { headers: { token } })
+        const response = await axios.post(`${url}/api/v1/cart`, { cartData: cartItems }, { headers: { token } })
         if (response.data.success) {
             alert(response.data.message)
             setShowConfirm(false)
@@ -22,7 +22,7 @@ const ConfirmPopup = ({ setShowConfirm }) => {
     const dispatch = useDispatch()
 
     const onDeny = async () => {
-        const response = await axios.post(`${url}/api/v1/cart/get`, {}, { headers: { token } })
+        const response = await axios.get(`${url}/api/v1/cart`, {}, { headers: { token } })
         if (response.data.success) {
             dispatch(setCartItems(response.data.cartData))
             setShowConfirm(false)

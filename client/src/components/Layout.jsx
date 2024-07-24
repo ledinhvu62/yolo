@@ -32,7 +32,7 @@ const Layout = () => {
     const dispatchCart = useDispatch()
 
     const fetchCartData = useCallback(async (token) => {
-        const response = await axios.post(`${url}/api/v1/cart/get`, {}, { headers: { token } })
+        const response = await axios.get(`${url}/api/v1/cart`, {}, { headers: { token } })
         if (response.data.success) {
             if (cartItems.length && response.data.cartData.length) {
                 console.log('Case A')
@@ -44,7 +44,7 @@ const Layout = () => {
             }
             else {
                 console.log('Case C')
-                await axios.post(`${url}/api/v1/cart/set`, { cartData: cartItems }, { headers: { token } })
+                await axios.post(`${url}/api/v1/cart`, { cartData: cartItems }, { headers: { token } })
             }
         }
     }, [dispatchCart, url]) // eslint-disable-line
