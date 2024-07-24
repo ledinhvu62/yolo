@@ -67,8 +67,7 @@ const removeProduct = async (req, res) => {
     }
 }
 
-// Test get related products
-
+// Get related products
 const getRelatedProducts = async (req, res) => {
     try {
         const product = await productModel.findOne({ slug: req.query.slug })
