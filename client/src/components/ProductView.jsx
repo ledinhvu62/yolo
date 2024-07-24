@@ -6,7 +6,6 @@ import { useDispatch } from 'react-redux'
 import Button from './Button'
 
 import numberWithCommas from '../utils/numberWithCommas'
-import { ToastContainer } from 'react-toastify'
 import { addItemWithSync } from '../redux/features/cartItemsSlice'
 
 const ProductView = ({ product = { price: 0, name: '', images: [], color: [], size: [] } }) => {
@@ -50,7 +49,6 @@ const ProductView = ({ product = { price: 0, name: '', images: [], color: [], si
 
     return (
         <div className='product'>
-            <ToastContainer />
             <div className='product__images'>
                 <div className='product__images__list'>
                     <div

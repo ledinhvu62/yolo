@@ -1,5 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { BrowserRouter } from 'react-router-dom'
+import axios from 'axios'
+import { ToastContainer } from 'react-toastify'
 
 import RoutesApp from '../routes/RoutesApp'
 
@@ -9,7 +11,6 @@ import LoginPopup from './LoginPopup'
 import { useDispatch, useSelector } from 'react-redux'
 import { set } from '../redux/features/productListSlice'
 import { setCartItems } from '../redux/features/cartItemsSlice'
-import axios from 'axios'
 import ConfirmPopup from './ConfirmPopup'
 
 const Layout = () => {
@@ -62,6 +63,7 @@ const Layout = () => {
 
     return (
         <BrowserRouter>
+            <ToastContainer />
             {showLogin ? <LoginPopup setShowLogin={setShowLogin} /> : <></>}
             {showConfirm && !isAdminPanel ? <ConfirmPopup setShowConfirm={setShowConfirm} /> : <></>}
             {isAdminPanel ?

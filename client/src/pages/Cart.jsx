@@ -7,7 +7,6 @@ import Button from '../components/Button'
 import CartItem from '../components/CartItem'
 
 import numberWithCommas from '../utils/numberWithCommas'
-import { ToastContainer } from 'react-toastify'
 
 const Cart = () => {
     const cartItems = useSelector((state) => state.cartItems.value)
@@ -22,7 +21,6 @@ const Cart = () => {
 
     return (
         <Helmet title='Giỏ hàng'>
-            <ToastContainer />
             <div className='cart'>
                 <h2 className='cart__title'>
                     Giỏ hàng
