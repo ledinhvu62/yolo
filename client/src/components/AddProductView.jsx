@@ -7,8 +7,11 @@ import CheckBox from './CheckBox'
 import categoryData from '../assets/fake-data/category'
 import colorData from '../assets/fake-data/product-color'
 import sizeData from '../assets/fake-data/product-size'
+import { useSelector } from 'react-redux'
 
-const AddProductView = ({ url }) => {
+const AddProductView = () => {
+    const url = useSelector((state) => state.url.value)
+
     const categoryList = categoryData.getAllCategories()
     const colorList = colorData.getAllColors()
     const sizeList = sizeData.getAllSizes()
@@ -109,36 +112,36 @@ const AddProductView = ({ url }) => {
 
     return (
         <div className='add__product__view'>
-            <form action="" className="flex-col" onSubmit={onSubmitHandler}>
-                <div className="add__product__view__form__item flex-col">
+            <form action='' className='flex-col' onSubmit={onSubmitHandler}>
+                <div className='add__product__view__form__item flex-col'>
                     <p>Tải lên hình ảnh 1</p>
                     <input onChange={(e) => {
                         let newArr = [...images]
                         newArr[0] = e.target.files[0]
                         setImages(newArr)
-                    }} type="file" id='images' required />
+                    }} type='file' id='images' required />
                 </div>
-                <div className="add__product__view__form__item flex-col">
+                <div className='add__product__view__form__item flex-col'>
                     <p>Tải lên hình ảnh 2</p>
                     <input onChange={(e) => {
                         let newArr = [...images]
                         newArr[1] = e.target.files[0]
                         setImages(newArr)
-                    }} type="file" id='images' required />
+                    }} type='file' id='images' required />
                 </div>
-                <div className="add__product__view__form__item flex-col">
+                <div className='add__product__view__form__item flex-col'>
                     <p>Tên sản phẩm</p>
-                    <input onChange={onChangeHandler} value={data.name} type="text" name='name' required />
+                    <input onChange={onChangeHandler} value={data.name} type='text' name='name' required />
                 </div>
-                <div className="add__product__view__form__item flex-col">
+                <div className='add__product__view__form__item flex-col'>
                     <p>Mô tả sản phẩm</p>
-                    <textarea onChange={onChangeHandler} value={data.description} name="description" id="" cols='30' rows='10' required ></textarea>
+                    <textarea onChange={onChangeHandler} value={data.description} name='description' id='' cols='30' rows='10' required ></textarea>
                 </div>
-                <div className="add__product__view__form__item flex-col">
+                <div className='add__product__view__form__item flex-col'>
                     <p>Giá</p>
                     <input onChange={onChangeHandler} value={data.price} type='number' name='price' required />
                 </div>
-                <div className="add__product__view__form__item flex-col">
+                <div className='add__product__view__form__item flex-col'>
                     <p>Màu sắc</p>
                     <div className='add__product__view__form__checkbox'>
                         {
@@ -153,7 +156,7 @@ const AddProductView = ({ url }) => {
                         }
                     </div>
                 </div>
-                <div className="add__product__view__form__item flex-col">
+                <div className='add__product__view__form__item flex-col'>
                     <p>Kích cỡ</p>
                     <div className='add__product__view__form__checkbox'>
                         {
@@ -168,7 +171,7 @@ const AddProductView = ({ url }) => {
                         }
                     </div>
                 </div>
-                <div className="add__product__view__form__item flex-col">
+                <div className='add__product__view__form__item flex-col'>
                     <p>Loại</p>
                     <select onChange={onChangeHandler} name='categorySlug' required>
                         {

@@ -60,7 +60,7 @@ const CartItem = (props) => {
                 className='cart__item__image'
                 onClick={() => navigate(`/catalog/${item.slug}`)}
             >
-                <img src={`${url}/images/${item.image01}`} alt='Ảnh sản phẩm' />
+                <img src={item.images[0]} alt='Ảnh sản phẩm' />
             </div>
             <div className='cart__item__info'>
                 <div className='cart__item__info__left'>

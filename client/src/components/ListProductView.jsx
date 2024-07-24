@@ -6,8 +6,11 @@ import numberWithCommas from '../utils/numberWithCommas'
 import categoryData from '../assets/fake-data/category'
 import colorData from '../assets/fake-data/product-color'
 import sizeData from '../assets/fake-data/product-size'
+import { useSelector } from 'react-redux'
 
-const ListProductView = ({ url }) => {
+const ListProductView = () => {
+    const url = useSelector((state) => state.url.value)
+
     const [data, setData] = useState([])
 
     const fetchData = useCallback(async () => {

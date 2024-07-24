@@ -2,7 +2,6 @@ import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 import navigationData from '../assets/fake-data/navigation'
-//import productData from '../assets/fake-data/products'
 
 const Breadcrumbs = ({ title }) => {
     const location = useLocation()

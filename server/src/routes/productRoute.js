@@ -7,13 +7,6 @@ import { CloudinaryStorage } from 'multer-storage-cloudinary'
 
 const productRouter = express.Router()
 
-/* const storage = multer.diskStorage({
-    destination: 'uploads',
-    filename: (req, file, cb) => {
-        return cb(null, `${Date.now()}${file.originalname}`)
-    }
-}) */
-
 const storage = new CloudinaryStorage({
     cloudinary: cloudinary,
     params: {

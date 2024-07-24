@@ -50,19 +50,19 @@ const LoginPopup = ({ setShowLogin }) => {
 
     return (
         <div className='login__popup'>
-            <form onSubmit={onLogin} className="login__popup__container">
-                <div className="login__popup__title">
+            <form onSubmit={onLogin} className='login__popup__container'>
+                <div className='login__popup__title'>
                     <h2>{title}</h2>
                     <i onClick={() => setShowLogin(false)} className='bx bx-x'></i>
                 </div>
-                <div className="login__popup__inputs">
+                <div className='login__popup__inputs'>
                     {title === 'Đăng ký' ? <input onChange={onChangeHandler} value={data.name} type='text' placeholder='Tên của bạn' name='name' required /> : <></>}
                     <input onChange={onChangeHandler} value={data.email} type='email' name='email' placeholder='Email của bạn' required />
                     <input onChange={onChangeHandler} value={data.password} type='password' name='password' placeholder='Mật khẩu' required />
                 </div>
                 <button type='submit'>{title === 'Đăng ký' ? 'Tạo tài khoản' : 'Đăng nhập'}</button>
                 {title === 'Đăng ký'
-                    ? <div className="login__popup__condition">
+                    ? <div className='login__popup__condition'>
                         <input type='checkbox' required />
                         <p>Tôi đồng ý với các điều khoản sử dụng và chính sách bảo mật của Yolo</p>
                     </div>

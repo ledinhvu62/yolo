@@ -25,13 +25,11 @@ const port = process.env.PORT || 4000
 const server = http.createServer(app)
 
 mongoose.connect(process.env.MONGODB_URL).then(() => {
-    console.log('Mongodb connected');
+    console.log('MongoDB connected')
     server.listen(port, () => {
         console.log(`Server is listening on port ${port}`)
     })
 }).catch((err) => {
-    console.log({ err })
+    console.log(err)
     process.exit(1)
 })
-
-//mongodb+srv://ledinhvu6:ledinhvu6@cluster0.4w0ljax.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0

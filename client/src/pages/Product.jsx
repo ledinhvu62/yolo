@@ -1,5 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
+import axios from 'axios'
 
 import Helmet from '../components/Helmet'
 import Breadcrumbs from '../components/Breadcrumbs'
@@ -7,8 +9,6 @@ import Section, { SectionBody, SectionTitle } from '../components/Section'
 import Grid from '../components/Grid'
 import ProductCard from '../components/ProductCard'
 import ProductView from '../components/ProductView'
-import axios from 'axios'
-import { useSelector } from 'react-redux'
 
 const Product = () => {
     const { slug } = useParams()
@@ -66,8 +66,7 @@ const Product = () => {
                             relatedProducts.map((item, index) => (
                                 <ProductCard
                                     key={index}
-                                    img01={item.image01}
-                                    img02={item.image02}
+                                    images={item.images}
                                     name={item.name}
                                     price={+item.price}
                                     slug={item.slug}

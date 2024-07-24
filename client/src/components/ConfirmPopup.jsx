@@ -34,14 +34,14 @@ const ConfirmPopup = ({ setShowConfirm }) => {
 
     return (
         <div className='confirm__popup'>
-            <div className="confirm__popup__container">
-                <div className="confirm__popup__title">
+            <div className='confirm__popup__container'>
+                <div className='confirm__popup__title'>
                     <h2>Xác nhận giỏ hàng</h2>
                     <i onClick={() => setShowConfirm(false)} className='bx bx-x'></i>
                 </div>
-                <div className="confirm__popup__content">
+                <div className='confirm__popup__content'>
                     <p>Giỏ hàng của bạn đã tồn tại. Bạn có muốn cập nhật lại không?</p>
-                    <div className="confirm__popup__content__option">
+                    <div className='confirm__popup__content__option'>
                         <button onClick={onDeny}>Không</button>
                         <button onClick={onConfirm}>Cập nhật</button>
                     </div>

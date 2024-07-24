@@ -13,9 +13,7 @@ const ProductView = ({ product = { price: 0, name: '', color: [], size: [] } }) 
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
-    const url = useSelector((state) => state.url.value)
-
-    const [previewImg, setPreviewImg] = useState(product.image01)
+    const [previewImg, setPreviewImg] = useState(product.images[0])
     const [color, setColor] = useState(product.color[0])
     const [size, setSize] = useState(product.size[0])
     const [quantity, setQuantity] = useState(1)
@@ -57,19 +55,19 @@ const ProductView = ({ product = { price: 0, name: '', color: [], size: [] } }) 
                 <div className='product__images__list'>
                     <div
                         className='product__images__list__item'
-                        onMouseOver={() => setPreviewImg(product.image01)}
+                        onMouseOver={() => setPreviewImg(product.images[0])}
                     >
-                        <img src={`${url}/images/${product.image01}`} alt='Ảnh sản phẩm 1' />
+                        <img src={product.images[0]} alt='Ảnh sản phẩm 1' />
                     </div>
                     <div
                         className='product__images__list__item'
-                        onMouseOver={() => setPreviewImg(product.image02)}
+                        onMouseOver={() => setPreviewImg(product.images[1])}
                     >
-                        <img src={`${url}/images/${product.image02}`} alt='Ảnh sản phẩm 2' />
+                        <img src={product.images[1]} alt='Ảnh sản phẩm 2' />
                     </div>
                 </div>
                 <div className='product__images__main'>
-                    <img src={`${url}/images/${previewImg}`} alt='Ảnh sản phẩm' />
+                    <img src={previewImg} alt='Ảnh sản phẩm' />
                 </div>
                 <div className='product-description'>
                     <div className='product-description__title'>
