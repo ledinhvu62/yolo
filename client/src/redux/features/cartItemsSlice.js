@@ -49,10 +49,10 @@ export const syncCartWithServer = createAsyncThunk(
     async (cartItems, { getState }) => {
         const { token, url } = getState()
         if (!token.value) {
-            showToast('Giỏ hàng đã được cập nhật. Login ?', 'success')
+            showToast('Giỏ hàng đã được cập nhật. Đăng nhập ?', 'success')
             return
         }
-        const response = await axios.post(`${url.value}/api/cart/set`, { cartData: cartItems }, { headers: { token: token.value } })
+        const response = await axios.post(`${url.value}/api/v1/cart`, { cartData: cartItems }, { headers: { token: token.value } })
         return response.data
     }
 )
