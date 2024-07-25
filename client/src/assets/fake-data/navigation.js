@@ -4,12 +4,12 @@ const navigation = [
         path: 'catalog',
     },
     {
-        display: 'Áo polo',
-        path: 'ao-polo',
-    },
-    {
         display: 'Áo thun',
         path: 'ao-thun',
+    },
+    {
+        display: 'Áo polo',
+        path: 'ao-polo',
     },
     {
         display: 'Áo sơ mi',
