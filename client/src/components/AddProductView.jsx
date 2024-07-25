@@ -113,16 +113,16 @@ const AddProductView = () => {
     return (
         <div className='add__product__view'>
             <form action='' className='flex-col' onSubmit={onSubmitHandler}>
-                <div className='add__product__view__form__item flex-col'>
-                    <p>Tải lên hình ảnh 1</p>
+                <div className='add__product__view__form__item flex-col image'>
+                    <p>Ảnh sản phẩm 1</p>
                     <input onChange={(e) => {
                         let newArr = [...images]
                         newArr[0] = e.target.files[0]
                         setImages(newArr)
                     }} type='file' id='images' required />
                 </div>
-                <div className='add__product__view__form__item flex-col'>
-                    <p>Tải lên hình ảnh 2</p>
+                <div className='add__product__view__form__item flex-col image'>
+                    <p>Ảnh sản phẩm 2</p>
                     <input onChange={(e) => {
                         let newArr = [...images]
                         newArr[1] = e.target.files[0]

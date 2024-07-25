@@ -1,8 +1,7 @@
 .add__product__view {
     width: 100%;
-    margin-left: 100px;
-    margin-top: 40px;
-    color: #6d6d6d;
+    padding: 40px 0;
+    padding-left: 10%;
     font-size: 16px;
 
     & form {
@@ -12,12 +11,13 @@
 
         & button {
             width: 120px;
-            border: none;
             padding: 10px;
             background-color: $main-color;
-            color: white;
+            color: $txt-white;
             cursor: pointer;
             font-family: inherit;
+            border: none;
+            border-radius: 8px;
         }
     }
 
@@ -32,24 +32,40 @@
 
         & * {
             width: 30%;
+            font-family: inherit;
         }
 
-        & input,
+        & input:not([type='file']),
         & textarea,
         & select {
             padding: 10px;
             font-size: 10pt;
-            font-family: inherit;
+            color: $txt-second-color;
+            border: 1px solid $border-main-color;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        &.image {
+            @include flex(center, flex-start);
+            flex-direction: row;
         }
     }
 
     &__form__checkbox {
-        @include flex(flex-start, flex-start);
-        gap: 20px;
-        width: 50%;
+        @include flex(flex-start, space-between);
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 90%;
+
+        & label {
+            width: 20%;
+            cursor: unset;
+        }
         
-        & input {
-            width: 100%;
+        & label:hover {
+            color: unset;
         }
     }
 }

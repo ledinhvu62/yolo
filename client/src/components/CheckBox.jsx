@@ -11,14 +11,14 @@ const CheckBox = props => {
     }
 
     return (
-        <label className='custom-checkbox'>
+        <label className='checkbox'>
             <input
                 ref={inputRef}
                 type='checkbox'
                 checked={props.checked}
                 onChange={onChange}
             />
-            <span className='custom-checkbox__checkmark'>
+            <span className='checkbox__checkmark'>
                 <i className='bx bx-check'></i>
             </span>
             {props.label}

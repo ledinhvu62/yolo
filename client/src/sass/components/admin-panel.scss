@@ -3,25 +3,27 @@
     flex-direction: column;
     width: 100%;
     max-width: 1620px;
-    padding: 60px 120px;
+    padding: 15px 120px;
     margin: auto;
 
     &__logo {
-        width: 100px;
+        width: 60px;
     }
 
     &__title {
         font-weight: 500;
-        font-size: 16pt;
+        font-size: 14pt;
         margin: 10px 0;
     }
 
     &__sidebar__content {
         @include flex(flex-start, center);
         width: 100%;
+        background-color: red;
     }
 
     &__content {
         width: 80%;
+        background-color: #ededed;
     }
 }
