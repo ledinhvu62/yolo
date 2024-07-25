@@ -82,10 +82,8 @@ export const cartItemsSlice = createSlice({
     extraReducers: {
         [syncCartWithServer.fulfilled]: (state, { payload }) => {
             if (payload && payload.success) {
-                console.log(payload.message)
                 showToast(payload.message, 'success')
             } else if (payload) {
-                console.log(payload.message)
                 showToast(payload.message, 'error')
             }
         }
