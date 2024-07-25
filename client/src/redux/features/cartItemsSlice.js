@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios'
-import { Bounce, toast } from 'react-toastify'
+
+import showToast from '../../utils/showToast'
 
 const getLocalStorageItems = () => {
     const items = localStorage.getItem('cartItems')
@@ -9,21 +10,6 @@ const getLocalStorageItems = () => {
 
 const initialState = {
     value: getLocalStorageItems(),
-}
-
-const showToast = (message, type) => {
-    const toastOptions = {
-        position: 'top-right',
-        autoClose: 3000,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        theme: 'light',
-        transition: Bounce,
-        className: `toast__${type}`,
-    }
-    type === 'success' ? toast.success(message, toastOptions) : toast.error(message, toastOptions)
 }
 
 const findItem = (arr, item) => arr.filter(e => e._id === item._id && e.color === item.color && e.size === item.size)

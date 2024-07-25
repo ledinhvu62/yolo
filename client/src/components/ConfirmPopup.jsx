@@ -3,6 +3,8 @@ import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux'
 import { setCartItems } from '../redux/features/cartItemsSlice'
 
+import showToast from '../utils/showToast'
+
 const ConfirmPopup = ({ setShowConfirm }) => {
     const url = useSelector((state) => state.url.value)
     const cartItems = useSelector((state) => state.cartItems.value)
@@ -12,6 +14,7 @@ const ConfirmPopup = ({ setShowConfirm }) => {
         const response = await axios.post(`${url}/api/v1/cart`, { cartData: cartItems }, { headers: { token } })
         if (response.data.success) {
             setShowConfirm(false)
+            showToast(response.data.message, 'success')
         }
         else {
             console.log(response.data.message)
