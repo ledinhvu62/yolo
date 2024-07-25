@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { set } from '../redux/features/productListSlice'
 import { setCartItems } from '../redux/features/cartItemsSlice'
 import ConfirmPopup from './ConfirmPopup'
+import showToast from '../utils/showToast'
 
 const Layout = () => {
     const isAdminPanel = window.location.pathname === '/admin'
@@ -45,7 +46,8 @@ const Layout = () => {
             }
             else {
                 console.log('Case C')
-                await axios.post(`${url}/api/v1/cart`, { cartData: cartItems }, { headers: { token } })
+                const response = await axios.post(`${url}/api/v1/cart`, { cartData: cartItems }, { headers: { token } })
+                response.data.success && showToast(response.data.message, 'success')
             }
         }
     }, [dispatchCart, url]) // eslint-disable-line
