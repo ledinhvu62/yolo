@@ -44,8 +44,10 @@ const ListProductView = () => {
             </div>
             {data.map(item => {
                 return (
-                    <div key={item._id} className='list__product__table'>
-                        <img src={item.images[0]} alt='Ảnh sản phẩm' />
+                    <div key={item._id} className='list__product__table item'>
+                        <div className='image-wrapper'>
+                            <img src={item.images[0]} alt='Ảnh sản phẩm' onClick={() => { window.open(item.images[0], '_blank') }} />
+                        </div>
                         <p>{item.name}</p>
                         <p>{categoryData.getCategory(item.categorySlug).display}</p>
                         <p>{numberWithCommas(item.price)}đ</p>
