@@ -11,11 +11,10 @@ const ConfirmPopup = ({ setShowConfirm }) => {
     const onConfirm = async () => {
         const response = await axios.post(`${url}/api/v1/cart`, { cartData: cartItems }, { headers: { token } })
         if (response.data.success) {
-            alert(response.data.message)
             setShowConfirm(false)
         }
         else {
-            alert(response.data.message)
+            console.log(response.data.message)
         }
     }
 
@@ -28,7 +27,7 @@ const ConfirmPopup = ({ setShowConfirm }) => {
             setShowConfirm(false)
         }
         else {
-            alert(response.data.message)
+            console.log(response.data.message)
         }
     }
 
