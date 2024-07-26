@@ -100,7 +100,7 @@ const AddProductView = () => {
                 price: '',
                 color: [],
                 size: [],
-                categorySlug: 'ao-thun',
+                categorySlug: 'ao-polo',
             })
             setImages([])
         }
