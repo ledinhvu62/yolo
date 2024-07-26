@@ -15,7 +15,7 @@ const addProduct = async (req, res) => {
         price: req.body.price,
         images: imageUrls,
         color: req.body.color,
-        size: req.body.size,
+        size: req.body.size.sort(),
         slug: req.body.slug,
         categorySlug: req.body.categorySlug,
         description: req.body.description,

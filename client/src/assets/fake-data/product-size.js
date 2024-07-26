@@ -1,19 +1,19 @@
 const sizes = [
     {
         display: 'S',
-        size: 's',
+        size: '01-s',
     },
     {
         display: 'M',
-        size: 'm',
+        size: '02-m',
     },
     {
         display: 'L',
-        size: 'l',
+        size: '03-l',
     },
     {
         display: 'XL',
-        size: 'xl',
+        size: '04-xl',
     },
 ]
 
