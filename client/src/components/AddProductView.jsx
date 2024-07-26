@@ -18,14 +18,16 @@ const AddProductView = () => {
 
     const [images, setImages] = useState([])
 
-    const [data, setData] = useState({
+    const initData = {
         name: '',
         description: '',
         price: '',
         color: [],
         size: [],
-        categorySlug: 'ao-thun',
-    })
+        categorySlug: 'ao-polo',
+    }
+
+    const [data, setData] = useState(initData)
 
     const filterSelect = (type, checked, value) => {
         if (checked) {
@@ -94,14 +96,7 @@ const AddProductView = () => {
         
         const response = await axios.post(`${url}/api/v1/products`, formData)
         if (response.data.success) {
-            setData({
-                name: '',
-                description: '',
-                price: '',
-                color: [],
-                size: [],
-                categorySlug: 'ao-polo',
-            })
+            setData(initData)
             setImages([])
         }
     }
