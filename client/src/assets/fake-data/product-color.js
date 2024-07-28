@@ -1,11 +1,11 @@
 const colors = [
     {
         name: 'Be',
-        hexCode: 'red',
+        hexCode: 'fbf3ec',
     },
     {
         name: 'Cam',
-        hexCode: '#ec7f3e',
+        hexCode: '#f36b26',
     },
     {
         name: 'Đen',
@@ -13,19 +13,19 @@ const colors = [
     },
     {
         name: 'Đỏ',
-        hexCode: '#e23041',
+        hexCode: '#e7352b',
     },
     {
         name: 'Hồng',
-        hexCode: '#f0adb1',
+        hexCode: '#f0728f',
     },
     {
         name: 'Nâu',
-        hexCode: 'red',
+        hexCode: '#825d41',
     },
     {
         name: 'Tím',
-        hexCode: 'red',
+        hexCode: '#8d429f',
     },
     {
         name: 'Trắng',
@@ -33,19 +33,19 @@ const colors = [
     },
     {
         name: 'Vàng',
-        hexCode: '#f5ebc7',
+        hexCode: '#fed533',
     },
     {
         name: 'Xám',
-        hexCode: 'red',
+        hexCode: '#b3b3b3',
     },
     {
         name: 'Xanh dương',
-        hexCode: '#0e76c0',
+        hexCode: '#0d74c4',
     },
     {
         name: 'Xanh lá',
-        hexCode: 'red',
+        hexCode: '#079a64',
     },
 ]
 
