@@ -1,5 +1,5 @@
-import productModel from '../models/productModel'
-import cloudinary from '../config/cloudinary'
+import productModel from '../models/productModel.js'
+import cloudinary from '../config/cloudinary.js'
 
 const addProduct = async (req, res) => {
     const files = req.files

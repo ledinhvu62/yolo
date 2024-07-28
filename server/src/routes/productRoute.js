@@ -1,5 +1,5 @@
 import express from 'express'
-import { addProduct, removeProduct, getProducts, getRelatedProducts } from '../controllers/productController'
+import { addProduct, removeProduct, getProducts, getRelatedProducts } from '../controllers/productController.js'
 import multer from 'multer'
 
 import cloudinary from '../config/cloudinary.js'
