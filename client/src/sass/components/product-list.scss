@@ -1,14 +1,13 @@
 .product__list {
     @include flex(flex-end, center);
     flex-direction: column;
-    gap: 40px;
 
     &__table {
         @include flex(center, space-between);
         width: 100%;
-        gap: 10px;
+        gap: 20px;
         padding: 12px;
-        font-size: 10pt;
+        font-size: 12pt;
 
         & *:not(:first-child):not(:last-child) {
             flex: 1;
