@@ -1,5 +1,5 @@
 import express from 'express'
-import { addProduct, removeProduct, getProducts, getRelatedProducts } from '../controllers/productController.js'
+import { addProduct, removeProduct, getProducts, getRelatedProducts } from '../controllers/productController'
 import multer from 'multer'
 
 import cloudinary from '../config/cloudinary.js'
@@ -20,8 +20,6 @@ const upload = multer({ storage })
 productRouter.post('/', upload.array('images'), addProduct)
 productRouter.delete('/:productId', removeProduct)
 productRouter.get('/', getProducts)
-
-// Test
 productRouter.get('/related-products', getRelatedProducts)
 
 export default productRouter

@@ -1,7 +1,6 @@
-import productModel from '../models/productModel.js'
-import cloudinary from '../config/cloudinary.js'
+import productModel from '../models/productModel'
+import cloudinary from '../config/cloudinary'
 
-// Add product
 const addProduct = async (req, res) => {
     const files = req.files
     const uploadPromises = files.map((file) =>
@@ -15,7 +14,7 @@ const addProduct = async (req, res) => {
         price: req.body.price,
         images: imageUrls,
         color: req.body.color,
-        size: req.body.size.sort(),
+        size: req.body.size,
         slug: req.body.slug,
         categorySlug: req.body.categorySlug,
         description: req.body.description,
@@ -30,7 +29,6 @@ const addProduct = async (req, res) => {
     }
 }
 
-// Get all product
 const getProducts = async (req, res) => {
     try {
         if (!Object.keys(req.query).length) {
@@ -56,7 +54,6 @@ const getProducts = async (req, res) => {
     }
 }
 
-// Remove product
 const removeProduct = async (req, res) => {
     try {
         await productModel.findByIdAndDelete(req.params.productId)
@@ -67,7 +64,6 @@ const removeProduct = async (req, res) => {
     }
 }
 
-// Get related products
 const getRelatedProducts = async (req, res) => {
     try {
         const product = await productModel.findOne({ slug: req.query.slug })

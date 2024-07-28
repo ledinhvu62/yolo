@@ -7,7 +7,6 @@ import Button from './Button'
 
 import numberWithCommas from '../utils/numberWithCommas'
 import { addItemWithSync } from '../redux/features/cartItemsSlice'
-import sizeData from '../assets/fake-data/product-size'
 
 const ProductView = ({ product = { price: 0, name: '', images: [], color: [], size: [] } }) => {
     const dispatch = useDispatch()
@@ -115,7 +114,7 @@ const ProductView = ({ product = { price: 0, name: '', images: [], color: [], si
                                     onClick={() => setSize(item)}
                                 >
                                     <span className='product__info__item__list__item__size'>
-                                        {sizeData.getSize(item).display}
+                                        {item}
                                     </span>
                                 </div>
                             ))

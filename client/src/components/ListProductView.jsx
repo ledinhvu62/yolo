@@ -1,12 +1,11 @@
 import React, { useCallback, useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
 import axios from 'axios'
 
 import numberWithCommas from '../utils/numberWithCommas'
 
 import categoryData from '../assets/fake-data/category'
 import colorData from '../assets/fake-data/product-color'
-import sizeData from '../assets/fake-data/product-size'
-import { useSelector } from 'react-redux'
 
 const ListProductView = () => {
     const url = useSelector((state) => state.url.value)
@@ -52,7 +51,7 @@ const ListProductView = () => {
                         <p>{categoryData.getCategory(item.categorySlug).display}</p>
                         <p>{numberWithCommas(item.price)}đ</p>
                         <p>{item.color.map((item) => colorData.getColor(item).display).join(', ')}</p>
-                        <p>{item.size.map((item) => sizeData.getSize(item).display).join(', ')}</p>
+                        <p>{item.size.join(', ')}</p>
                         <i onClick={() => removeProduct(item._id)} className='bx bx-trash'></i>
                     </div>
                 )

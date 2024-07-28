@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
 import axios from 'axios'
 
 import changeToSlug from '../utils/changeToSlug'
@@ -7,14 +8,13 @@ import CheckBox from './CheckBox'
 import categoryData from '../assets/fake-data/category'
 import colorData from '../assets/fake-data/product-color'
 import sizeData from '../assets/fake-data/product-size'
-import { useSelector } from 'react-redux'
 
 const AddProductView = () => {
     const url = useSelector((state) => state.url.value)
 
-    const categoryList = categoryData.getAllCategories()
-    const colorList = colorData.getAllColors()
-    const sizeList = sizeData.getAllSizes()
+    const categories = categoryData.getAllCategories()
+    const colors = colorData.getAllColors()
+    const sizes = sizeData.getAllSizes()
 
     const [images, setImages] = useState([])
 
@@ -41,7 +41,7 @@ const AddProductView = () => {
                 case 'SIZE':
                     setData({
                         ...data,
-                        size: [...data.size, value],
+                        size: sizeData.sortSizes([...data.size, value]),
                     })
                     break
                 default:
@@ -59,7 +59,7 @@ const AddProductView = () => {
                     const newSize = data.size.filter(e => e !== value)
                     setData({
                         ...data,
-                        size: newSize,
+                        size: sizeData.sortSizes(newSize),
                     })
                     break
                 default:
@@ -140,7 +140,7 @@ const AddProductView = () => {
                     <p>Màu sắc</p>
                     <div className='add__product__view__form__checkbox'>
                         {
-                            colorList.map((item, index) => (
+                            colors.map((item, index) => (
                                 <CheckBox
                                     key={index}
                                     label={item.display}
@@ -155,12 +155,12 @@ const AddProductView = () => {
                     <p>Kích cỡ</p>
                     <div className='add__product__view__form__checkbox'>
                         {
-                            sizeList.map((item, index) => (
+                            sizes.map((item, index) => (
                                 <CheckBox
                                     key={index}
-                                    label={item.display}
-                                    checked={data.size.includes(item.size)}
-                                    onChange={(input) => filterSelect('SIZE', input.checked, item.size)}
+                                    label={item}
+                                    checked={data.size.includes(item)}
+                                    onChange={(input) => filterSelect('SIZE', input.checked, item)}
                                 />
                             ))
                         }
@@ -170,7 +170,7 @@ const AddProductView = () => {
                     <p>Loại</p>
                     <select onChange={onChangeHandler} name='categorySlug' required>
                         {
-                            categoryList.map((item, index) => (
+                            categories.map((item, index) => (
                                 <option key={index} value={item.categorySlug}>{item.display}</option>
                             ))
                         }

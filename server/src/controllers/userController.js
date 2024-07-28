@@ -1,9 +1,12 @@
-import userModel from '../models/userModel.js'
+import userModel from '../models/userModel'
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcryptjs'
 import validator from 'validator'
 
-// Login
+const createToken = (id) => {
+    return jwt.sign({ id }, process.env.JWT_SECRET)
+}
+
 const loginUser = async (req, res) => {
     const { email, password } = req.body
 
@@ -27,11 +30,6 @@ const loginUser = async (req, res) => {
     }
 }
 
-const createToken = (id) => {
-    return jwt.sign({ id }, process.env.JWT_SECRET)
-}
-
-// Register
 const registerUser = async (req, res) => {
     const { name, password, email } = req.body
     try {

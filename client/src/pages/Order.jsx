@@ -15,8 +15,6 @@ const Order = () => {
         setTotalPrice(cartItems.reduce((total, item) => total + ((+item.quantity) * (+item.price)), 0))
     }, [cartItems])
 
-    // Test
-
     const DISCOUNT = 16000
 
     const [currentAddress, setCurrentAddress] = useState({

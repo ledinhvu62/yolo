@@ -21,9 +21,9 @@ const Catalog = () => {
 
     const productList = useSelector((state) => state.productList.value)
 
-    const categoryList = categoryData.getAllCategories()
-    const colorList = colorData.getAllColors()
-    const sizeList = sizeData.getAllSizes()
+    const categories = categoryData.getAllCategories()
+    const colors = colorData.getAllColors()
+    const sizes = sizeData.getAllSizes()
 
     const filterRef = useRef(null)
     const [products, setProducts] = useState(productList)
@@ -49,7 +49,7 @@ const Catalog = () => {
                 case 'SIZE':
                     setFilter({
                         ...filter,
-                        size: [...filter.size, item.size],
+                        size: [...filter.size, item],
                     })
                     break
                 default:
@@ -71,7 +71,7 @@ const Catalog = () => {
                     })
                     break
                 case 'SIZE':
-                    const newSize = filter.size.filter(e => e !== item.size)
+                    const newSize = filter.size.filter(e => e !== item)
                     setFilter({
                         ...filter,
                         size: newSize,
@@ -132,7 +132,7 @@ const Catalog = () => {
                         </div>
                         <div className='catalog__filter__widget__content'>
                             {
-                                categoryList.map((item, index) => (
+                                categories.map((item, index) => (
                                     <div
                                         key={index}
                                         className='catalog__filter__widget__content__item'
@@ -153,7 +153,7 @@ const Catalog = () => {
                         </div>
                         <div className='catalog__filter__widget__content'>
                             {
-                                colorList.map((item, index) => (
+                                colors.map((item, index) => (
                                     <div
                                         key={index}
                                         className='catalog__filter__widget__content__item'
@@ -174,14 +174,14 @@ const Catalog = () => {
                         </div>
                         <div className='catalog__filter__widget__content'>
                             {
-                                sizeList.map((item, index) => (
+                                sizes.map((item, index) => (
                                     <div
                                         key={index}
                                         className='catalog__filter__widget__content__item'
                                     >
                                         <CheckBox
-                                            label={item.display}
-                                            checked={filter.size.includes(item.size)}
+                                            label={item}
+                                            checked={filter.size.includes(item)}
                                             onChange={(input) => filterSelect('SIZE', input.checked, item)}
                                         />
                                     </div>

@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios'
 
 import showToast from '../../utils/showToast'
+import sizeData from '../../assets/fake-data/product-size'
 
 const getLocalStorageItems = () => {
     const items = localStorage.getItem('cartItems')
@@ -21,9 +22,9 @@ const sortItems = (arr) => arr.sort((a, b) => {
     if (a._id < b._id) return -1
     if (a.color > b.color) return 1
     if (a.color < b.color) return -1
-    if (a.size > b.size) return 1
-    if (a.size < b.size) return -1
-    return 0
+    const sizeAIndex = sizeData.getSizeIndex(a.size)
+    const sizeBIndex = sizeData.getSizeIndex(b.size)
+    return sizeAIndex - sizeBIndex
 })
 
 const syncLocalStorage = (items) => {
