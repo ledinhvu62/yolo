@@ -1,7 +1,7 @@
 const colors = [
     {
         name: 'Be',
-        hexCode: 'fbf3ec',
+        hexCode: '#fbf3ec',
     },
     {
         name: 'Cam',
