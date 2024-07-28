@@ -5,31 +5,34 @@ import { useSearchParams } from 'react-router-dom'
 import Helmet from '../components/Helmet'
 import InfinityList from '../components/InfinityList'
 
+import removeVietnameseTones from '../utils/removeVietnameseTones'
+
 const Search = () => {
     const keyword = useSelector((state) => state.keywordSearch.value)
+    const productList = useSelector((state) => state.productList.value)
 
     const keywordRef = useRef(null)
-    const [products, setProducts] = useState([]) // eslint-disable-line
+    const [products, setProducts] = useState([])
     const [searchParams, setSearchParams] = useSearchParams({}) // eslint-disable-line
 
-    useEffect(() => {
-        //setProducts(productData.getProductByKeyword(keyword))
-        setSearchParams({ keyword })
-        keywordRef.current.innerText = ` ${keyword}`
-        window.scrollTo(0, 0)
-    }, [setSearchParams]) // eslint-disable-line
-
-/*     const getProductByKeyword = (keywordSearch) => {
+    const searchProductByKeyword = (productList, keywordSearch) => {
         const keywordStandard = removeVietnameseTones(keywordSearch)
         if (!keywordStandard) {
             return []
         }
-    
+
         const keywords = keywordStandard.split(' ')
-        return products.filter((product) => {
+        return productList.filter((product) => {
             return keywords.some((keyword) => product.slug.toLowerCase().includes(keyword.toLowerCase()))
         })
-    } */
+    }
+
+    useEffect(() => {
+        setProducts(searchProductByKeyword(productList, keyword))
+        setSearchParams({ keyword })
+        keywordRef.current.innerText = ` ${keyword}`
+        window.scrollTo(0, 0)
+    }, [setSearchParams]) // eslint-disable-line
 
     return (
         <Helmet title='Tìm kiếm'>
