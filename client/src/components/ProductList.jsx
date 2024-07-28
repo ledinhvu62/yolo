@@ -64,18 +64,15 @@ const ProductList = ({ setCurrView }) => {
                     </div>
                 )
             })}
-            {
-                data.length ?
-                    <Button
-                        color='white'
-                        backgroundColor='main'
-                        size='sm'
-                        icon='bx bx-plus'
-                        onClick={handleClick}
-                    >
-                        Thêm sản phẩm
-                    </Button> : <></>
-            }
+            <Button
+                color='white'
+                backgroundColor='main'
+                size='sm'
+                icon='bx bx-plus'
+                onClick={handleClick}
+            >
+                Thêm sản phẩm
+            </Button> : <></>
         </div>
     )
 }
