@@ -4,6 +4,8 @@ import axios from 'axios'
 
 import numberWithCommas from '../utils/numberWithCommas'
 
+import showToast from '../utils/showToast'
+
 import categoryData from '../assets/fake-data/category'
 import Button from './Button'
 
@@ -22,6 +24,7 @@ const ProductList = ({ setCurrView }) => {
     const removeProduct = async (productId) => {
         const response = await axios.delete(`${url}/api/v1/products/${productId}`)
         if (response.data.success) {
+            showToast(response.data.message, 'success')
             await fetchData()
         }
     }
@@ -66,7 +69,7 @@ const ProductList = ({ setCurrView }) => {
                     <Button
                         color='white'
                         backgroundColor='main'
-                        size='block'
+                        size='sm'
                         icon='bx bx-plus'
                         onClick={handleClick}
                     >

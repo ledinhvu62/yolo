@@ -5,6 +5,8 @@ import axios from 'axios'
 import changeToSlug from '../utils/changeToSlug'
 import CheckBox from './CheckBox'
 
+import showToast from '../utils/showToast'
+
 import categoryData from '../assets/fake-data/category'
 import colorData from '../assets/fake-data/product-color'
 import sizeData from '../assets/fake-data/product-size'
@@ -96,6 +98,7 @@ const AddProductView = () => {
         
         const response = await axios.post(`${url}/api/v1/products`, formData)
         if (response.data.success) {
+            showToast(response.data.message, 'success')
             setData(initData)
             setImages([])
         }

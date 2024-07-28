@@ -57,7 +57,7 @@ const getProducts = async (req, res) => {
 const removeProduct = async (req, res) => {
     try {
         await productModel.findByIdAndDelete(req.params.productId)
-        res.json({ success: true, message: 'Sản phẩm đã bị xóa' })
+        res.json({ success: true, message: 'Sản phẩm đã được xóa' })
     } catch (error) {
         console.log(error)
         res.json({ success: false, message: 'Lỗi' })
