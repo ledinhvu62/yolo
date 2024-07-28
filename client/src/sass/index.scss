@@ -3,10 +3,9 @@
 @import "./base";
 
 @import "./components/add-product-view";
-@import "./components/list-product-view";
+@import "./components/product-list";
 @import "./components/confirm-popup";
 
-@import "./components/admin-panel";
 @import "./components/breadcrumbs";
 @import "./components/button";
 @import "./components/checkbox";
@@ -20,6 +19,7 @@
 @import "./components/sidebar";
 @import "./components/slider";
 
+@import "./components/admin-panel";
 @import "./components/cart";
 @import "./components/catalog";
 @import "./components/contact";

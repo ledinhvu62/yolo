@@ -5,10 +5,10 @@ import Sidebar from '../components/Sidebar'
 
 import logo from '../assets/images/logo.svg'
 import AddProductView from '../components/AddProductView'
-import ListProductView from '../components/ListProductView'
+import ProductList from '../components/ProductList'
 
 const AdminPanel = () => {
-    const [currView, setCurrView] = useState('add-product-view')
+    const [currView, setCurrView] = useState('product-list')
 
     return (
         <Helmet title='Trang quản trị'>
@@ -20,7 +20,7 @@ const AdminPanel = () => {
                 <div className='admin__panel__sidebar__content'>
                     <Sidebar setCurrView={setCurrView} />
                     <div className='admin__panel__content'>
-                        {currView === 'add-product-view' ? <AddProductView /> : (currView === 'list-product-view' ? <ListProductView /> : <></>)}
+                        {currView === 'add-product' ? <AddProductView /> : (currView === 'product-list' ? <ProductList setCurrView={setCurrView} /> : <></>)}
                     </div>
                 </div>
             </div>

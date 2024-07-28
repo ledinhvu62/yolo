@@ -5,8 +5,9 @@ import axios from 'axios'
 import numberWithCommas from '../utils/numberWithCommas'
 
 import categoryData from '../assets/fake-data/category'
+import Button from './Button'
 
-const ListProductView = () => {
+const ProductList = ({ setCurrView }) => {
     const url = useSelector((state) => state.url.value)
 
     const [data, setData] = useState([])
@@ -25,13 +26,18 @@ const ListProductView = () => {
         }
     }
 
+    const handleClick = () => {
+        setCurrView('add-product')
+        window.scrollTo(0, 0)
+    }
+
     useEffect(() => {
         fetchData()
     }, [fetchData])
 
     return (
-        <>
-            <div className='list__product__table title'>
+        <div className='product__list'>
+            <div className='product__list__table title'>
                 <b>Hình ảnh</b>
                 <b>Tên</b>
                 <b>Loại</b>
@@ -42,7 +48,7 @@ const ListProductView = () => {
             </div>
             {data.map(item => {
                 return (
-                    <div key={item._id} className='list__product__table item'>
+                    <div key={item._id} className='product__list__table item'>
                         <div className='image-wrapper'>
                             <img src={item.images[0]} alt='Ảnh sản phẩm' onClick={() => { window.open(item.images[0], '_blank') }} />
                         </div>
@@ -55,8 +61,20 @@ const ListProductView = () => {
                     </div>
                 )
             })}
-        </>
+            {
+                data.length ?
+                    <Button
+                        color='white'
+                        backgroundColor='main'
+                        size='block'
+                        icon='bx bx-plus'
+                        onClick={handleClick}
+                    >
+                        Thêm sản phẩm
+                    </Button> : <></>
+            }
+        </div>
     )
 }
 
-export default ListProductView
+export default ProductList

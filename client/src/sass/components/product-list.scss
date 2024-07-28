@@ -1,4 +1,8 @@
-.list__product {
+.product__list {
+    @include flex(flex-end, center);
+    flex-direction: column;
+    gap: 40px;
+
     &__table {
         @include flex(center, space-between);
         width: 100%;
@@ -45,5 +49,11 @@
             font-size: 16pt;
             text-align: center;
         }
+    }
+
+    & button {
+        margin-right: 40px;
+        width: 200px;
+        font-size: 1.2rem;
     }
 }
