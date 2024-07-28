@@ -86,7 +86,7 @@ const ProductView = ({ product = { price: 0, name: '', images: [], color: [], si
                 </div>
                 <div className='product__info__item'>
                     <div className='product__info__item__title'>
-                        Màu sắc:
+                        {`Màu sắc: ${color ? color : ''}`}
                     </div>
                     <div className='product__info__item__list'>
                         {
