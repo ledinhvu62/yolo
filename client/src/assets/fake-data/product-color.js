@@ -1,61 +1,69 @@
 const colors = [
     {
-        display: 'Be',
-        color: 'beige',
+        name: 'Be',
+        hexCode: 'red',
     },
     {
-        display: 'Cam',
-        color: 'orange',
+        name: 'Cam',
+        hexCode: '#ec7f3e',
     },
     {
-        display: 'Đen',
-        color: 'black',
+        name: 'Đen',
+        hexCode: '#000000',
     },
     {
-        display: 'Đỏ',
-        color: 'red',
+        name: 'Đỏ',
+        hexCode: '#e23041',
     },
     {
-        display: 'Hồng',
-        color: 'pink',
+        name: 'Hồng',
+        hexCode: '#f0adb1',
     },
     {
-        display: 'Nâu',
-        color: 'brown',
+        name: 'Nâu',
+        hexCode: 'red',
     },
     {
-        display: 'Tím',
-        color: 'purple',
+        name: 'Tím',
+        hexCode: 'red',
     },
     {
-        display: 'Trắng',
-        color: 'white',
+        name: 'Trắng',
+        hexCode: '#ffffff',
     },
     {
-        display: 'Vàng',
-        color: 'yellow',
+        name: 'Vàng',
+        hexCode: '#f5ebc7',
     },
     {
-        display: 'Xám',
-        color: 'gray',
+        name: 'Xám',
+        hexCode: 'red',
     },
     {
-        display: 'Xanh dương',
-        color: 'blue',
+        name: 'Xanh dương',
+        hexCode: '#0e76c0',
     },
     {
-        display: 'Xanh lá',
-        color: 'green',
+        name: 'Xanh lá',
+        hexCode: 'red',
     },
 ]
 
 const getAllColors = () => colors
 
-const getColor = (color) => colors.find(clr => clr.color === color)
+const getColor = (color) => colors.find(clr => clr.name === color)
+
+const colorOrder = colors.map(color => color.name)
+
+const getColorIndex = (color) => colorOrder.indexOf(color)
+
+const sortColors = (arr) => arr.sort((a, b) => colorOrder.indexOf(a) - colorOrder.indexOf(b))
 
 const colorData = {
     getAllColors,
     getColor,
+    getColorIndex,
+    sortColors,
 }
 
 export default colorData

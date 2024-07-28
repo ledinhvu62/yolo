@@ -4,8 +4,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
-import colorData from '../assets/fake-data/product-color'
-
 import { updateItemWithSync, removeItemWithSync } from '../redux/features/cartItemsSlice'
 
 import numberWithCommas from '../utils/numberWithCommas'
@@ -63,7 +61,7 @@ const CartItem = (props) => {
                         {item.name}
                     </Link>
                     <span>
-                        {`${colorData.getColor(item.color).display} - ${item.size}`}
+                        {`${item.color} - ${item.size}`}
                     </span>
                 </div>
                 <div className='cart__item__info__right'>

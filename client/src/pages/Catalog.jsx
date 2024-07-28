@@ -43,7 +43,7 @@ const Catalog = () => {
                 case 'COLOR':
                     setFilter({
                         ...filter,
-                        color: [...filter.color, item.color],
+                        color: [...filter.color, item.name],
                     })
                     break
                 case 'SIZE':
@@ -64,7 +64,7 @@ const Catalog = () => {
                     })
                     break
                 case 'COLOR':
-                    const newColor = filter.color.filter(e => e !== item.color)
+                    const newColor = filter.color.filter(e => e !== item.name)
                     setFilter({
                         ...filter,
                         color: newColor,
@@ -159,8 +159,8 @@ const Catalog = () => {
                                         className='catalog__filter__widget__content__item'
                                     >
                                         <CheckBox
-                                            label={item.display}
-                                            checked={filter.color.includes(item.color)}
+                                            label={item.name}
+                                            checked={filter.color.includes(item.name)}
                                             onChange={(input) => filterSelect('COLOR', input.checked, item)}
                                         />
                                     </div>

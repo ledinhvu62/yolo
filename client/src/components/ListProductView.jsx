@@ -5,7 +5,6 @@ import axios from 'axios'
 import numberWithCommas from '../utils/numberWithCommas'
 
 import categoryData from '../assets/fake-data/category'
-import colorData from '../assets/fake-data/product-color'
 
 const ListProductView = () => {
     const url = useSelector((state) => state.url.value)
@@ -50,7 +49,7 @@ const ListProductView = () => {
                         <p>{item.name}</p>
                         <p>{categoryData.getCategory(item.categorySlug).display}</p>
                         <p>{numberWithCommas(item.price)}đ</p>
-                        <p>{item.color.map((item) => colorData.getColor(item).display).join(', ')}</p>
+                        <p>{item.color.join(', ')}</p>
                         <p>{item.size.join(', ')}</p>
                         <i onClick={() => removeProduct(item._id)} className='bx bx-trash'></i>
                     </div>

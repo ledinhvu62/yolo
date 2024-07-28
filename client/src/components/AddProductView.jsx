@@ -35,7 +35,7 @@ const AddProductView = () => {
                 case 'COLOR':
                     setData({
                         ...data,
-                        color: [...data.color, value],
+                        color: colorData.sortColors([...data.color, value]),
                     })
                     break
                 case 'SIZE':
@@ -59,7 +59,7 @@ const AddProductView = () => {
                     const newSize = data.size.filter(e => e !== value)
                     setData({
                         ...data,
-                        size: sizeData.sortSizes(newSize),
+                        size: newSize,
                     })
                     break
                 default:
@@ -143,9 +143,9 @@ const AddProductView = () => {
                             colors.map((item, index) => (
                                 <CheckBox
                                     key={index}
-                                    label={item.display}
-                                    checked={data.color.includes(item.color)}
-                                    onChange={(input) => filterSelect('COLOR', input.checked, item.color)}
+                                    label={item.name}
+                                    checked={data.color.includes(item.name)}
+                                    onChange={(input) => filterSelect('COLOR', input.checked, item.name)}
                                 />
                             ))
                         }

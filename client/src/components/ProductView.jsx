@@ -7,6 +7,7 @@ import Button from './Button'
 
 import numberWithCommas from '../utils/numberWithCommas'
 import { addItemWithSync } from '../redux/features/cartItemsSlice'
+import colorData from '../assets/fake-data/product-color'
 
 const ProductView = ({ product = { price: 0, name: '', images: [], color: [], size: [] } }) => {
     const dispatch = useDispatch()
@@ -95,7 +96,7 @@ const ProductView = ({ product = { price: 0, name: '', images: [], color: [], si
                                     className={`product__info__item__list__item ${color === item ? 'active' : ''}`}
                                     onClick={() => setColor(item)}
                                 >
-                                    <div className={`circle bg-${item}`}></div>
+                                    <div className='circle' style={{ '--bg-color': colorData.getColor(item).hexCode }}></div>
                                 </div>
                             ))
                         }
